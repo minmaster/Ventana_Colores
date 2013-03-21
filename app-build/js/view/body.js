@@ -1,0 +1,1 @@
+define("body",["underscore","backbone","collection","model","soporteData"],function(e,t,n,r,i){var s=t.View.extend({el:$("#bodyContainer"),initialize:function(){this.render()},render:function(){calcularAltoScroll(),title_input(),drawStage(),new i.getSoporteData(localStorage.idSoporte)},close:function(){this.undelegateEvents()}});return s});

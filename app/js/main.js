@@ -54,17 +54,17 @@ require.config({
   paths: {
     underscore: 'vendor/underscore',
     backbone: 'vendor/backbone',
-    backboneBinder: 'vendor/backbone.eventbinder',
     handlebars: 'vendor/handlebars',
+    jquery: 'vendor/jquery',
     jqueryui: 'vendor/jquery-ui',
     kinetic: 'vendor/kinetic',
-    modernizr: 'vendor/modernizr-2.6.2.min',
+    modernizr: 'vendor/modernizr-2.6.2.min',    
     jtransit: "vendor/jtransit",
-    plugins: "plugins.ycomp",
-    model: "model.ycomp",
-    collection: "collection.ycomp",
-    view: 'view.ycomp',
-    routes: "routes.ycomp",
+    plugins: "plugins",
+    model: "model",
+    collection: "collection",
+    view: 'view',
+    routes: "routes",
     soporteData: "data/soporteData",
     dragdrop: "functions/dragdrop",
     initialload: "functions/initialload",
@@ -92,6 +92,7 @@ require.config({
 });
 
 require([ 
+        "domReady",
 		"handlebars",
 		 "jquery", 
 		 "jqueryui",
@@ -106,12 +107,15 @@ require([
 		 "objetos",
 		 "medidas",
 		 "colores",
-		 "mask"], function(Handlebars, $, ui, transit, Kinetic, Modernizr, Plugins, m, c, r) {
-		 	
+		 "mask"], function(domReady, Handlebars, $, ui, transit, Kinetic, Modernizr, Plugins, m, c, r) {
+		 
+	 	domReady(function () {
 
 
 			appRouter = new r.AppRouter(); 
 			Backbone.history.start();
+			
+	 	});
 });
 
 

@@ -17,24 +17,24 @@
  
 ({
 	//- paths are relative to this app.build.js file
-	appDir: "../web",
+	appDir: "../app",
 	baseUrl: "js/",
 	//- this is the directory that the new files will be. it will be created if it doesn't exist
-	dir: "../web-build",
+	dir: "../app-build",
 	paths: {
 	    underscore: 'vendor/underscore',
 	    backbone: 'vendor/backbone',
-	    backboneBinder: 'vendor/backbone.eventbinder',
 	    handlebars: 'vendor/handlebars',
+	    jquery: 'vendor/jquery',
 	    jqueryui: 'vendor/jquery-ui',
 	    kinetic: 'vendor/kinetic',
 	    modernizr: 'vendor/modernizr-2.6.2.min',
 	    jtransit: "vendor/jtransit",
-	    plugins: "plugins.ycomp",
-	    model: "model.ycomp",
-	    collection: "collection.ycomp",
-	    view: 'view.ycomp',
-	    routes: "routes.ycomp",
+	    plugins: "plugins",
+	    model: "model",
+	    collection: "collection",
+	    view: 'view',
+	    routes: "routes",
 	    soporteData: "data/soporteData",
 	    dragdrop: "functions/dragdrop",
 	    initialload: "functions/initialload",
@@ -54,7 +54,7 @@
 	modules: [
 		{
 			name: "main",
-			exclude: ["jquery"]
+			exclude: ["jquery", "handlebars", "underscore", "backbone"]
 		}
 	],
 	fileExclusionRegExp: /\.git/

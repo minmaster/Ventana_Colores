@@ -1,0 +1,1 @@
+define("viasCarrito",["underscore","backbone","handlebars","jquery"],function(e,t,n,r){var i=t.View.extend({el:r("#viascarritoContainer"),initialize:function(){this.render()},render:function(){var e=r("#viascarritoTemplate").html(),t=n.compile(e),i=t(viasCarrito.toJSON());this.$el.html(i)},close:function(){this.undelegateEvents()}});return i});

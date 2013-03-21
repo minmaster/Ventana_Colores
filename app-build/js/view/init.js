@@ -1,0 +1,1 @@
+define("init",["underscore","backbone","initpage"],function(e,t,n){return ViewInit=t.View.extend({el:$("#contContainer"),initialize:function(){this.render()},render:function(){$(".divLoader").fadeOut("fast"),$("#initContainer").css({display:"block"}),n.initPage()},close:function(){this.undelegateEvents()}}),ViewInit});
