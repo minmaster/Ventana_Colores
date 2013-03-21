@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rockstarapps>
+
+<file name="css/main.css">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>true</resolveImports>
+        <urlRewriting>true</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>true</oldFileNames>
+        <dependencies>
+            <file>css/main.css</file>
+        </dependencies>
+        <properties/>
+</file>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<file name="js/init.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>false</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/init.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<file name="js/js.all.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/collection.js</file>
+            <file>js/colores.js</file>
+            <file>js/init.js</file>
+            <file>js/main.js</file>
+            <file>js/mask.js</file>
+            <file>js/medidas.js</file>
+            <file>js/model.js</file>
+            <file>js/objetos.js</file>
+            <file>js/plugins.js</file>
+            <file>js/routes.js</file>
+            <file>js/soportes.js</file>
+            <file>js/view.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/view.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>false</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/view.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/soportes.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/soportes.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/routes.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/routes.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/plugins.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>false</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/plugins.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/objetos.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/objetos.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/model.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>false</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/model.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/medidas.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/medidas.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/mask.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/mask.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+
+
+
+<file name="js/colores.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/colores.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+<file name="js/collection.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/collection.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+
+
+
+
+
+<file name="js/main.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>true</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>false</oldFileNames>
+        <dependencies>
+            <file>js/main.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+</rockstarapps>

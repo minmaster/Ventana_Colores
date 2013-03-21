@@ -1,0 +1,25 @@
+Options +Indexes
+Options +FollowSymlinks
+RewriteEngine On
+
+############################
+# Sustituir por el sitio web
+############################
+RewriteBase /
+
+#if not a file in file system
+RewriteCond %{REQUEST_FILENAME} -f
+
+#if not a directory in file system
+RewriteCond %{REQUEST_FILENAME} -d
+
+
+############################################################
+# API dise–o
+############################################################
+
+### Orden: accion/nombre/id/nombreAdd
+Rewriterule ^([\w]*)/([\w]*)/([\w]*)/([\w]*).json$ index.php?app=disenio&mod=$1&accion=$2&id=$3&nombreAdd=$4 [NC,L]
+Rewriterule ^([\w]*)/([\w]*)/([\w]*).json$ index.php?app=disenio&mod=$1&accion=$2&id=$3 [NC,L]
+Rewriterule ^([\w]*)/([\w]*).json$ index.php?app=disenio&mod=$1&accion=$2 [NC,L]
+Rewriterule ^([\w]*).json$ index.php?app=api&accion=$1 [NC,L]
