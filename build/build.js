@@ -50,7 +50,25 @@
 	    init: "view/init",
 	    variosColores: "view/variosColores"
 	},
-	optimizeCss: "standard.keepLines",
+	optimize: "uglify2",
+	optimizeCss: "standard",
+	preserveLicenseComments: false,
+	 uglify2: {
+	        output: {
+	            beautify: false
+	           
+	        },
+	        compress: {
+	            sequences: false,
+	            global_defs: {
+	                DEBUG: true
+	            }
+	        },
+	        warnings: false,
+	        mangle: true,
+	        ascii_only: true,
+	        comments: false
+	},
 	modules: [
 		{
 			name: "main",

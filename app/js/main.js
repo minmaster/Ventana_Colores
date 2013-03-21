@@ -804,9 +804,6 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		$('.menuObjetos').css({"visibility":"hidden"});
     	$('.menuObjetos').css({"visibility":"visible"});
     	
-    	menuPlay = setTimeout(function(){
-    		$('.menuObjetos').css({"visibility":"hidden"});},5000);
-    	
     	var attrSymbol = simbolosArray[id].getAttrs();
 
     	$('.menuObjetos span').attr("dibujo", attrSymbol.dibujo);

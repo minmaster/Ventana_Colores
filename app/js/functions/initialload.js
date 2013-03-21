@@ -113,12 +113,53 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     	$('.btnRotate').on("click", function(){ 
     		
     		var id = $(this).attr("id");
+    		var value = 
+    		
+    		$('#sliderRotar').slider({
+    		      min: 0,
+    		      max: 180,
+    		      values: [ 90 ],
+    		      slide: function( event, ui ) {
+    		    	 
+    		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());
+    		    	 
+
+    		    	 if (value < ui.value) {
+    		    		 var ca = +3;
+    		    	 } else {
+    		    		 var ca = -3;	 
+    		    	 }
+    		    	 
+    		    	 
+    		    	 value = ui.value;
+    		    	 
+    		    	 
+    		    	 
+    		    	 
+    		    	 console.log(ca);
+    		    	 console.log(ca*Math.PI/180);
+    		    	 
+    		    	 
+    		    	 var a = simbolosArray[id];
+    				 a.rotate(ca*Math.PI/180);
+    		         layer.draw();
+    		        
+    		      }
+    			    			
+    		});    		
+    		$('.menuObjetos .submenu .tab').css({"display":"none"});   
+    		$('.menuObjetos .submenu').transition({"top": "30px"}, function() { 
+    			$('.divRotar').css({"display": "block"}); 
+    		});
+    		
+    		/*
+    		
 			var rotationValue = parseInt(simbolosArray[id].getRotationDeg());
     		var ca = -300;
     		var a = simbolosArray[id];
 			a.rotate(Math.PI / ca);
-
             layer.draw();
+            */
     		  		
     	});	
     	
@@ -140,10 +181,10 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		var id = $(this).attr("dibujo");
     		var index = $(this).attr("id");
     		
-    		$('.menuObjetos .submenu').transition({"top": "30px"});
-    		
-    		clearInterval(menuPlay);
-    		
+    		$('.menuObjetos .submenu .tab').css({"display":"none"});    		
+    		$('.menuObjetos .submenu').transition({"top": "30px"}, function() {    			
+    			$('.divTexto').css({"display": "block"});    			
+    		});    		
     		
     		$('#textoObjeto').val(productoSelected.get("texto"));
     		
@@ -153,7 +194,6 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     			var precioActual = productoSelected.get("precioUnidad")*val.length;    			   			
     			productoSelected.set({precio: precioActual.toFixed(2), texto: val});
     			layer.draw();
-    			
     		});
     		
     		$('#textoObjeto').on("blur", function() {    			

@@ -1513,6 +1513,12 @@ textarea {
 	.menuObjetos .submenu .tab {
 		padding: 5px 10px;
 		margin-left: 190px;
+		display: none;
+	}
+	
+	.menuObjetos .submenu .tab.divRotar div {
+		width: 300px;
+		margin: 5px 10px
 	}
 	
 	.menuObjetos .submenu .tab label {

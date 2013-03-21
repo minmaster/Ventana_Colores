@@ -32,10 +32,7 @@
 		   	<section>
 		   		<nav>
 		   			
-		   			<div id="soportesContainer">
-		   				
-		   				
-		   			</div>
+		   			<div id="soportesContainer"></div>
 		
 		   			   						
 		   		</nav>
@@ -186,10 +183,16 @@
 				
 				<div class="submenu">
 					
+					<div class="divRotar tab">						
+						<div id="sliderRotar"></div>
+					</div>
+					
 					<div class="divTexto tab">	
 						<label for="textoObjeto">Escribe aquí tu texto:</label>					
 						<input type="text" name="textoObjeto" id="textoObjeto" />						
 					</div>
+					
+					
 					
 				</div>
 		</div>
