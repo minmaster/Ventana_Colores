@@ -122,24 +122,12 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		      slide: function( event, ui ) {
     		    	 
     		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());
-    		    	 
-
     		    	 if (value < ui.value) {
     		    		 var ca = +3;
     		    	 } else {
     		    		 var ca = -3;	 
     		    	 }
-    		    	 
-    		    	 
     		    	 value = ui.value;
-    		    	 
-    		    	 
-    		    	 
-    		    	 
-    		    	 console.log(ca);
-    		    	 console.log(ca*Math.PI/180);
-    		    	 
-    		    	 
     		    	 var a = simbolosArray[id];
     				 a.rotate(ca*Math.PI/180);
     		         layer.draw();
