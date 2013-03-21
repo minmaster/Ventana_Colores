@@ -113,23 +113,21 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     	$('.btnRotate').on("click", function(){ 
     		
     		var id = $(this).attr("id");
-    		var value = 
     		
     		$('#sliderRotar').slider({
-    		      min: 0,
+    		      min: -180,
     		      max: 180,
-    		      values: [ 90 ],
+    		      values: [ 0 ],
     		      slide: function( event, ui ) {
     		    	 
-    		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());
-    		    	 if (value < ui.value) {
-    		    		 var ca = +3;
-    		    	 } else {
-    		    		 var ca = -3;	 
-    		    	 }
-    		    	 value = ui.value;
-    		    	 var a = simbolosArray[id];
-    				 a.rotate(ca*Math.PI/180);
+    		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());    		    	 
+    		    	 
+    		    	 console.log(simbolosArray[id].getRotation());
+    		    	 console.log(rotationValue);
+
+    		    	 var a = simbolosArray[id];    		    	 
+    		    	 a.setRotation(0);
+    				 a.rotate(ui.value*Math.PI/180);
     		         layer.draw();
     		        
     		      }
