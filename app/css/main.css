@@ -385,6 +385,8 @@ textarea {
 		font-size: 12px;
 	}	
 	
+	.tejidoEvent { cursor: pointer; }
+	
 	.init .elem:hover {
 		background: #ffffff; /* Old browsers */
 		background: -moz-linear-gradient(top, #ffffff 26%, #ffffff 58%, #f9f9f9 100%); /* FF3.6+ */
@@ -661,6 +663,10 @@ textarea {
 	.main .sidebar-right .seleccion .list .pd {
 		clear:both;
 		margin-bottom: 10px;
+	}
+	
+	.main .sidebar-right .seleccion .list .pd:hover, .main .sidebar-right .seleccion .list .pd.active {
+		background: #f5f5f5;
 	}
 	
 	.main .sidebar-right .seleccion .list .pd .uds {
@@ -1085,8 +1091,8 @@ textarea {
 	}
 	
 	.main .center {
-		width: 590px;
-		margin: 20px auto 0 auto;
+		width: 100%;
+		margin: 20px 0 0 240px;
 		height: 450px;
 		z-index: 0;
 		position:relative;
@@ -1419,12 +1425,17 @@ textarea {
 	#popupVariosColores .zonas span {
 		width: 60px;
 		height: 60px;
-		background: #E5E5E5;
+		background: #9A9A99;
 		text-align: center;
 		line-height: 60px;
 		margin: 0 5px;
 		display:block;
 		float: left;
+	}
+	
+	#popupVariosColores .zonas span:first-child {
+		background: #000000;
+		color: white;
 	}
 	
 	#popupVariosColores .zonas span.active {
@@ -1788,6 +1799,109 @@ and (max-device-width : 1024px) {
 
 
 /* Elastislide Style */
+
+.carouselContent {
+	width: 100%;
+	height: 33px;
+	padding: 4px 25px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.carouselContent .mask {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.carouselContent ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.carouselContent li {
+	float: left;
+}
+
+.carouselContent nav {
+}
+
+.carouselContent nav .prev {
+	display: block;
+	position:absolute;
+		height: 100%;
+		width: 20px;
+		left: 0;
+		top: 0;
+		background: #d1d1d1; /* Old browsers */
+		background: -moz-linear-gradient(top, #d1d1d1 0%, #eeeeee 40%, #eeeeee 48%, #eeeeee 56%, #d3d3d3 99%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(40%,#eeeeee), color-stop(48%,#eeeeee), color-stop(56%,#eeeeee), color-stop(99%,#d3d3d3)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* IE10+ */
+		background: linear-gradient(to bottom, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
+		-webkit-box-shadow: 3px 0px 5px rgba(50, 50, 50, 0.18);
+		-moz-box-shadow:    3px 0px 5px rgba(50, 50, 50, 0.18);
+		box-shadow:         3px 0px 5px rgba(50, 50, 50, 0.18);			
+		display:block;
+		cursor:pointer;
+		z-index: 20;
+	
+}
+
+
+.carouselContent nav .next {
+		position:absolute;
+		height: 100%;
+		width: 20px;
+		right: 0;
+		top: 0;
+		background: #d1d1d1; /* Old browsers */
+		background: -moz-linear-gradient(top, #d1d1d1 0%, #eeeeee 40%, #eeeeee 48%, #eeeeee 56%, #d3d3d3 99%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(40%,#eeeeee), color-stop(48%,#eeeeee), color-stop(56%,#eeeeee), color-stop(99%,#d3d3d3)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* IE10+ */
+		background: linear-gradient(to bottom, #d1d1d1 0%,#eeeeee 40%,#eeeeee 48%,#eeeeee 56%,#d3d3d3 99%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
+		-webkit-box-shadow: -3px 0px 5px rgba(50, 50, 50, 0.18);
+		-moz-box-shadow:    -3px 0px 5px rgba(50, 50, 50, 0.18);
+		box-shadow:         -3px 0px 5px rgba(50, 50, 50, 0.18);		
+		display:block;
+		cursor:pointer;
+		z-index: 20;
+}
+
+
+.carouselContent nav .prev span {
+		display:block;
+		width: 7px;
+		height: 11px;
+		background: URL(../img/ico-prev.png) no-repeat;
+		top: 50%;
+		left: 50%;
+		position:absolute;
+		margin-left: -3px;
+		margin-top: -5px;
+		text-indent: -9999px;
+}
+
+
+.carouselContent nav .next span {
+		display:block;
+		width: 7px;
+		height: 11px;
+		background: URL(../img/ico-next.png) no-repeat;
+		top: 50%;
+		left: 50%;
+		position:absolute;
+		margin-left: -3px;
+		margin-top: -5px;
+		text-indent: -9999px;
+}
 
 .slide-objetos {
 	width: 100%;

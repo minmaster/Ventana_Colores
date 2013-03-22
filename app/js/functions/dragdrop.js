@@ -68,6 +68,10 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
 			$(".ui-draggable-dragging img").remove();
 			$(".ui-draggable-dragging").append("<div class='mask' id='maskSymbol'></div>");	
 			
+			$('.menuObjetos').css({"visibility":"hidden"});
+			$('.menuObjetos .submenu').css({"top": "-5px"});	
+			
+			
 			var width = $(this).attr("mwidth")*2;
 			var height = $(this).attr("mheight")*2;
 
@@ -213,10 +217,24 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
 				
 				if (dibujo == 98 || dibujo == 99) {	
         			symbolStage(dibujo, id, x, y, $('input#producto').val(), width, height, colores, true);
+        			$('.menuObjetos .btnTexto').parent().css({"display":"block"});    
+        			
         		} else {
         			symbolStage(dibujo, id, x, y, $('input#producto').val(), width, height, colores, false);
+        			$('.menuObjetos .btnTexto').parent().css({"display":"none"});
         		}
-		
+        		
+        		$('.menuObjetos span').attr("dibujo", dibujo);
+    			$('.menuObjetos span').attr("id", id);
+        		$('.menuObjetos').css({"visibility":"visible"});
+        		
+        		if (colores == "2") {
+		    		$('.menuObjetos .btnColorear').parent().css({"display":"block"});
+		    	} else {
+		    		$('.menuObjetos .btnColorear').parent().css({"display":"none"});
+		    	}
+		    	       		
+        				
         	}
         	
         	

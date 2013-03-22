@@ -65,7 +65,8 @@ define("model", ["underscore", "backbone", "soporteCarrito"], function(_, Backbo
 			con_vias: false,
 			vias: 0,
 			tejidoId: 0,
-			tejidoNombre: ""	
+			tejidoNombre: "",
+			rotacion: 0
 		},
 		initialize: function() {
         	this.on('change', this.reCalcular, this);

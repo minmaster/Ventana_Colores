@@ -78,7 +78,6 @@ var ViewVias = Backbone.View.extend({
 		appRouter.navigate("app", true);
 	},
 	closePopup: function(e) {
-		alert("hola");
 	},
 	close: function() {
 		this.undelegateEvents();
@@ -222,7 +221,7 @@ var ViewTejidos = Backbone.View.extend({
 		var html = template(tejidos.toJSON());
 		this.$el.html(html);
     	
-    	$('.pagination').pajinate({items_per_page : 6});
+    	$('.pagination').pajinate({items_per_page : 8});
     },
     actualizarTejido: function(e) {
     	
@@ -334,6 +333,10 @@ var ViewTejidos = Backbone.View.extend({
 /*** VIEW CARRITO ***/
 var ViewCarrito = Backbone.View.extend({
 	el: $('#list-vinilos-comprados'),
+	events: {
+		"mouseover .pd": "showVinilo",
+		"mouseout .pd": "hideVinilo"
+	},
 	initialize: function() {
 		this.render();		
 	},
@@ -348,6 +351,20 @@ var ViewCarrito = Backbone.View.extend({
 	},
 	close: function() {
 		this.undelegateEvents();
+		
+	},
+	showVinilo: function(e) {
+		$this = $(e.currentTarget);		
+		var id = $this.attr("id");		
+		mask.setOpacity(0.9);
+		layer.draw();
+		
+	},
+	hideVinilo: function(e) {
+		$this = $(e.currentTarget);		
+		var id = $this.attr("id");		
+		mask.setOpacity(1);
+		layer.draw();
 		
 	}
 });

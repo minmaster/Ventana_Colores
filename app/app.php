@@ -312,7 +312,7 @@
 				<div class="canvas" id="escenarioColores"></div>
 				
 				
-				<p>Arrastra el color sobre la zona que deseas pintar</p>
+				<p>Arrastra el color sobre el <b>cuadrado</b> de la zona que deseas pintar.</p>
 				<div class="zonas">
 					
 					
@@ -389,7 +389,7 @@
 		<li class="elem">
 			
 			<a href="img/tejidos/gr/{{imagen}}" class="lupa">lupa</a>
-			<div class="img">
+			<div class="img tejidoEvent">
 				<img src="img/tejidos/peq/th_{{imagen}}" alt="" />
 			</div>
 			<div class="title tejidoEvent" id="{{ id }}" name="{{ nombre }}">

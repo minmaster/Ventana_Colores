@@ -4,6 +4,16 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
 		
 		calcularAltoScroll();
 		
+		$('.main .center').on("click", function() {			
+			$('.menuObjetos').css({"visibility":"hidden"});
+			$('.menuObjetos .submenu').css({"top": "-5px"});	
+		});
+		
+		$('.sidebar-bottom').on("click", function() {
+			$('.menuObjetos').css({"visibility":"hidden"});	
+			$('.menuObjetos .submenu').css({"top": "-5px"});	
+		});
+		
 		 $('input').bind('focus',function() {
         $(window).scrollTop(10);
         var keyboard_shown = $(window).scrollTop() > 0;
@@ -11,6 +21,8 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
 
         $('#test').append(keyboard_shown?'keyboard ':'nokeyboard ');
     });
+    
+    	
 				
 		carrito = new c.Carrito();
 			$('#tejido').click(function() {
@@ -113,19 +125,22 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     	$('.btnRotate').on("click", function(){ 
     		
     		var id = $(this).attr("id");
-    		
-    		$('#sliderRotar').slider({
+    		productoSelected = carrito.get(id); 
+			console.log(productoSelected);
+			
+    		if (Slider) $('#sliderRotar').slider("destroy");    		
+    		Slider = $('#sliderRotar').slider({
     		      min: -180,
     		      max: 180,
-    		      values: [ 0 ],
+    		      value: productoSelected.get("rotacion"),
     		      slide: function( event, ui ) {
     		    	 
-    		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());    		    	 
+    		    	 var rotationValue = parseInt(simbolosArray[id].getRotationDeg());
     		    	 
-    		    	 console.log(simbolosArray[id].getRotation());
-    		    	 console.log(rotationValue);
-
-    		    	 var a = simbolosArray[id];    		    	 
+    		  
+    		    	 var a = simbolosArray[id];
+    		    	 productoSelected.set({rotacion: ui.value});
+    		    	 
     		    	 a.setRotation(0);
     				 a.rotate(ui.value*Math.PI/180);
     		         layer.draw();
@@ -167,6 +182,10 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		var id = $(this).attr("dibujo");
     		var index = $(this).attr("id");
     		
+    		productoSelected = carrito.get(index);
+    		
+    		
+    		
     		$('.menuObjetos .submenu .tab').css({"display":"none"});    		
     		$('.menuObjetos .submenu').transition({"top": "30px"}, function() {    			
     			$('.divTexto').css({"display": "block"});    			
@@ -174,8 +193,10 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		
     		$('#textoObjeto').val(productoSelected.get("texto"));
     		
+    		$('#textoObjeto').unbind("keyup");
     		$('#textoObjeto').on("keyup", function() {    			
-    			var val = $(this).val();    			
+    			var val = $(this).val();    
+   			
     			simbolosArray[index].setText(val); 
     			var precioActual = productoSelected.get("precioUnidad")*val.length;    			   			
     			productoSelected.set({precio: precioActual.toFixed(2), texto: val});
