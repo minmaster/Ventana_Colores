@@ -389,7 +389,7 @@
 		<li class="elem">
 			
 			<a href="img/tejidos/gr/{{imagen}}" class="lupa">lupa</a>
-			<div class="img tejidoEvent">
+			<div class="img tejidoEvent" id="{{ id }}">
 				<img src="img/tejidos/peq/th_{{imagen}}" alt="" />
 			</div>
 			<div class="title tejidoEvent" id="{{ id }}" name="{{ nombre }}">
