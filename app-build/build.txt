@@ -3,10 +3,6 @@ css/main.css
 ----------------
 css/main.css
 
-css/main.css.ycomp.css
-----------------
-css/main.css.ycomp.css
-
 css/normalize.css
 ----------------
 css/normalize.css

@@ -26,16 +26,13 @@
     	 <header>
 		    	<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
 		    	<h2>Seleccione el producto que desea diseñar</h2>    	
-		    	<a href="ayuda.php" target="_blank" class="help">Ayuda</a>
+		    	<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank" class="help">Ayuda</a>
 		   	</header>	
 		   	
 		   	<section>
 		   		<nav>
 		   			
-		   			<div id="soportesContainer">
-		   				
-		   				
-		   			</div>
+		   			<div id="soportesContainer"></div>
 		
 		   			   						
 		   		</nav>
@@ -66,6 +63,8 @@
 				
 				<ul class="paleta-colores colores-soporte">
 				</ul>
+				
+				<p class="aviso">* AVISO IMPORTANTE COLORIDOS</p>
 				
 				<div class="clear"></div>
 			</div>
@@ -123,7 +122,7 @@
 		
 		<div class="sidebar-right">
 			
-			<a href="ayuda.php" target="_blank" class="help">Ayuda</a>
+			<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank" class="help">Ayuda</a>
 			
 			<h2>TU SELECCIÓN</h2>
 			
@@ -149,22 +148,39 @@
 					</div>					
 					
 					<div id="list-vinilos-comprados">
-					
-					
 					</div>
 					
-					<div id="list-grecas">
+					<div class="info-grecas">
+						<div class="cab">
+							<span>GRECAS</span>											
+						</div>
 						
-						
+						<div class="info clear">
+							<p>Introduzca medida aproximada. Ver <a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank">ayuda</a></p>
+						</div>
 					</div>
+					<div id="list-grecas"></div>
 					
 				</div>
 				
 			</div>
 			
-			<div class="total">
-				<span>TOTAL</span>
-				<span id="total">0 €</span>
+			<div class="precioTotal">
+				<div class="total">
+					<span>IMPORTE</span>
+					<span id="total">0 €</span>
+				</div>
+				<div class="iva">
+					<span>IVA (21%)</span>
+					<span id="iva">0 €</span>
+				</div>
+				<div class="totalIVA">
+					<span>TOTAL (IVA INC.)</span>
+					<span id="totalIVA">0 €</span>
+				</div>
+				<div class="text">
+					* PRECIOS SIN INSTALACIÓN
+				</div>
 			</div>
 			
 			<div class="botones">
@@ -182,14 +198,21 @@
 					<li><span class="btnRotate" title="Rotar Objeto">Rotar Objeto</span></li>
 					<li><span class="btnColorear" title="Colorear Objeto">Colorear Objeto</span></li>
 					<li><span class="btnTexto" title="Editar Texto">Editar Texto</span></li>
+					<li class="1color">Para colorear el objeto arrastre el color hasta él</li>
 				</ul>
 				
 				<div class="submenu">
+					
+					<div class="divRotar tab">						
+						<div id="sliderRotar"></div>
+					</div>
 					
 					<div class="divTexto tab">	
 						<label for="textoObjeto">Escribe aquí tu texto:</label>					
 						<input type="text" name="textoObjeto" id="textoObjeto" />						
 					</div>
+					
+					
 					
 				</div>
 		</div>
@@ -309,13 +332,17 @@
 				<div class="canvas" id="escenarioColores"></div>
 				
 				
-				<p>Arrastra el color sobre la zona que deseas pintar</p>
+				<p>Arrastra el color sobre el <b>cuadrado</b> de la zona que deseas pintar.</p>
 				<div class="zonas">
 					
 					
 				</div>				
 		</div>   		
-   		<!-- /POPUP VARIOS COLORES -->  		
+   		<!-- /POPUP VARIOS COLORES -->  
+   		
+   		<div id="popupMessage">
+   			
+   		</div>			
                
     </body>
     
@@ -386,7 +413,7 @@
 		<li class="elem">
 			
 			<a href="img/tejidos/gr/{{imagen}}" class="lupa">lupa</a>
-			<div class="img">
+			<div class="img tejidoEvent" id="{{ id }}">
 				<img src="img/tejidos/peq/th_{{imagen}}" alt="" />
 			</div>
 			<div class="title tejidoEvent" id="{{ id }}" name="{{ nombre }}">
@@ -404,6 +431,9 @@
 			<div class="pvp"><span>{{precio}}</span> €</div>
 			
 			<div class="clear"></div>
+			
+			
+			
 			<input type="number" name="medida-greca" class="medidaGreca" value="{{height}}" />
 			<input type="hidden" name="precio-greca" value="{{precio}}" class="precioGreca" />
 			<input type="hidden" name="precioDefault-greca" value="{{height}}" class="precioDefaultGreca" />
@@ -488,7 +518,26 @@
 	   							<tr>
 	   								<td class="total">{{precio.total}}</td>
 		   						</tr>
+		   						<tr>
+	   								<th>IVA</th>
+	   							</tr>	   							   						
+	   							<tr>
+	   								<td class="total">{{precio.iva}}</td>
+		   						</tr>
+		   						<tr>
+	   								<th>PRECIO CON IVA</th>
+	   							</tr>	   							   						
+	   							<tr>
+	   								<td class="total">{{precio.totalIVA}}</td>
+		   						</tr>
 	   						</table>
+	   						
+	   						<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">	
+	   							<td>
+	   								 * Precios sin instalación<br />
+	   								 * Comprobar siempre el color real de tejidos y estampaciones en el punto de venta. Recuerda que los colores que se muestran en pantalla no son 100% reales.<br />
+	   							</td>
+	   						</table>	   						
 	   						
 	   					</div>
 	   				
@@ -610,9 +659,9 @@
 		</script>	
 		
 		<script type="text/handlebars" id="popupTemplate">
-			<div class="popupTemplate">				
+			<div class="popupTemplate popupMessage">				
 				<span class="btn-cerrar"><img src="img/ico-close.gif" alt="cerrar" /></span>
-				<div class="message">{{ message }}</div>				
+				<div class="message">{{{ message }}}</div>				
 			</div>
 		</script>
 		
@@ -740,6 +789,25 @@
 	   							<tr>
 	   								<td class="total" style="border:1px solid black">{{precio.total}}</td>
 		   						</tr>
+	   							<tr>
+	   								<td style="border:1px solid black">IVA</td>
+	   							</tr>	   							   						
+	   							<tr>
+	   								<td class="total" style="border:1px solid black">{{precio.iva}}</td>
+		   						</tr>	
+	   							<tr>
+	   								<td style="border:1px solid black">Total con IVA</td>
+	   							</tr>	   							   						
+	   							<tr>
+	   								<td class="total" style="border:1px solid black">{{precio.totalIVA}}</td>
+		   						</tr>		   							   						
+	   						</table>
+	   						
+	   						<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">	
+	   							<td>
+	   								 * Precios sin instalación<br />
+	   								 * Comprobar siempre el color real de tejidos y estampaciones en el punto de venta. Recuerda que los colores que se muestran en pantalla no son 100% reales.<br />
+	   							</td>
 	   						</table>
 	   						
 	   					</div>
