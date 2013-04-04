@@ -18,7 +18,9 @@ var ViewImprimir =  Backbone.View.extend({
 		
 		
 		var precio = {
-			total: $('#total').text()
+			total: $('#total').text(),
+			iva: $('#iva').text(),
+			totalIVA: $('#totalIVA').text()
 		}
 		
 		this.$el.attr("class", "init").css({"overflow": "auto"});

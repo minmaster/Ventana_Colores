@@ -1,4 +1,4 @@
-define("initialload", ["jquery", "handlebars", "collection", "variosColores"], function($, Handlebars, c, viewVC) {
+define("initialload", ["jquery", "handlebars", "collection", "variosColores", "model", "popup"], function($, Handlebars, c, viewVC, m, vPopup) {
 	
 	function initialLoad() {
 		
@@ -21,8 +21,6 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
 
         $('#test').append(keyboard_shown?'keyboard ':'nokeyboard ');
     });
-    
-    	
 				
 		carrito = new c.Carrito();
 			$('#tejido').click(function() {
@@ -177,6 +175,53 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		  		
     	});	
     	
+    	$('.colores .aviso').hover( 
+    		
+    		function() {
+    		
+    			var html = "*Nota: Los colores de la pantalla son aproximados, comprobar con los reales en los puntos de venta."
+    			
+    			
+    			popupModel = new m.Popup();
+			  	popupModel.set("message", html);
+			  	
+			  	var popup = new vPopup();
+			  	popup.render();
+
+    		
+    		},
+    		function() {
+    			
+    			var popup = new vPopup();
+			  	popup.cerrarPopup();
+    			
+    		}
+    		
+    		
+    	);
+    	
+    	$('.hoverTotal').hover(
+    		function() {
+    		
+    			var html = "* Instalación no incluida <br />*Nota: Los colores de la pantalla son aproximados, comprobar con los reales en los puntos de venta."
+    			
+    			
+    			popupModel = new m.Popup();
+			  	popupModel.set("message", html);
+			  	
+			  	var popup = new vPopup();
+			  	popup.render();
+
+    		
+    		},
+    		function() {
+    			
+    			var popup = new vPopup();
+			  	popup.cerrarPopup();
+    			
+    		}
+    	);
+    	
      	$('.btnTexto').on("click", function(){ 
     		
     		var id = $(this).attr("dibujo");
@@ -196,7 +241,9 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores"], f
     		$('#textoObjeto').unbind("keyup");
     		$('#textoObjeto').on("keyup", function() {    			
     			var val = $(this).val();    
-   			
+    			
+    			console.log(simbolosArray[index]);
+    			
     			simbolosArray[index].setText(val); 
     			var precioActual = productoSelected.get("precioUnidad")*val.length;    			   			
     			productoSelected.set({precio: precioActual.toFixed(2), texto: val});

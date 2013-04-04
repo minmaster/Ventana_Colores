@@ -69,8 +69,11 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		viewObjetos = new v.ViewObjetos();
 		viewTejidos = new v.ViewTejidos();
 
-		
-		$('.popup-tejidos').fadeIn("300");
+		if (result.soporte.idSoporte == 8) {
+			
+		} else {
+			$('.popup-tejidos').fadeIn("300");
+		}
 	  
 	  	/// FORMATO CONTENIDO
 	  	$('.txt-nombre').text(result.soporte.nombre);

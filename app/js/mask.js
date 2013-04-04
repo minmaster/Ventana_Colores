@@ -2,11 +2,7 @@ function drawMask(dibujo, ctx) {
 	
 	if (dibujo == "2") {  
 		
- // capa1/Grupo
-      ctx.save();
 
-      // capa1/Grupo/Trazado
-      ctx.save();
       ctx.beginPath();
       ctx.moveTo(380.6, 15000.2);
       ctx.bezierCurveTo(380.6, 15000.2, 378.5, 15000.0, 374.9, 15000.6);
@@ -18,9 +14,7 @@ function drawMask(dibujo, ctx) {
 
       // capa1/Grupo/Grupo
 
-      // capa1/Grupo/Grupo/Trazado
-      ctx.save();
-      ctx.beginPath();
+       ctx.beginPath();
       ctx.moveTo(3537.3, 1297.6);
       ctx.lineTo(3524.7, 1464.8);
       ctx.lineTo(3506.0, 1553.9);
@@ -108,16 +102,13 @@ function drawMask(dibujo, ctx) {
       ctx.lineTo(188.0, 3223.2);
       ctx.lineTo(164.8, 1751.5);
       ctx.lineTo(0.0, 1751.5);
-      ctx.lineTo(0.0, 8557.0);
-      ctx.lineTo(8503.9, 8557.0);
-      ctx.lineTo(8503.9, 0.0);
+      ctx.lineTo(0.0, 15000.0);
+      ctx.lineTo(15000.9, 15000.0);
+      ctx.lineTo(15000.9, 0.0);
       ctx.lineTo(0.0, 0.0);
       ctx.closePath();
       ctx.fill();      
-      ctx.restore();
-      ctx.restore();
-      ctx.restore();
-		
+
 		
 		
 }
@@ -296,7 +287,6 @@ function drawMask(dibujo, ctx) {
 	if (dibujo == "8") {
 		
 		 // capa1/Trazado
-      ctx.save();
       ctx.beginPath();
       ctx.moveTo(7086.6, 0.0);
       ctx.lineTo(7086.6, 6519.7);
@@ -310,84 +300,322 @@ function drawMask(dibujo, ctx) {
       ctx.closePath();
       ctx.fillStyle = "rgb(239, 239, 239)";
       ctx.fill();
-      ctx.restore();
 	}
 	
 	if (dibujo == "6") {
 		
 		if (localStorage['vias'] == 3) {
 			
-			 // capa1/Trazado
-		      ctx.save();
-		      ctx.beginPath();
-		      ctx.moveTo(240.0, 0.0);
-		      ctx.lineTo(240.0, 250.0);
-		      ctx.lineTo(0.0, 250.0);
-		      ctx.lineTo(0.0, 720.0);
-		      ctx.lineTo(720.0, 720.0);
-		      ctx.lineTo(720.0, 0.0);
-		      ctx.lineTo(240.0, 0.0);
+		      
+		      // capa1/Grupo/Trazado
+			 ctx.beginPath();
+		      ctx.moveTo(6813.2, 1.0);
+		      ctx.lineTo(6813.2, 7086.6);
+		      ctx.lineTo(4545.4, 7086.6);
+		      ctx.lineTo(4545.4, 1.0);
+		      ctx.lineTo(4540.4, 1.0);
+		      ctx.lineTo(4540.4, 7086.6);
+		      ctx.lineTo(2272.7, 7086.6);
+		      ctx.lineTo(2272.7, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.lineTo(2267.7, 7087.6);
+		      ctx.lineTo(0.0, 7087.6);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 16384.0);
+		      ctx.lineTo(16383.0, 16384.0);
+		      ctx.lineTo(16383.0, 1.0);
+		      ctx.lineTo(6813.2, 1.0);
 		      ctx.closePath();
 		      ctx.fillStyle = "rgb(239, 239, 239)";
 		      ctx.fill();
-		      ctx.restore();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(2267.7, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(4540.4, 0.0);
+		      ctx.lineTo(2272.7, 0.0);
+		      ctx.lineTo(2272.7, 1.0);
+		      ctx.lineTo(4540.4, 1.0);
+		      ctx.lineTo(4540.4, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(6813.2, 0.0);
+		      ctx.lineTo(4545.4, 0.0);
+		      ctx.lineTo(4545.4, 1.0);
+		      ctx.lineTo(6813.2, 1.0);
+		      ctx.lineTo(6813.2, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		      
+		      
 			
 		}		
 		
 		if (localStorage['vias'] == 4) {
 			
-			 // capa1/Trazado
-		      ctx.save();
+
+		      
+		      
 		      ctx.beginPath();
-		      ctx.moveTo(320.0, 0.0);
-		      ctx.lineTo(320.0, 250.0);
-		      ctx.lineTo(0.0, 250.0);
-		      ctx.lineTo(0.0, 720.0);
-		      ctx.lineTo(720.0, 720.0);
-		      ctx.lineTo(720.0, 0.0);
-		      ctx.lineTo(320.0, 0.0);
-		      ctx.closePath();
-		      ctx.fillStyle = "rgb(239, 239, 239)";
-		      ctx.fill();
-		      ctx.restore();
+      ctx.moveTo(9082.9, 1.0);
+      ctx.lineTo(9082.9, 7086.6);
+      ctx.lineTo(6815.2, 7086.6);
+      ctx.lineTo(6815.2, 1.0);
+      ctx.lineTo(6813.2, 1.0);
+      ctx.lineTo(6813.2, 7086.6);
+      ctx.lineTo(4545.4, 7086.6);
+      ctx.lineTo(4545.4, 1.0);
+      ctx.lineTo(4540.4, 1.0);
+      ctx.lineTo(4540.4, 7086.6);
+      ctx.lineTo(2272.7, 7086.6);
+      ctx.lineTo(2272.7, 1.0);
+      ctx.lineTo(2267.7, 1.0);
+      ctx.lineTo(2267.7, 7087.6);
+      ctx.lineTo(0.0, 7087.6);
+      ctx.lineTo(0.0, 1.0);
+      ctx.lineTo(0.0, 1.0);
+      ctx.lineTo(0.0, 15133.1);
+      ctx.lineTo(22327.3, 15133.1);
+      ctx.lineTo(22327.3, 1.0);
+      ctx.lineTo(9082.9, 1.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(239, 239, 239)";
+      ctx.fill();
+
+      // capa1/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(2267.7, 1.0);
+      ctx.lineTo(0.0, 1.0);
+      ctx.lineTo(0.0, 1.0);
+      ctx.lineTo(2267.7, 1.0);
+      ctx.lineTo(2267.7, 1.0);
+      ctx.closePath();
+      ctx.fill();
+
+      // capa1/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(4540.4, 0.0);
+      ctx.lineTo(2272.7, 0.0);
+      ctx.lineTo(2272.7, 1.0);
+      ctx.lineTo(4540.4, 1.0);
+      ctx.lineTo(4540.4, 0.0);
+      ctx.closePath();
+      ctx.fill();
+
+      // capa1/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(6813.2, 0.0);
+      ctx.lineTo(4545.4, 0.0);
+      ctx.lineTo(4545.4, 1.0);
+      ctx.lineTo(6813.2, 1.0);
+      ctx.lineTo(6813.2, 0.0);
+      ctx.closePath();
+      ctx.fill();
+
+      // capa1/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(9082.9, 0.0);
+      ctx.lineTo(6815.2, 0.0);
+      ctx.lineTo(6815.2, 1.0);
+      ctx.lineTo(9082.9, 1.0);
+      ctx.lineTo(9082.9, 0.0);
+      ctx.closePath();
+      ctx.fill();
 			
 		}
 		
 		if (localStorage['vias'] == 5) {
 			
-			 // capa1/Trazado
-		      ctx.save();
-		      ctx.beginPath();
-		      ctx.moveTo(400.0, 0.0);
-		      ctx.lineTo(400.0, 250.0);
-		      ctx.lineTo(0.0, 250.0);
-		      ctx.lineTo(0.0, 720.0);
-		      ctx.lineTo(720.0, 720.0);
-		      ctx.lineTo(720.0, 0.0);
-		      ctx.lineTo(400.0, 0.0);
-		      ctx.closePath();
-		      ctx.fillStyle = "rgb(239, 239, 239)";
-		      ctx.fill();
-		      ctx.restore();
+		  ctx.beginPath();
+	      ctx.moveTo(11352.6, 1.0);
+	      ctx.lineTo(11352.6, 7086.6);
+	      ctx.lineTo(9084.9, 7086.6);
+	      ctx.lineTo(9084.9, 1.0);
+	      ctx.lineTo(9082.9, 1.0);
+	      ctx.lineTo(9082.9, 7086.6);
+	      ctx.lineTo(6815.2, 7086.6);
+	      ctx.lineTo(6815.2, 1.0);
+	      ctx.lineTo(6813.2, 1.0);
+	      ctx.lineTo(6813.2, 7086.6);
+	      ctx.lineTo(4545.4, 7086.6);
+	      ctx.lineTo(4545.4, 1.0);
+	      ctx.lineTo(4540.4, 1.0);
+	      ctx.lineTo(4540.4, 7086.6);
+	      ctx.lineTo(2272.7, 7086.6);
+	      ctx.lineTo(2272.7, 1.0);
+	      ctx.lineTo(2267.7, 1.0);
+	      ctx.lineTo(2267.7, 7087.6);
+	      ctx.lineTo(0.0, 7087.6);
+	      ctx.lineTo(0.0, 1.0);
+	      ctx.lineTo(0.0, 1.0);
+	      ctx.lineTo(0.0, 15133.1);
+	      ctx.lineTo(22327.3, 15133.1);
+	      ctx.lineTo(22327.3, 1.0);
+	      ctx.lineTo(11352.6, 1.0);
+	      ctx.closePath();
+	      ctx.fillStyle = "rgb(239, 239, 239)";
+	      ctx.fill();
+	
+	      // capa1/Grupo/Trazado
+	      ctx.beginPath();
+	      ctx.moveTo(2267.7, 1.0);
+	      ctx.lineTo(0.0, 1.0);
+	      ctx.lineTo(0.0, 1.0);
+	      ctx.lineTo(2267.7, 1.0);
+	      ctx.lineTo(2267.7, 1.0);
+	      ctx.closePath();
+	      ctx.fill();
+	
+	      // capa1/Grupo/Trazado
+	      ctx.beginPath();
+	      ctx.moveTo(4540.4, 0.0);
+	      ctx.lineTo(2272.7, 0.0);
+	      ctx.lineTo(2272.7, 1.0);
+	      ctx.lineTo(4540.4, 1.0);
+	      ctx.lineTo(4540.4, 0.0);
+	      ctx.closePath();
+	      ctx.fill();
+	
+	      // capa1/Grupo/Trazado
+	      ctx.beginPath();
+	      ctx.moveTo(6813.2, 0.0);
+	      ctx.lineTo(4545.4, 0.0);
+	      ctx.lineTo(4545.4, 1.0);
+	      ctx.lineTo(6813.2, 1.0);
+	      ctx.lineTo(6813.2, 0.0);
+	      ctx.closePath();
+	      ctx.fill();
+	
+	      // capa1/Grupo/Trazado
+	      ctx.beginPath();
+	      ctx.moveTo(9082.9, 0.0);
+	      ctx.lineTo(6815.2, 0.0);
+	      ctx.lineTo(6815.2, 1.0);
+	      ctx.lineTo(9082.9, 1.0);
+	      ctx.lineTo(9082.9, 0.0);
+	      ctx.closePath();
+	      ctx.fill();
+	
+	      // capa1/Grupo/Trazado
+	      ctx.beginPath();
+	      ctx.moveTo(11352.6, 0.0);
+	      ctx.lineTo(9084.9, 0.0);
+	      ctx.lineTo(9084.9, 1.0);
+	      ctx.lineTo(11352.6, 1.0);
+	      ctx.lineTo(11352.6, 0.0);
+	      ctx.closePath();
+	      ctx.fill();
 			
 		}
 		
 		if (localStorage['vias'] == 6) {
 			
-			 // capa1/Trazado
-		      ctx.save();
-		      ctx.beginPath();
-		      ctx.moveTo(480.0, 0.0);
-		      ctx.lineTo(480.0, 250.0);
-		      ctx.lineTo(0.0, 250.0);
-		      ctx.lineTo(0.0, 720.0);
-		      ctx.lineTo(720.0, 720.0);
-		      ctx.lineTo(720.0, 0.0);
-		      ctx.lineTo(480.0, 0.0);
+		 ctx.beginPath();
+		      ctx.moveTo(13624.3, 1.0);
+		      ctx.lineTo(13624.3, 7086.6);
+		      ctx.lineTo(11356.6, 7086.6);
+		      ctx.lineTo(11356.6, 1.0);
+		      ctx.lineTo(11352.6, 1.0);
+		      ctx.lineTo(11352.6, 7086.6);
+		      ctx.lineTo(9084.9, 7086.6);
+		      ctx.lineTo(9084.9, 1.0);
+		      ctx.lineTo(9082.9, 1.0);
+		      ctx.lineTo(9082.9, 7086.6);
+		      ctx.lineTo(6815.2, 7086.6);
+		      ctx.lineTo(6815.2, 1.0);
+		      ctx.lineTo(6813.2, 1.0);
+		      ctx.lineTo(6813.2, 7086.6);
+		      ctx.lineTo(4545.4, 7086.6);
+		      ctx.lineTo(4545.4, 1.0);
+		      ctx.lineTo(4540.4, 1.0);
+		      ctx.lineTo(4540.4, 7086.6);
+		      ctx.lineTo(2272.7, 7086.6);
+		      ctx.lineTo(2272.7, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.lineTo(2267.7, 7087.6);
+		      ctx.lineTo(0.0, 7087.6);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 15133.1);
+		      ctx.lineTo(22327.3, 15133.1);
+		      ctx.lineTo(22327.3, 1.0);
+		      ctx.lineTo(13624.3, 1.0);
 		      ctx.closePath();
 		      ctx.fillStyle = "rgb(239, 239, 239)";
 		      ctx.fill();
-		      ctx.restore();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(2267.7, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(0.0, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.lineTo(2267.7, 1.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(4540.4, 0.0);
+		      ctx.lineTo(2272.7, 0.0);
+		      ctx.lineTo(2272.7, 1.0);
+		      ctx.lineTo(4540.4, 1.0);
+		      ctx.lineTo(4540.4, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(6813.2, 0.0);
+		      ctx.lineTo(4545.4, 0.0);
+		      ctx.lineTo(4545.4, 1.0);
+		      ctx.lineTo(6813.2, 1.0);
+		      ctx.lineTo(6813.2, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(9082.9, 0.0);
+		      ctx.lineTo(6815.2, 0.0);
+		      ctx.lineTo(6815.2, 1.0);
+		      ctx.lineTo(9082.9, 1.0);
+		      ctx.lineTo(9082.9, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(11352.6, 0.0);
+		      ctx.lineTo(9084.9, 0.0);
+		      ctx.lineTo(9084.9, 1.0);
+		      ctx.lineTo(11352.6, 1.0);
+		      ctx.lineTo(11352.6, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
+		
+		      // capa1/Grupo/Trazado
+		      ctx.beginPath();
+		      ctx.moveTo(13624.3, 0.0);
+		      ctx.lineTo(11356.6, 0.0);
+		      ctx.lineTo(11356.6, 1.0);
+		      ctx.lineTo(13624.3, 1.0);
+		      ctx.lineTo(13624.3, 0.0);
+		      ctx.closePath();
+		      ctx.fill();
 			
 		}				
 		

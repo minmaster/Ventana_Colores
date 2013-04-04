@@ -589,13 +589,13 @@ textarea {
 		margin-top: 15px;
 	}	
 	
-	.main .sidebar-right .total {
+	.main .sidebar-right .precioTotal {
 		position:absolute;
 		bottom: 155px;
 		background: #dedede;
 		width: 100%;
 		font-weight: bold;
-		font-size: 13px;
+		font-size: 9px;
 		padding: 5px 0;
 		border-top: 1px solid #cecece;
 	}
@@ -644,13 +644,56 @@ textarea {
 		width: 30.7%;
 		border-left: 1px solid #bcbcbc;
 		padding: 0 10px;
-	}		
+	}	
 	
-	.main .sidebar-right .total span:first-child {
-		float:left;
+	.main .sidebar-right .iva { font-weight: bold; font-size: 9px;}	
+	.main .sidebar-right .totalIVA { font-weight: bold; font-size: 13px; }	
+	
+	.main .sidebar-right .total span:first-child, .main .sidebar-right .iva span:first-child, .main .sidebar-right .totalIVA span:first-child   {
+		 display:inline-table;
 		 width: 65%;
 		 padding: 0 10px;
+		 box-sizing: border-box;
+		 -webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
 	}
+	
+	
+	
+	.main .sidebar-right .total span:last-child, .main .sidebar-right .iva span:last-child {
+		width: 30%;
+		text-align:right;
+		display:inline-table;
+		box-sizing: border-box;
+		 -webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+	}
+	
+	.main .sidebar-right .totalIVA span:last-child {
+		width: 32%;
+		text-align:right;
+		display:inline-table;
+		box-sizing: border-box;
+		 -webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+	}	
+	
+	.main .sidebar-right .totalIVA span:first-child {
+		padding:0;
+	}
+	
+	.main .sidebar-right .precioTotal .text {
+		font-size: 9px;
+		color: #4f4f4f;
+		padding: 0 10px;
+	}
+		
+	
+	.main .sidebar-right .totalIVA {
+		border-top: 1px solid black;
+		margin: 0 10px;
+	}
+	
 	
 	.main .sidebar-right .seleccion .list {
 		position:absolute;
@@ -817,6 +860,13 @@ textarea {
 		padding: 10px 9px;
 	}
 	
+	.colores .aviso {
+		font-size: 9px;
+		color: #a70328;
+		background: url("../img/ico-warning.png") top right no-repeat;
+		cursor:pointer;		
+	}
+	
 	.colores li {
 		border: 1px solid #d8d8d8;
 		background: white;
@@ -839,7 +889,9 @@ textarea {
 		
 	}
 	
-	.coloresList { margin: 0 15px}
+	.coloresList { margin: 0 15px}	
+	.hoverTotal { cursor: pointer }
+	
 	
 	.main .field input, .main .field textarea {
 		-webkit-border-radius: 3px;
@@ -1092,23 +1144,25 @@ textarea {
 	
 	.main .center {
 		width: 100%;
-		margin: 20px 0 0 240px;
+		margin: 40px 0 0 240px;
 		height: 450px;
 		z-index: 0;
+		overflow:hidden;
 		position:relative;
 	}
+
 	
 	.main #escenario {
 		position:absolute;
-		top: 0;
-		left: 0;
+		top: 20px;
+		left: 30px;
 		z-index:2;
 	}
 	
 	.main #medidas {
 		position:absolute;
-		top: -20px;
-		left: -30px;
+		top: 0;
+		left: 0;
 		z-index:2;
 	}
 	
@@ -1265,6 +1319,10 @@ textarea {
 	.viasList li { display:inline-table; width: 40px; height: 100px; line-height: 100px; border: 1px solid black; text-indent: -9999px; cursor: pointer; }
 	.viasList li:hover { background: #F5F5F5; text-indent: 0;  }
 	.viasList li.active { background: #C2C8CC; text-indent: 0; color: white; }
+	
+	.info-grecas { display: none }
+	.info-grecas .info { font-size: 10px; }
+	.info-grecas .info a { color: black; text-decoration: underline }
 	
 	.popup-tejidos {
 		-webkit-border-radius: 5px;
@@ -1438,6 +1496,11 @@ textarea {
 		color: white;
 	}
 	
+	#popupVariosColores .zonas span:last-child {
+		background: #d8d8d8;
+	}
+	
+	
 	#popupVariosColores .zonas span.active {
 		background: #9A9A99;
 		color: white;
@@ -1496,8 +1559,7 @@ textarea {
 	.pagination .page_navigation .previous_link { font-weight: normal;  display:inline-table; background: url('../img/ico_prev.png') no-repeat; text-indent: -9999px; width: 11px; height: 12.5px; margin: 5px 0 0 5px; background-size: 11px 12.5px }
 	.pagination .page_navigation .next_link { font-weight: normal;  display:inline-table; background: url('../img/ico_next.png') no-repeat; text-indent: -9999px; width: 11px; height: 12.5px; margin: 5px 0 0 0; background-size: 11px 12.5px }
 
-	.menuObjetos { 
-		
+	.menuObjetos { 		
 		width: 100%;
 		height: 30px;
 		-webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
@@ -1506,6 +1568,21 @@ textarea {
 		visibility:hidden;
 		z-index: 2;
 		position:relative;
+	}
+	
+	.menuObjetos .btnErase {
+		background: url(../img/ico-delete.png) no-repeat;
+		padding: 0 0 0 20px;
+	}
+	
+	.menuObjetos .btnRotate {
+		background: url(../img/ico-rotate.png) no-repeat;
+		padding: 0 0 0 20px;
+	}
+	
+	.menuObjetos .btnColorear {
+		background: url(../img/ico-colores.png) no-repeat;
+		padding: 0 0 0 20px;		
 	}
 	
 	.menuObjetos .submenu {
@@ -1712,8 +1789,12 @@ and (max-device-width : 1024px) {
 }
   
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1024px) {
+	.main .center {
+		width: 550px;
+		height: 430px;
+		overflow:auto;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),

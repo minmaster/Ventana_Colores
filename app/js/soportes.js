@@ -1,4 +1,4 @@
-function draw(dibujo, ctx, mask) { 	
+function draw(dibujo, ctx, mask, via) { 	
 	
 	
 	
@@ -47,8 +47,6 @@ function draw(dibujo, ctx, mask) {
 	}
 	
 	if (dibujo == 3) {
- 	  	
-
 	  ctx.beginPath();
       ctx.moveTo(8503.9, 8503.9);
       ctx.lineTo(0.0, 8503.9);
@@ -56,9 +54,99 @@ function draw(dibujo, ctx, mask) {
       ctx.lineTo(8503.9, 0.0);
       ctx.lineTo(8503.9, 8503.9);
       ctx.closePath();
-      
-      
- 
+
+	}
+	
+	if (dibujo == 6) {
+		
+		console.log(via);
+
+	  if (via == 1) {
+
+	      ctx.beginPath();
+	      ctx.moveTo(2271.2, 7091.1);
+	      ctx.lineTo(3.5, 7091.1);
+	      ctx.lineTo(3.5, 4.5);
+	      ctx.lineTo(2271.2, 4.5);
+	      ctx.lineTo(2271.2, 7091.1);
+	      ctx.closePath();
+	      ctx.lineWidth = 7.0;
+	      ctx.stroke();
+
+
+
+
+
+
+
+
+      }
+
+	  if (via == 2) {
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(4543.9, 7090.1);
+      ctx.lineTo(2276.2, 7090.1);
+      ctx.lineTo(2276.2, 3.5);
+      ctx.lineTo(4543.9, 3.5);
+      ctx.lineTo(4543.9, 7090.1);
+      ctx.closePath();
+      ctx.lineWidth = 7.0;
+      ctx.stroke();
+	  }
+
+      if (via == 3) {
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(6816.7, 7090.1);
+      ctx.lineTo(4548.9, 7090.1);
+      ctx.lineTo(4548.9, 3.5);
+      ctx.lineTo(6816.7, 3.5);
+      ctx.lineTo(6816.7, 7090.1);
+      ctx.closePath();
+      ctx.lineWidth = 7.0;
+      ctx.stroke();
+
+      }
+
+      if (via == 4) {
+      ctx.beginPath();
+      ctx.moveTo(9086.4, 7090.1);
+      ctx.lineTo(6818.7, 7090.1);
+      ctx.lineTo(6818.7, 3.5);
+      ctx.lineTo(9086.4, 3.5);
+      ctx.lineTo(9086.4, 7090.1);
+      ctx.closePath();
+      ctx.lineWidth = 7.0;
+      ctx.stroke();
+      }
+
+      if (via == 5) {
+       ctx.beginPath();
+      ctx.moveTo(11356.1, 7090.1);
+      ctx.lineTo(9088.4, 7090.1);
+      ctx.lineTo(9088.4, 3.5);
+      ctx.lineTo(11356.1, 3.5);
+      ctx.lineTo(11356.1, 7090.1);
+      ctx.closePath();
+      ctx.lineWidth = 7.0;
+      ctx.stroke();
+      }
+
+      if (via == 6) {
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(13627.8, 7090.1);
+      ctx.lineTo(11360.1, 7090.1);
+      ctx.lineTo(11360.1, 3.5);
+      ctx.lineTo(13627.8, 3.5);
+      ctx.lineTo(13627.8, 7090.1);
+      ctx.closePath();
+      ctx.lineWidth = 7.0;
+      ctx.stroke();
+
+      }
+
 
 
 	}
@@ -86,6 +174,208 @@ function draw(dibujo, ctx, mask) {
       ctx.closePath();
 
 	}	
+	
+	if (dibujo == "vinilo") {
+
+
+ // capa1/Grupo/Grupo/Trazado
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(498.8, 6750.8);
+      ctx.lineTo(1.8, 7039.0);
+      ctx.lineWidth = 7.0;
+      ctx.strokeStyle = "rgb(87, 87, 87)";
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(757.2, 6750.8);
+      ctx.lineTo(31.6, 7198.1);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(1097.0, 6750.8);
+      ctx.lineTo(172.6, 7357.1);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(44.7, 6740.8);
+      ctx.lineTo(7140.5, 6740.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(1355.4, 6730.9);
+      ctx.lineTo(381.3, 7466.4);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(1663.6, 6740.8);
+      ctx.lineTo(818.7, 7486.3);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(2041.3, 6750.8);
+      ctx.lineTo(1285.9, 7476.4);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(2299.7, 6730.9);
+      ctx.lineTo(1683.5, 7456.5);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(2597.9, 6740.8);
+      ctx.lineTo(2140.7, 7466.4);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(2876.3, 6730.9);
+      ctx.lineTo(2548.2, 7446.6);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(3164.5, 6730.9);
+      ctx.lineTo(2975.6, 7446.6);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(3423.0, 6711.0);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(3423.0, 7486.3);
+      ctx.lineTo(3432.9, 6750.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(3896.3, 7484.7);
+      ctx.lineTo(3747.2, 6749.1);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(4290.1, 7486.6);
+      ctx.lineTo(4011.8, 6741.1);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(4705.2, 7456.5);
+      ctx.lineTo(4267.8, 6740.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(5112.7, 7456.5);
+      ctx.lineTo(4546.2, 6750.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(5540.1, 7466.4);
+      ctx.lineTo(4804.6, 6740.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(5967.6, 7466.4);
+      ctx.lineTo(5102.8, 6740.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(6424.8, 7486.3);
+      ctx.lineTo(5540.1, 6730.9);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(6920.2, 7462.7);
+      ctx.lineTo(5975.9, 6737.1);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(7126.8, 7333.5);
+      ctx.lineTo(6431.0, 6737.0);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(7130.6, 6979.4);
+      ctx.lineTo(6792.6, 6740.8);
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Trazado
+      ctx.restore();
+      ctx.beginPath();
+      ctx.moveTo(912.8, 6230.6);
+      ctx.bezierCurveTo(912.8, 6269.3, 881.4, 6300.8, 842.6, 6300.8);
+      ctx.lineTo(593.1, 6300.8);
+      ctx.bezierCurveTo(554.3, 6300.8, 522.9, 6269.3, 522.9, 6230.6);
+      ctx.lineTo(522.9, 5981.1);
+      ctx.bezierCurveTo(522.9, 5942.3, 554.3, 5910.9, 593.1, 5910.9);
+      ctx.lineTo(842.6, 5910.9);
+      ctx.bezierCurveTo(881.4, 5910.9, 912.8, 5942.3, 912.8, 5981.1);
+      ctx.lineTo(912.8, 6230.6);
+      ctx.closePath();
+      ctx.stroke();
+
+      // capa1/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(684.4, 6122.7);
+      ctx.bezierCurveTo(684.4, 6137.1, 672.7, 6148.8, 658.3, 6148.8);
+      ctx.bezierCurveTo(643.9, 6148.8, 632.2, 6137.1, 632.2, 6122.7);
+      ctx.bezierCurveTo(632.2, 6108.3, 643.9, 6096.6, 658.3, 6096.6);
+      ctx.bezierCurveTo(672.7, 6096.6, 684.4, 6108.3, 684.4, 6122.7);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(87, 87, 87)";
+      ctx.fill();
+
+      // capa1/Grupo/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(798.6, 6122.7);
+      ctx.bezierCurveTo(798.6, 6137.1, 786.9, 6148.8, 772.5, 6148.8);
+      ctx.bezierCurveTo(758.1, 6148.8, 746.5, 6137.1, 746.5, 6122.7);
+      ctx.bezierCurveTo(746.5, 6108.3, 758.1, 6096.6, 772.5, 6096.6);
+      ctx.bezierCurveTo(786.9, 6096.6, 798.6, 6108.3, 798.6, 6122.7);
+      ctx.closePath();
+      ctx.fill();
+
+      // capa1/Grupo/Trazado
+      ctx.restore();
+      ctx.beginPath();
+      ctx.moveTo(7095.2, 6525.6);
+      ctx.lineWidth = 7.0;
+      ctx.strokeStyle = "rgb(87, 87, 87)";
+      ctx.stroke();
+
+      // capa1/Grupo/Trazado
+      ctx.beginPath();
+      ctx.moveTo(146.7, 6525.6);
+      ctx.stroke();
+      ctx.restore();
+      ctx.restore();
+
+		
+		
+		
+	}
 	
 	if (dibujo == "enrollable") {
 		

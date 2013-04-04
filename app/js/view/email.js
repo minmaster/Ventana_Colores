@@ -23,7 +23,9 @@ var ViewEmail =  Backbone.View.extend({
 		
 		
 		var precio = {
-			total: $('#total').text()
+			total: $('#total').text(),
+			iva: $('#iva').text(),
+			totalIVA: $('#totalIVA').text()
 		}
 		
 		this.$el.attr("class", "init").css({"overflow": "auto"});
@@ -60,8 +62,6 @@ var ViewEmail =  Backbone.View.extend({
 			  		
 			  		popupModel = new m.Popup();
 			  		popupModel.set("message", result.mensaje);
-			  		
-			  		
 			  		new vPopup();
 			  	
 			  	}

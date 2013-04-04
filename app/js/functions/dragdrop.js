@@ -140,6 +140,8 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
         		
         		if (greca > 0) {
         			
+        			$('.info-grecas').css({"display":"block"});
+        			
         			if (greca == 1) {
         				var medida = width;
         			} else {
@@ -163,7 +165,6 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
 					var plantilla = Handlebars.compile(fuente);
 					var html = plantilla(context);
 					$('#list-grecas').append(html);	
-					
 					
 					$('#greca'+dibujo+' input.medidaGreca').spinner({
 				      step: 1,
@@ -228,10 +229,12 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
     			$('.menuObjetos span').attr("id", id);
         		$('.menuObjetos').css({"visibility":"visible"});
         		
-        		if (colores == "2") {
+        		if (colores > 1) {
 		    		$('.menuObjetos .btnColorear').parent().css({"display":"block"});
+		    		$('.menuObjetos .1color').css({"display":"none"});
 		    	} else {
 		    		$('.menuObjetos .btnColorear').parent().css({"display":"none"});
+		    		$('.menuObjetos .1color').css({"display":"block"});
 		    	}
 		    	       		
         				

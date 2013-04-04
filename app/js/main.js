@@ -26,6 +26,7 @@ var routeImage = "";
 var vias = localStorage['vias'];
 var indexObject = 0;
 var enrollable = null;
+var vinilo = null;
 var objetos, categorias, tejidos, carrito;
 var viaHover = 10;
 var soporteProducto;
@@ -40,6 +41,7 @@ var objetoSelected, productoSelected;
 var shapeColores;
 var menuPlay;
 var Slider;
+var IVA = 0.21;
 
 /**** CONFIG ***/
 var config =  {
@@ -229,7 +231,18 @@ function calcular_medida(ancho, alto) {
 	        },
 	        duration: 0.3
 	      });
-	}	
+	}
+	
+	if (vinilo != null) {
+		
+		vinilo.transitionTo({
+	        scale: {  
+	            x: scaleAnchoMin,
+	            y: scaleAltoMin
+	        },
+	        duration: 0.3
+	      });
+	}		
 	
 }
 
@@ -295,7 +308,11 @@ function drawVariosColores(dibujo, id, colores) {
     });
     
     var layerColores = new Kinetic.Layer();
-    var coloresFill = ["#000000", "#9A9A99"];
+    var coloresFill = ["#000000", "#9A9A99", "#d8d8d8"];
+    
+    console.log(coloresFill);
+    
+    
     var coloresActuales = productoSelected.get("coloresPintados");
  
 	if (coloresActuales[0]) {
@@ -310,11 +327,17 @@ function drawVariosColores(dibujo, id, colores) {
 		var color2 = coloresFill[1];
 	}
 	
+	if (coloresActuales[2]) {
+		var color3 = coloresActuales[2];
+	} else {
+		var color3 = coloresFill[2];
+	}	
+	
     	
     shapeColores = new Kinetic.Shape({
           	drawFunc: function(canvas) {          		
           		var ctxDibujo = canvas.getContext();   
-          		ctxDibujo = drawSymbolColores(dibujo, ctxDibujo, color1, color2);
+          		ctxDibujo = drawSymbolColores(dibujo, ctxDibujo, color1, color2, color3);
           		canvas.fillStroke(this);
 
           	}	    
@@ -339,26 +362,75 @@ function drawVariosColores(dibujo, id, colores) {
         	var coloresTextos = productoSelected.get("color");
         	var coloresActuales = productoSelected.get("coloresPintados");
         	
-        	if (coloresTextos[1]) {
+        	
+        	
+        	if (coloresTextos[2]) {
+        		var colortexto3 = coloresTextos[2];
+        	} else {
+        		var colortexto3 = "";
+        	}
+        	
+        	if (!coloresActuales[2]) { 
+	     		var color3 = coloresFill[2];
+	     	} else {
+	     		var color3 = coloresActuales[2];
+	     	}  
+	     	
+	     	if (coloresTextos[1]) {
         		var colortexto2 = coloresTextos[1];
         	} else {
         		var colortexto2 = "";
-        	}
+        	} 
  
 	     	if (!coloresActuales[1]) { 
 	     		var color2 = coloresFill[1];
 	     	} else {
 	     		var color2 = coloresActuales[1];
+	     	} 
+	     	
+	     	
+	     	    	
+	     	var colorestext = []
+	        var colores = []     
+	        colores.push("#"+colorVinilo, color2, color3);
+	        colorestext.push(colorId, colortexto2, colortexto3);
+	        productoSelected.set({coloresPintados: colores, color: colorestext}); 
+
+		}
+	    else if (id == 2) {
+
+			var coloresTextos = productoSelected.get("color");
+         	var coloresActuales = productoSelected.get("coloresPintados");
+         	
+         	if (coloresTextos[0]) {
+        		var colortexto1 = coloresTextos[0];
+        	} else {
+        		var colortexto1 = "";
+        	}
+        	
+        	if (coloresTextos[2]) {
+        		var colortexto3 = coloresTextos[2];
+        	} else {
+        		var colortexto3 = "";
+        	}
+        	
+        	if (!coloresActuales[2]) { 
+	     		var color3 = coloresFill[2];
+	     	} else {
+	     		var color3 = coloresActuales[2];
+	     	}        	
+
+	     	if (!coloresActuales[0]) { 
+	     		var color1 = coloresFill[0];
+	     	} else {
+	     		var color1 = coloresActuales[0];
 	     	}     	
 	     	var colorestext = []
 	        var colores = []     
-	        colores.push("#"+colorVinilo, color2);
-	        colorestext.push(colorId, colortexto2);
-	        productoSelected.set({coloresPintados: colores, color: colorestext}); 
-
-	        
-	  
-	        
+	        colores.push(color1, "#"+colorVinilo, color3);
+	        colorestext.push(colortexto1, colorId, colortexto3);
+	        productoSelected.set({coloresPintados: colores, color: colorestext}); 	    	
+	    	
      	
         } else {
 
@@ -375,11 +447,24 @@ function drawVariosColores(dibujo, id, colores) {
 	     		var color1 = coloresFill[0];
 	     	} else {
 	     		var color1 = coloresActuales[0];
-	     	}     	
+	     	} 
+	     	
+	     	if (coloresTextos[1]) {
+        		var colortexto2 = coloresTextos[1];
+        	} else {
+        		var colortexto2 = "";
+        	} 
+ 
+	     	if (!coloresActuales[1]) { 
+	     		var color2 = coloresFill[1];
+	     	} else {
+	     		var color2 = coloresActuales[1];
+	     	} 
+	     	    	
 	     	var colorestext = []
 	        var colores = []     
-	        colores.push(color1, "#"+colorVinilo);
-	        colorestext.push(colortexto1, colorId);
+	        colores.push(color1, color2, "#"+colorVinilo);
+	        colorestext.push(colortexto1, colortexto2, colorId);
 	        productoSelected.set({coloresPintados: colores, color: colorestext}); 
 	
      	}
@@ -387,7 +472,7 @@ function drawVariosColores(dibujo, id, colores) {
      	shapeColores = new Kinetic.Shape({
           	drawFunc: function(canvas) {          		
           		var ctxDibujo = canvas.getContext();   
-          		ctxDibujo = drawSymbolColores(dibujo, ctxDibujo, productoSelected.get("coloresPintados")[0], productoSelected.get("coloresPintados")[1]);
+          		ctxDibujo = drawSymbolColores(dibujo, ctxDibujo, productoSelected.get("coloresPintados")[0], productoSelected.get("coloresPintados")[1], productoSelected.get("coloresPintados")[2]);
           		canvas.fillStroke(this);
           	}	    
      	});
@@ -412,7 +497,7 @@ function drawVariosColores(dibujo, id, colores) {
      	simbolosArray[productoSelected.get("id")].remove();
      	layer.draw();
      	
-     	symbolStage(dibujo, productoSelected.get("id"), x, y, $('input#producto').val(), width, height, colores, false, productoSelected.get("coloresPintados")[0], productoSelected.get("coloresPintados")[1]);
+     	symbolStage(dibujo, productoSelected.get("id"), x, y, $('input#producto').val(), width, height, colores, false, productoSelected.get("coloresPintados")[0], productoSelected.get("coloresPintados")[1], productoSelected.get("coloresPintados")[2]);
         
         }
         
@@ -492,23 +577,34 @@ function drawObjeto(dibujo) {
       	var distanciaX = 0;
       	var x = 0;
       	var y = 0;
-      	var n = 1;
+      	var n = 0;
+      	
+      	console.log(localStorage['vias']);
       	
       	for (i = 1; i <= localStorage['vias']; i++) {
-      		n++;     		
+      		    		
       		x = y;
-      		y+= 80;
+      		y+= 100;
+      
+      	if (rect) rect == null;
+      	
+      	
       		
-      	var rect = new Kinetic.Rect({
-	        x: x,
-	        y: 0,
-	        width: 80,
-	        height: 250,
-	        fill: 'white',
-	        stroke: 'black',
-	        strokeWidth: 0.5
+      	var rect = new Kinetic.Shape({
+	        drawFunc: function(canvas) { 
+	        	
+	        	n++; 
+    	        var ctx = canvas.getContext();   	        	
+    	        ctx = draw(dibujo, ctx, false, n);   	          
+    	        canvas.fillStroke(this);
+    	        
+
+    	        },
+    	        opacity: 1,
+    	        fill: "#FFFFFF"
 	    });
       
+        rect.setScale(config.scaleObjetos);
         triangleCopy.add(rect);
         }
         
@@ -523,7 +619,7 @@ function drawObjeto(dibujo) {
     	    y: 0
           });
 
-        
+        mask.setScale(config.scaleObjetos);
       	layer.add(triangleCopy);
       	layer.add(mask);
 
@@ -560,6 +656,32 @@ function drawObjeto(dibujo) {
 
     	 layer.add(triangleCopy);  
     	 layer.add(mask);
+    	 
+    	 if (dibujo == "8") {
+    	 	
+     	 	 vinilo = new Kinetic.Shape({
+    			 drawFunc: function(canvas) {  
+    			 		var ctx = canvas.getContext();  	        	
+    	    	        ctx = draw("vinilo", ctx, false);
+    	   	          	canvas.fillStroke(this);
+    	    	        },
+    	    	        opacity: 1,
+    	    	        fill: "#FFFFFF",
+    	    	        x: 0,
+    	    	        y: 0,
+    	                shadow: {
+    	                    color: "black",
+    	                    blur: 10,
+    	                    offset: [0, 0],
+    	                    opacity: 0.1
+    	         }     			 
+    		 });
+    		 
+    		  vinilo.setScale(config.scaleObjetos);
+    		  
+    		  layer.add(vinilo);    	 	
+    	 	
+    	 }
     	 
     	 if (dibujo == "3") {
     	 	
@@ -640,6 +762,10 @@ function drawObjeto(dibujo) {
     	 	enrollable.moveToTop();
     	 }
     	 
+    	 if (vinilo) {
+    	 	vinilo.moveToTop();
+    	 }
+    	 
 	    	 
       } 
     	 
@@ -678,17 +804,13 @@ function Symbol(dibujo, maskSymbol, width, height) {
 }
 
 
-function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente, color1, color2) {
+function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente, color1, color2, color3) {
 
 	width = width*2;
 	height = height*2;
 	
 	var medWidth = width/2;
 	var medHeight = height/2;	
-	
-	console.log(x);
-	console.log(y);
-
 
 	if (fuente) {		
 		
@@ -710,9 +832,6 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
         draggable:true
       });
       
-      
-      
-      
       productoSelected = carrito.get(id);      
       var precio = productoSelected.get("precio");  
       var precioActual = precio*7;
@@ -727,7 +846,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 			simbolosArray[id] = new Kinetic.Shape({
 		  	        drawFunc: function(canvas) { 
 		  	        var ctx = canvas.getContext(); 
-		  	          ctx = drawSymbolColores(dibujo, ctx, color1, color2);        
+		  	          ctx = drawSymbolColores(dibujo, ctx, color1, color2, color3);        
 		  	          canvas.fillStroke(this);
 		  	        },
 		  	        id: id,
@@ -766,7 +885,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 	}
 
 	simbolosArray[id].setScale(config.scaleObjetos);
-		
+
     simbolosArray[id].on("touchstart mouseover", function(){
         document.body.style.cursor = "pointer"; 
         
@@ -792,10 +911,13 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
     	
     	var colores = this.attrs.colores;
     	var fuente = this.attrs.fuente;    	
-    	if (colores == "2") {
+    	
+    	if (colores > 1) {
     		$('.menuObjetos .btnColorear').parent().css({"display":"block"});
+    		$('.menuObjetos .1color').css({"display":"none"});
     	} else {
     		$('.menuObjetos .btnColorear').parent().css({"display":"none"});
+    		$('.menuObjetos .1color').css({"display":"block"});
     	}
     	
     	if (fuente) {
@@ -824,6 +946,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		 mask.moveToTop();
 		 
 		 if (enrollable) enrollable.moveToTop();
+		 if (vinilo) vinilo.moveToTop();
 
          layer.draw();
     	
@@ -841,6 +964,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		 mask.moveToTop();
 		 
 		 if (enrollable) enrollable.moveToTop();
+		 if (vinilo) vinilo.moveToTop();
 
          layer.draw();
       });
@@ -856,6 +980,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		 mask.moveToTop();
 		 
 		 if (enrollable) enrollable.moveToTop();
+		 if (vinilo) vinilo.moveToTop();
 
 		layer.draw();
          
@@ -891,6 +1016,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 	 mask.moveToTop();
 	 
 	 if (enrollable) enrollable.moveToTop();
+	 if (vinilo) vinilo.moveToTop();
 	 
      layer.draw();
      
@@ -1234,13 +1360,16 @@ function calcularTotal() {
 	
 	var value = 0;
 	
-	$('div.pvp:not(.nopvp)').each(function() {
-		
+	$('div.pvp:not(.nopvp)').each(function() {	
 		
 		value += parseFloat($("span", this).text());	
 	});
 	
-	$('#total').html(value.toFixed(2)+" €");
+	$('#total').html(value.toFixed(2)+" €");	
+	var cantidadIVA = value.toFixed(2)* IVA;	
+	$('#iva').html(cantidadIVA.toFixed(2)+" €");	
+	var cantidadTotal = value + cantidadIVA;	
+	$('#totalIVA').html(cantidadTotal.toFixed(2)+" €");
 	
 }
 
@@ -2114,7 +2243,9 @@ function slideContent(clase) {
 		animateWidth = 0;
 		$(clase).transition({ x: 0 });
 		$('.prev', carousel).hide();
-		$('.next', carousel).show();		
+		$('.next', carousel).show();	
+		
+		
 	})
 
 	
