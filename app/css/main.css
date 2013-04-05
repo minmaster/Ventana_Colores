@@ -1144,7 +1144,7 @@ textarea {
 	
 	.main .center {
 		width: 100%;
-		margin: 40px 0 0 240px;
+		margin: 20px 0 0 200px;
 		height: 450px;
 		z-index: 0;
 		overflow:hidden;
@@ -1572,17 +1572,22 @@ textarea {
 	
 	.menuObjetos .btnErase {
 		background: url(../img/ico-delete.png) no-repeat;
-		padding: 0 0 0 20px;
+		padding: 0 0 0 23px;
 	}
 	
 	.menuObjetos .btnRotate {
 		background: url(../img/ico-rotate.png) no-repeat;
-		padding: 0 0 0 20px;
+		padding: 0 0 0 23px;
 	}
 	
 	.menuObjetos .btnColorear {
 		background: url(../img/ico-colores.png) no-repeat;
-		padding: 0 0 0 20px;		
+		padding: 0 0 0 23px;		
+	}
+	
+	.menuObjetos .color {
+		background: url(../img/ico-color.png) no-repeat;
+		padding: 0 0 0 23px;		
 	}
 	
 	.menuObjetos .submenu {

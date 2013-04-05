@@ -91,7 +91,8 @@ require.config({
         	deps: ["jquery"],
         	exports: 'jqueryUI'
         }
-  }
+  },
+  waitSeconds: 200
 });
 
 require([ 
@@ -164,6 +165,8 @@ function calcular_medida(ancho, alto) {
       
     } else {  
     	
+    	
+    	
     	var distanciaX = 0;
       	var x = 0;
       	var y = 0;
@@ -173,13 +176,13 @@ function calcular_medida(ancho, alto) {
     		
     		n++;     		
       		x = y;
-      		y+= parseInt(ancho);
+      		y+= parseInt(scaleAnchoMin);
 
             		
 		   triangleCopy.getChildren()[i].transitionTo({
 		        scale: {  
-		            x: scaleAncho,
-		            y: scaleAlto
+		            x: scaleAnchoMin,
+		            y: scaleAltoMin
 		        },
 		         x: x,
 		         y: 0,		        
@@ -190,8 +193,8 @@ function calcular_medida(ancho, alto) {
 	    
 	    mask.transitionTo({
         scale: {  
-            x: scaleAncho,
-            y: scaleAlto
+            x: scaleAnchoMin,
+            y: scaleAnchoMin
         },
         duration: 0.3
       }); 	    
@@ -310,7 +313,6 @@ function drawVariosColores(dibujo, id, colores) {
     var layerColores = new Kinetic.Layer();
     var coloresFill = ["#000000", "#9A9A99", "#d8d8d8"];
     
-    console.log(coloresFill);
     
     
     var coloresActuales = productoSelected.get("coloresPintados");
@@ -549,7 +551,7 @@ function drawObjeto(dibujo) {
 	
     stage = new Kinetic.Stage({
         container: "escenario",
-        width: 720,
+        width: 1000,
         height:640
     });
     
@@ -579,7 +581,6 @@ function drawObjeto(dibujo) {
       	var y = 0;
       	var n = 0;
       	
-      	console.log(localStorage['vias']);
       	
       	for (i = 1; i <= localStorage['vias']; i++) {
       		    		
@@ -1493,10 +1494,12 @@ function redimensionar(type, val) {
 		      			
 		      			for (var i = 0; i < localStorage['vias']; i++) {
 		      			var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
+			  					
 						viaSoporte.set({ancho: val});
 						getPrecioVia(i);
 						}
+						
+						calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
 		      			
 		      			}		
 		
@@ -1514,10 +1517,12 @@ function redimensionar(type, val) {
 		           		
 		           		for (var i = 0; i < localStorage['vias']; i++) {
 		           		var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
+			  					
 						viaSoporte.set({alto: val});
 						getPrecioVia(i);
 						}
+						
+						calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
 		           		
 		           	}
 		

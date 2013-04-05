@@ -337,8 +337,7 @@ function drawMask(dibujo, ctx) {
 		      ctx.lineTo(0.0, 1.0);
 		      ctx.lineTo(2267.7, 1.0);
 		      ctx.lineTo(2267.7, 1.0);
-		      ctx.closePath();
-		      ctx.fill();
+
 		
 		      // capa1/Grupo/Trazado
 		      ctx.beginPath();
@@ -347,8 +346,7 @@ function drawMask(dibujo, ctx) {
 		      ctx.lineTo(2272.7, 1.0);
 		      ctx.lineTo(4540.4, 1.0);
 		      ctx.lineTo(4540.4, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
+
 		
 		      // capa1/Grupo/Trazado
 		      ctx.beginPath();
@@ -358,7 +356,6 @@ function drawMask(dibujo, ctx) {
 		      ctx.lineTo(6813.2, 1.0);
 		      ctx.lineTo(6813.2, 0.0);
 		      ctx.closePath();
-		      ctx.fill();
 		      
 		      
 			

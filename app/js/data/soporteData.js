@@ -130,13 +130,8 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      		
 		      	} else {
 		      		
-		      		for (var i = 0; i < localStorage['vias']; i++) {
-			  			var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
-						viaSoporte.set({ancho: $('.medida_estandar input[name="ancho"]').val()});
-						getPrecioVia(i);
-						
-			  		}
+			  		
+			  		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
 		      		
 		      	}
 		      	
