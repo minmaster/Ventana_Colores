@@ -1145,9 +1145,8 @@ textarea {
 	.main .center {
 		width: 100%;
 		margin: 20px 0 0 200px;
-		height: 450px;
+		height: 100%;
 		z-index: 0;
-		overflow:hidden;
 		position:relative;
 	}
 

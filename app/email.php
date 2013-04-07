@@ -9,9 +9,8 @@ $sunombre = $_POST['nombre'];
 $mensaje = $_POST['mensaje'];
 
 $datos = $_POST['datos'];
-$imagen = $_POST['image'];
 
-$body = "Mensaje: ".$mensaje."<br /><br />".$datos;
+$body = "Mensaje: ".$mensaje."<br /><br /><img src='http://ventanacolores.artdinamica.com/image.png' /><br /><br />".$datos;
 
 try {
   $mail->AddAddress($suemail, $sunombre);
@@ -20,7 +19,7 @@ try {
   $mail->Subject = 'Ventana de Colores - Presupuesto de Diseño';
   $mail->Body = $body;
   $mail->IsHTML(true);
-  $mail->AddAttachment($imagen);
+  //$mail->AddAttachment($imagen);
   $mail->Send();
   
   $datos = array("status" => true, "mensaje" => "Email enviado correctamente");

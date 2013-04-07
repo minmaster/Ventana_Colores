@@ -1,4 +1,4 @@
-define("email", ["underscore", "backbone", "jquery", "handlebars", "model", "view"], function(_, Backbone, $, Handlebars, m, v) {
+define("email", ["underscore", "backbone", "jquery", "handlebars", "model", "view", "popup"], function(_, Backbone, $, Handlebars, m, v, vPopup) {
 
 var imagePrint = null;
 /*** VIEW IMPRIMIR ***/
@@ -16,10 +16,6 @@ var ViewEmail =  Backbone.View.extend({
 		    mimeType: 'image/jpeg',
 		    quality: 0.9
 		});
-		
-		$.post("save.php", {data: imagePrint}, function (file) {
-        	//window.location.href =  "download.php?path="+ file
-        });
 		
 		
 		var precio = {
@@ -50,24 +46,34 @@ var ViewEmail =  Backbone.View.extend({
 		
 		if (validar_formulario(form, e)) {
 			
-			$.ajax({
-			  url: url+"email.php",
-			  type: "POST",
-		  	  data: form.serialize()+"&datos="+$('.listEmail').html()+"&image="+imagePrint,
-			  success: function(data) {
-			  	
-			  	var result = jQuery.parseJSON(data);
-			  	
-			  	if (result.status) {
-			  		
-			  		popupModel = new m.Popup();
-			  		popupModel.set("message", result.mensaje);
-			  		new vPopup();
-			  	
-			  	}
-			  	
-			  }
-			});
+					$.ajax({
+					  type: "POST",
+					  url: "save.php",
+					  data: {image: imagePrint}
+					}).done(function( respond ) {
+
+		
+			
+					$.ajax({
+					  url: url+"email.php",
+					  type: "POST",
+				  	  data: form.serialize()+"&datos="+$('.listEmail').html()+"&image="+imagePrint,
+					  success: function(data) {
+					  	
+					  	var result = jQuery.parseJSON(data);
+					  	
+					  	if (result.status) {
+					  		
+					  		popupModel = new m.Popup();
+					  		popupModel.set("message", result.mensaje);
+					  		new vPopup();
+					  	
+					  	}
+					  	
+					  }
+					});
+				
+				 });
 		} 
 		e.preventDefault();
 	},

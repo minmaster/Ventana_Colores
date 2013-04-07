@@ -5,6 +5,19 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		
 		getSoporteData: function(id) {
 			
+					/**** CONFIG ***/
+		if (localStorage['idSoporte'] == 6) {
+			config =  {
+				scaleObjetos: 0.05
+			}
+			
+		} else {
+			config =  {
+				scaleObjetos: 0.07
+			}
+			
+		}
+			
 			$.ajax({
 			  url: url+"selectSoporte.json",
 			  type: "POST",

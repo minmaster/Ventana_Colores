@@ -42,11 +42,11 @@ var shapeColores;
 var menuPlay;
 var Slider;
 var IVA = 0.21;
-
-/**** CONFIG ***/
 var config =  {
-	scaleObjetos: 0.07
-}
+		scaleObjetos: 0.07
+	}
+
+
 
 $(window).resize(function() {
 		calcularAltoScroll();
@@ -91,8 +91,7 @@ require.config({
         	deps: ["jquery"],
         	exports: 'jqueryUI'
         }
-  },
-  waitSeconds: 200
+  }
 });
 
 require([ 
@@ -165,8 +164,6 @@ function calcular_medida(ancho, alto) {
       
     } else {  
     	
-    	
-    	
     	var distanciaX = 0;
       	var x = 0;
       	var y = 0;
@@ -176,8 +173,7 @@ function calcular_medida(ancho, alto) {
     		
     		n++;     		
       		x = y;
-      		y+= parseInt(scaleAnchoMin);
-
+      		y+= cmToPixel(ancho) * config.scaleObjetos;
             		
 		   triangleCopy.getChildren()[i].transitionTo({
 		        scale: {  
@@ -194,7 +190,7 @@ function calcular_medida(ancho, alto) {
 	    mask.transitionTo({
         scale: {  
             x: scaleAnchoMin,
-            y: scaleAnchoMin
+            y: scaleAltoMin
         },
         duration: 0.3
       }); 	    
@@ -313,6 +309,7 @@ function drawVariosColores(dibujo, id, colores) {
     var layerColores = new Kinetic.Layer();
     var coloresFill = ["#000000", "#9A9A99", "#d8d8d8"];
     
+    console.log(coloresFill);
     
     
     var coloresActuales = productoSelected.get("coloresPintados");
@@ -526,8 +523,8 @@ function drawSoporteMedidas(dibujo) {
 	
 	var stageMedidas = new Kinetic.Stage({
         container: "medidas",
-        width: 820,
-        height:640
+        width: 1000,
+        height: 750
     });
     
     var layerMedidas = new Kinetic.Layer();
@@ -551,8 +548,8 @@ function drawObjeto(dibujo) {
 	
     stage = new Kinetic.Stage({
         container: "escenario",
-        width: 1000,
-        height:640
+        width: 900,
+        height:800
     });
     
     layer = new Kinetic.Layer();
@@ -579,33 +576,26 @@ function drawObjeto(dibujo) {
       	var distanciaX = 0;
       	var x = 0;
       	var y = 0;
-      	var n = 0;
+      	var n = 1;
       	
+      	var scale = (1/(config.scaleObjetos/100)) * 2268;
       	
       	for (i = 1; i <= localStorage['vias']; i++) {
-      		    		
+      		n++;     		
       		x = y;
-      		y+= 100;
-      
-      	if (rect) rect == null;
-      	
-      	
+      		y+= 2268 * config.scaleObjetos;
       		
-      	var rect = new Kinetic.Shape({
-	        drawFunc: function(canvas) { 
-	        	
-	        	n++; 
-    	        var ctx = canvas.getContext();   	        	
-    	        ctx = draw(dibujo, ctx, false, n);   	          
-    	        canvas.fillStroke(this);
-    	        
-
-    	        },
-    	        opacity: 1,
-    	        fill: "#FFFFFF"
+      	var rect = new Kinetic.Rect({
+	        x: x,
+	        y: 0,
+	        width: 2268,
+	        height: 7087,
+	        fill: 'white',
+	        stroke: 'black',
+	        strokeWidth: 10
 	    });
       
-        rect.setScale(config.scaleObjetos);
+      	rect.setScale(config.scaleObjetos);
         triangleCopy.add(rect);
         }
         
@@ -614,7 +604,6 @@ function drawObjeto(dibujo) {
           		var ctx = canvas.getContext(); 
           		ctx = drawMask(dibujo, ctx);
 				canvas.fillStroke(this);
-          		
           	},
           	x: 0,
     	    y: 0
@@ -948,7 +937,6 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		 
 		 if (enrollable) enrollable.moveToTop();
 		 if (vinilo) vinilo.moveToTop();
-
          layer.draw();
     	
     });
@@ -1494,12 +1482,10 @@ function redimensionar(type, val) {
 		      			
 		      			for (var i = 0; i < localStorage['vias']; i++) {
 		      			var viaSoporte = viasCarrito.at(i);		
-			  					
+			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
 						viaSoporte.set({ancho: val});
 						getPrecioVia(i);
 						}
-						
-						calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
 		      			
 		      			}		
 		
@@ -1517,12 +1503,10 @@ function redimensionar(type, val) {
 		           		
 		           		for (var i = 0; i < localStorage['vias']; i++) {
 		           		var viaSoporte = viasCarrito.at(i);		
-			  					
+			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
 						viaSoporte.set({alto: val});
 						getPrecioVia(i);
 						}
-						
-						calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
 		           		
 		           	}
 		
@@ -2248,9 +2232,7 @@ function slideContent(clase) {
 		animateWidth = 0;
 		$(clase).transition({ x: 0 });
 		$('.prev', carousel).hide();
-		$('.next', carousel).show();	
-		
-		
+		$('.next', carousel).show();		
 	})
 
 	
@@ -2291,7 +2273,17 @@ function slideContent(clase) {
 	
 }
 
-
+function cmToPixel(cm) {
+	
+	var dpi = 72;	
+	var value = dpi * cm / 2.54;
+	
+	console.log(value);
+	
+	return value;
+	
+	
+}
 
 
 

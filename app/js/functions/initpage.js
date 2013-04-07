@@ -13,7 +13,7 @@ define("initpage", ["jquery", "handlebars", "collection", "view"], function($, H
 			              {nombre:'Vinilos', codigo:'vinilos', id: 8, con_vias: false}]);
 			              
 			vias = new c.Vias();
-			vias.add([{nombre:'3 vías', via: 3},{nombre:'4 vías', via: 4},{nombre:'5 vías', via: 5},{nombre:'6 vías', via: 6}]);
+			vias.add([{nombre:'3 vías', via: 3},{nombre:'4 vías', via: 4},{nombre:'5 vías', via: 5}]);
 			
 			var viewSoporte = new v.ViewSoporte();
 				

@@ -114,8 +114,6 @@ function drawMask(dibujo, ctx) {
 }
 	if (dibujo == "1") {
 
-// capa1/Trazado compuesto
-      ctx.save();
       ctx.beginPath();
 
       // capa1/Trazado compuesto/Trazado
@@ -213,14 +211,13 @@ function drawMask(dibujo, ctx) {
       ctx.closePath();
       ctx.fillStyle = "rgb(239, 239, 239)";
       ctx.fill();
-      ctx.restore();
+
 
 	}
 	
 	if (dibujo == "4") {
 
      
-  	  ctx.save();
       ctx.beginPath();
 
       // capa1/Trazado compuesto/Trazado
@@ -240,7 +237,7 @@ function drawMask(dibujo, ctx) {
       ctx.closePath();
       ctx.fillStyle = "rgb(239, 239, 239)";
       ctx.fill();
-      ctx.restore();
+   
               
       
       	
@@ -248,8 +245,7 @@ function drawMask(dibujo, ctx) {
 	
 	if (dibujo == "3") {
 		
-// capa1/Trazado
-      ctx.save();
+
       ctx.beginPath();
       ctx.moveTo(0.0, 0.0);
       ctx.lineTo(0.0, 13.6);
@@ -280,7 +276,7 @@ function drawMask(dibujo, ctx) {
       ctx.closePath();
       ctx.fillStyle = "rgb(239, 239, 239)";
       ctx.fill();
-      ctx.restore();
+
 		
 	}
 	
@@ -302,324 +298,22 @@ function drawMask(dibujo, ctx) {
       ctx.fill();
 	}
 	
-	if (dibujo == "6") {
-		
-		if (localStorage['vias'] == 3) {
-			
-		      
-		      // capa1/Grupo/Trazado
-			 ctx.beginPath();
-		      ctx.moveTo(6813.2, 1.0);
-		      ctx.lineTo(6813.2, 7086.6);
-		      ctx.lineTo(4545.4, 7086.6);
-		      ctx.lineTo(4545.4, 1.0);
-		      ctx.lineTo(4540.4, 1.0);
-		      ctx.lineTo(4540.4, 7086.6);
-		      ctx.lineTo(2272.7, 7086.6);
-		      ctx.lineTo(2272.7, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-		      ctx.lineTo(2267.7, 7087.6);
-		      ctx.lineTo(0.0, 7087.6);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 16384.0);
-		      ctx.lineTo(16383.0, 16384.0);
-		      ctx.lineTo(16383.0, 1.0);
-		      ctx.lineTo(6813.2, 1.0);
+	if (dibujo == 6) {
+
+		var x = 2268 * localStorage['vias'];
+      
+		      ctx.beginPath();
+		      ctx.moveTo(x, 0.0);
+		      ctx.lineTo(x, 7087);
+		      ctx.lineTo(0.0, 7087);
+		      ctx.lineTo(0.0, 17061.0);
+		      ctx.lineTo(23321.0, 17061.0);
+		      ctx.lineTo(23321.0, 0.0);
+		      ctx.lineTo(x, 0.0);
 		      ctx.closePath();
 		      ctx.fillStyle = "rgb(239, 239, 239)";
 		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(2267.7, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(4540.4, 0.0);
-		      ctx.lineTo(2272.7, 0.0);
-		      ctx.lineTo(2272.7, 1.0);
-		      ctx.lineTo(4540.4, 1.0);
-		      ctx.lineTo(4540.4, 0.0);
-
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(6813.2, 0.0);
-		      ctx.lineTo(4545.4, 0.0);
-		      ctx.lineTo(4545.4, 1.0);
-		      ctx.lineTo(6813.2, 1.0);
-		      ctx.lineTo(6813.2, 0.0);
-		      ctx.closePath();
-		      
-		      
-			
-		}		
-		
-		if (localStorage['vias'] == 4) {
-			
-
-		      
-		      
-		      ctx.beginPath();
-      ctx.moveTo(9082.9, 1.0);
-      ctx.lineTo(9082.9, 7086.6);
-      ctx.lineTo(6815.2, 7086.6);
-      ctx.lineTo(6815.2, 1.0);
-      ctx.lineTo(6813.2, 1.0);
-      ctx.lineTo(6813.2, 7086.6);
-      ctx.lineTo(4545.4, 7086.6);
-      ctx.lineTo(4545.4, 1.0);
-      ctx.lineTo(4540.4, 1.0);
-      ctx.lineTo(4540.4, 7086.6);
-      ctx.lineTo(2272.7, 7086.6);
-      ctx.lineTo(2272.7, 1.0);
-      ctx.lineTo(2267.7, 1.0);
-      ctx.lineTo(2267.7, 7087.6);
-      ctx.lineTo(0.0, 7087.6);
-      ctx.lineTo(0.0, 1.0);
-      ctx.lineTo(0.0, 1.0);
-      ctx.lineTo(0.0, 15133.1);
-      ctx.lineTo(22327.3, 15133.1);
-      ctx.lineTo(22327.3, 1.0);
-      ctx.lineTo(9082.9, 1.0);
-      ctx.closePath();
-      ctx.fillStyle = "rgb(239, 239, 239)";
-      ctx.fill();
-
-      // capa1/Grupo/Trazado
-      ctx.beginPath();
-      ctx.moveTo(2267.7, 1.0);
-      ctx.lineTo(0.0, 1.0);
-      ctx.lineTo(0.0, 1.0);
-      ctx.lineTo(2267.7, 1.0);
-      ctx.lineTo(2267.7, 1.0);
-      ctx.closePath();
-      ctx.fill();
-
-      // capa1/Grupo/Trazado
-      ctx.beginPath();
-      ctx.moveTo(4540.4, 0.0);
-      ctx.lineTo(2272.7, 0.0);
-      ctx.lineTo(2272.7, 1.0);
-      ctx.lineTo(4540.4, 1.0);
-      ctx.lineTo(4540.4, 0.0);
-      ctx.closePath();
-      ctx.fill();
-
-      // capa1/Grupo/Trazado
-      ctx.beginPath();
-      ctx.moveTo(6813.2, 0.0);
-      ctx.lineTo(4545.4, 0.0);
-      ctx.lineTo(4545.4, 1.0);
-      ctx.lineTo(6813.2, 1.0);
-      ctx.lineTo(6813.2, 0.0);
-      ctx.closePath();
-      ctx.fill();
-
-      // capa1/Grupo/Trazado
-      ctx.beginPath();
-      ctx.moveTo(9082.9, 0.0);
-      ctx.lineTo(6815.2, 0.0);
-      ctx.lineTo(6815.2, 1.0);
-      ctx.lineTo(9082.9, 1.0);
-      ctx.lineTo(9082.9, 0.0);
-      ctx.closePath();
-      ctx.fill();
-			
-		}
-		
-		if (localStorage['vias'] == 5) {
-			
-		  ctx.beginPath();
-	      ctx.moveTo(11352.6, 1.0);
-	      ctx.lineTo(11352.6, 7086.6);
-	      ctx.lineTo(9084.9, 7086.6);
-	      ctx.lineTo(9084.9, 1.0);
-	      ctx.lineTo(9082.9, 1.0);
-	      ctx.lineTo(9082.9, 7086.6);
-	      ctx.lineTo(6815.2, 7086.6);
-	      ctx.lineTo(6815.2, 1.0);
-	      ctx.lineTo(6813.2, 1.0);
-	      ctx.lineTo(6813.2, 7086.6);
-	      ctx.lineTo(4545.4, 7086.6);
-	      ctx.lineTo(4545.4, 1.0);
-	      ctx.lineTo(4540.4, 1.0);
-	      ctx.lineTo(4540.4, 7086.6);
-	      ctx.lineTo(2272.7, 7086.6);
-	      ctx.lineTo(2272.7, 1.0);
-	      ctx.lineTo(2267.7, 1.0);
-	      ctx.lineTo(2267.7, 7087.6);
-	      ctx.lineTo(0.0, 7087.6);
-	      ctx.lineTo(0.0, 1.0);
-	      ctx.lineTo(0.0, 1.0);
-	      ctx.lineTo(0.0, 15133.1);
-	      ctx.lineTo(22327.3, 15133.1);
-	      ctx.lineTo(22327.3, 1.0);
-	      ctx.lineTo(11352.6, 1.0);
-	      ctx.closePath();
-	      ctx.fillStyle = "rgb(239, 239, 239)";
-	      ctx.fill();
-	
-	      // capa1/Grupo/Trazado
-	      ctx.beginPath();
-	      ctx.moveTo(2267.7, 1.0);
-	      ctx.lineTo(0.0, 1.0);
-	      ctx.lineTo(0.0, 1.0);
-	      ctx.lineTo(2267.7, 1.0);
-	      ctx.lineTo(2267.7, 1.0);
-	      ctx.closePath();
-	      ctx.fill();
-	
-	      // capa1/Grupo/Trazado
-	      ctx.beginPath();
-	      ctx.moveTo(4540.4, 0.0);
-	      ctx.lineTo(2272.7, 0.0);
-	      ctx.lineTo(2272.7, 1.0);
-	      ctx.lineTo(4540.4, 1.0);
-	      ctx.lineTo(4540.4, 0.0);
-	      ctx.closePath();
-	      ctx.fill();
-	
-	      // capa1/Grupo/Trazado
-	      ctx.beginPath();
-	      ctx.moveTo(6813.2, 0.0);
-	      ctx.lineTo(4545.4, 0.0);
-	      ctx.lineTo(4545.4, 1.0);
-	      ctx.lineTo(6813.2, 1.0);
-	      ctx.lineTo(6813.2, 0.0);
-	      ctx.closePath();
-	      ctx.fill();
-	
-	      // capa1/Grupo/Trazado
-	      ctx.beginPath();
-	      ctx.moveTo(9082.9, 0.0);
-	      ctx.lineTo(6815.2, 0.0);
-	      ctx.lineTo(6815.2, 1.0);
-	      ctx.lineTo(9082.9, 1.0);
-	      ctx.lineTo(9082.9, 0.0);
-	      ctx.closePath();
-	      ctx.fill();
-	
-	      // capa1/Grupo/Trazado
-	      ctx.beginPath();
-	      ctx.moveTo(11352.6, 0.0);
-	      ctx.lineTo(9084.9, 0.0);
-	      ctx.lineTo(9084.9, 1.0);
-	      ctx.lineTo(11352.6, 1.0);
-	      ctx.lineTo(11352.6, 0.0);
-	      ctx.closePath();
-	      ctx.fill();
-			
-		}
-		
-		if (localStorage['vias'] == 6) {
-			
-		 ctx.beginPath();
-		      ctx.moveTo(13624.3, 1.0);
-		      ctx.lineTo(13624.3, 7086.6);
-		      ctx.lineTo(11356.6, 7086.6);
-		      ctx.lineTo(11356.6, 1.0);
-		      ctx.lineTo(11352.6, 1.0);
-		      ctx.lineTo(11352.6, 7086.6);
-		      ctx.lineTo(9084.9, 7086.6);
-		      ctx.lineTo(9084.9, 1.0);
-		      ctx.lineTo(9082.9, 1.0);
-		      ctx.lineTo(9082.9, 7086.6);
-		      ctx.lineTo(6815.2, 7086.6);
-		      ctx.lineTo(6815.2, 1.0);
-		      ctx.lineTo(6813.2, 1.0);
-		      ctx.lineTo(6813.2, 7086.6);
-		      ctx.lineTo(4545.4, 7086.6);
-		      ctx.lineTo(4545.4, 1.0);
-		      ctx.lineTo(4540.4, 1.0);
-		      ctx.lineTo(4540.4, 7086.6);
-		      ctx.lineTo(2272.7, 7086.6);
-		      ctx.lineTo(2272.7, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-		      ctx.lineTo(2267.7, 7087.6);
-		      ctx.lineTo(0.0, 7087.6);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 15133.1);
-		      ctx.lineTo(22327.3, 15133.1);
-		      ctx.lineTo(22327.3, 1.0);
-		      ctx.lineTo(13624.3, 1.0);
-		      ctx.closePath();
-		      ctx.fillStyle = "rgb(239, 239, 239)";
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(2267.7, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(0.0, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-		      ctx.lineTo(2267.7, 1.0);
-		      ctx.closePath();
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(4540.4, 0.0);
-		      ctx.lineTo(2272.7, 0.0);
-		      ctx.lineTo(2272.7, 1.0);
-		      ctx.lineTo(4540.4, 1.0);
-		      ctx.lineTo(4540.4, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(6813.2, 0.0);
-		      ctx.lineTo(4545.4, 0.0);
-		      ctx.lineTo(4545.4, 1.0);
-		      ctx.lineTo(6813.2, 1.0);
-		      ctx.lineTo(6813.2, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(9082.9, 0.0);
-		      ctx.lineTo(6815.2, 0.0);
-		      ctx.lineTo(6815.2, 1.0);
-		      ctx.lineTo(9082.9, 1.0);
-		      ctx.lineTo(9082.9, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(11352.6, 0.0);
-		      ctx.lineTo(9084.9, 0.0);
-		      ctx.lineTo(9084.9, 1.0);
-		      ctx.lineTo(11352.6, 1.0);
-		      ctx.lineTo(11352.6, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
-		
-		      // capa1/Grupo/Trazado
-		      ctx.beginPath();
-		      ctx.moveTo(13624.3, 0.0);
-		      ctx.lineTo(11356.6, 0.0);
-		      ctx.lineTo(11356.6, 1.0);
-		      ctx.lineTo(13624.3, 1.0);
-		      ctx.lineTo(13624.3, 0.0);
-		      ctx.closePath();
-		      ctx.fill();
-			
-		}				
-		
-		
-		
-	
-	}	
+	}
 
 	
 	

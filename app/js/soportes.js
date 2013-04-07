@@ -58,8 +58,6 @@ function draw(dibujo, ctx, mask, via) {
 	}
 	
 	if (dibujo == 6) {
-		
-		console.log(via);
 
 	  if (via == 1) {
 
@@ -72,13 +70,6 @@ function draw(dibujo, ctx, mask, via) {
 	      ctx.closePath();
 	      ctx.lineWidth = 7.0;
 	      ctx.stroke();
-
-
-
-
-
-
-
 
       }
 

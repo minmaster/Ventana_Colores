@@ -16,7 +16,6 @@ var ViewImprimir =  Backbone.View.extend({
 		    quality: 0.9
 		});
 		
-		
 		var precio = {
 			total: $('#total').text(),
 			iva: $('#iva').text(),

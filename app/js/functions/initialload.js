@@ -2,6 +2,8 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
 	
 	function initialLoad() {
 		
+
+		
 		calcularAltoScroll();
 		
 		$('.main .center').on("click", function() {			
@@ -124,7 +126,6 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		
     		var id = $(this).attr("id");
     		productoSelected = carrito.get(id); 
-			console.log(productoSelected);
 			
     		if (Slider) $('#sliderRotar').slider("destroy");    		
     		Slider = $('#sliderRotar').slider({
@@ -241,8 +242,6 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		$('#textoObjeto').unbind("keyup");
     		$('#textoObjeto').on("keyup", function() {    			
     			var val = $(this).val();    
-    			
-    			console.log(simbolosArray[index]);
     			
     			simbolosArray[index].setText(val); 
     			var precioActual = productoSelected.get("precioUnidad")*val.length;    			   			

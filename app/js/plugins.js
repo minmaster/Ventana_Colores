@@ -988,9 +988,7 @@ $.event.setupHelper( [
 					ftv < totalSpace - visibleSpace ? this._toggleControls( 'next', true ) : this._toggleControls( 'next', false );
 						
 				}
-				
-				console.log(translation);
-				console.log(amount);
+
 
 				
 				tvalue = dir === 'next' ? translation - amount : translation + amount;
