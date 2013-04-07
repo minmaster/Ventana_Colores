@@ -795,9 +795,17 @@ function Symbol(dibujo, maskSymbol, width, height) {
 
 
 function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente, color1, color2, color3) {
-
+	
+	var widthOriginal = width;
+	var heightOriginal = height;
+	
+	console.log(widthOriginal);
+	console.log(heightOriginal);
+	
 	width = width*2;
 	height = height*2;
+	
+	
 	
 	var medWidth = width/2;
 	var medHeight = height/2;	
@@ -833,27 +841,58 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		
 		if (color1) {
 			
-			simbolosArray[id] = new Kinetic.Shape({
+			console.log("pasa");
+			
+			simbolosArray[id] = new Kinetic.Group({
+				x: x,
+				y: y,
+				id: id,
+		  	    width: widthOriginal,
+		  	    height: heightOriginal,
+		  	    colores: colores,
+		  	    dibujo: dibujo,
+				draggable:true
+			});	
+					
+			var shape = new Kinetic.Shape({
 		  	        drawFunc: function(canvas) { 
 		  	        var ctx = canvas.getContext(); 
 		  	          ctx = drawSymbolColores(dibujo, ctx, color1, color2, color3);        
 		  	          canvas.fillStroke(this);
 		  	        },
 		  	        id: id,
-		  	        x: x,
-		  	        y: y,
-		  	        width: width,
-		  	        height: height,
-		  	        offset: [90, 150],
+		  	        width: widthOriginal,
+		  	        height: heightOriginal,
 		  	        colores: colores,
 		  	        dibujo: dibujo,
-		  	        fuente: false,
-					draggable:true
+		  	        fuente: false
 			});
 			
-		} else {
+			var rect = new Kinetic.Rect({
+		        width: cmToPixel(widthOriginal),
+		        height: cmToPixel(heightOriginal),
+		        stroke: 'red',
+		        strokeWidth: 10,
+		        opacity:0			
+			});
 			
-			simbolosArray[id] = new Kinetic.Shape({
+
+			
+			simbolosArray[id].add(shape);
+			simbolosArray[id].add(rect);
+			
+		} else {
+			simbolosArray[id] = new Kinetic.Group({
+				x: x,
+				y: y,
+		  	    width: widthOriginal,
+		  	    height: heightOriginal,
+		  	    colores: colores,
+		  	    dibujo: dibujo,				
+				draggable:true
+			});	
+					
+			var shape = new Kinetic.Shape({
 		  	        drawFunc: function(canvas) { 
 		  	        var ctx = canvas.getContext(); 
 		  	          ctx = drawSymbol(dibujo, ctx);          
@@ -861,16 +900,26 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 		  	        },
 		  	        fill: "#000000",
 		  	        id: id,
-		  	        x: x,
-		  	        y: y,
-		  	        width: width,
-		  	        height: height,
-		  	        offset: [90, 150],
+		  	        width: widthOriginal,
+		  	        height: heightOriginal,
 		  	        colores: colores,
 		  	        dibujo: dibujo,
-		  	        fuente: false,
-					draggable:true
+		  	        fuente: false
 			});
+			
+			
+			var rect = new Kinetic.Rect({
+		        width: cmToPixel(widthOriginal),
+		        height: cmToPixel(heightOriginal),
+		        stroke: 'red',
+		        strokeWidth: 10,
+		        opacity:0			
+			});
+			
+			
+			simbolosArray[id].add(shape);
+			simbolosArray[id].add(rect);
+			
 		}
 	}
 
@@ -878,9 +927,10 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 
     simbolosArray[id].on("touchstart mouseover", function(){
         document.body.style.cursor = "pointer"; 
+        simbolosArray[id].getChildren()[1].setOpacity(1);
         
         if (stopVinilo) { 
-        simbolosArray[id].setFill("#"+colorVinilo);
+        simbolosArray[id].getChildren()[0].setFill("#"+colorVinilo);
         
         productoSelected = carrito.get(id);	
         var colores = [];        
@@ -899,8 +949,9 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
     
     simbolosArray[id].on("click touchstart", function(){
     	
-    	var colores = this.attrs.colores;
-    	var fuente = this.attrs.fuente;    	
+    	var colores = this.getChildren()[0].attrs.colores;
+    	var fuente = this.getChildren()[0].attrs.fuente; 
+    	simbolosArray[id].getChildren()[1].setOpacity(1);   	
     	
     	if (colores > 1) {
     		$('.menuObjetos .btnColorear').parent().css({"display":"block"});
@@ -961,6 +1012,8 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
     simbolosArray[id].on("dragend", function() {
          this.moveToTop();
          
+         simbolosArray[id].getChildren()[1].setOpacity(0);   
+         
          if (objeto1) {
          objeto1.moveToTop();
     	 objeto2.moveToTop();
@@ -977,6 +1030,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
       
     simbolosArray[id].on("mouseover", function(){
         document.body.style.cursor = "pointer"; 
+        simbolosArray[id].getChildren()[1].setOpacity(1);
         
         $('.pd#'+id).addClass("active");
         
@@ -984,13 +1038,15 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 
     
     simbolosArray[id].on("mouseout", function(){
-        document.body.style.cursor = "default";        
+        document.body.style.cursor = "default";  
+        simbolosArray[id].getChildren()[1].setOpacity(0);
+              
         idVinilo = null;
          $('.pd#'+id).removeClass("active");
         
         if (!stopVinilo) {        	
-        var fill =  simbolosArray[id].getFill();	
-        simbolosArray[id].setFill(fill);  
+        var fill =  simbolosArray[id].getChildren()[0].getFill();	
+        simbolosArray[id].getChildren()[0].setFill(fill);  
         }        
         layer.draw();  
     });	
@@ -1375,7 +1431,7 @@ function calcularAltoScroll () {
 	
 	var windowHeight = $(window).height();
 	
-	$('.seleccion').css({ "height": windowHeight - 230 });
+	$('.seleccion').css({ "height": windowHeight - 260 });
 	
 }
 

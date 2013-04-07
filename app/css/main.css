@@ -455,7 +455,7 @@ textarea {
 		top: 50%;
 		left: 50%;
 		margin-top: -150px;
-		margin-left: -400px;
+		margin-left: -300px;
 	}	
 	
 	.subelem {
@@ -1788,6 +1788,12 @@ and (max-device-width : 1024px) {
 	.main .sidebar-right .seleccion {
 		height: 600px !important;
 	}
+	
+	.main .center {
+		width: 550px;
+		height: 430px;
+		overflow:auto;
+	}	
  	
   
 }
