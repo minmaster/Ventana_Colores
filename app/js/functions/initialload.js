@@ -176,12 +176,11 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		  		
     	});	
     	
-    	$('.colores .aviso').hover( 
+    	$('.aviso_colores').hover( 
     		
     		function() {
     		
-    			var html = "*Nota: Los colores de la pantalla son aproximados, comprobar con los reales en los puntos de venta."
-    			
+    			var html = "*Nota: Los colores de la pantalla son aproximados, comprobar con los reales en los puntos de venta.";    			
     			
     			popupModel = new m.Popup();
 			  	popupModel.set("message", html);

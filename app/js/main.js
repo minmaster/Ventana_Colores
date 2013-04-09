@@ -20,7 +20,7 @@ var colorVinilo = null;
 var colorId = null;
 var stopVinilo = false;
 var idVinilo = null;
-var sessionSecurity = "6216f8a75fd5bb3d5f22b6f9958cdede3fc086c22955662957";
+var sessionSecurity = "";
 var url = 'http://ventanacolores.artdinamica.com/';
 var routeImage = "";
 var vias = localStorage['vias'];
@@ -45,7 +45,6 @@ var IVA = 0.21;
 var config =  {
 		scaleObjetos: 0.07
 	}
-
 
 
 $(window).resize(function() {
@@ -111,13 +110,10 @@ require([
 		 "medidas",
 		 "colores",
 		 "mask"], function(domReady, Handlebars, $, ui, transit, Kinetic, Modernizr, Plugins, m, c, r) {
-		 
+		 	
 	 	domReady(function () {
-
-
 			appRouter = new r.AppRouter(); 
-			Backbone.history.start();
-			
+			Backbone.history.start();			
 	 	});
 });
 
@@ -128,18 +124,27 @@ require([
 
 function calcular_medida(ancho, alto) {
 
-	var anchoDefault = parseFloat($("input[name='anchoDefault']").val());
-	var altoDefault = parseFloat($("input[name='altoDefault']").val());
+	if (localStorage["idSoporte"] != 6) {
+		var anchoDefault = parseFloat($("input[name='anchoDefault']").val());
+		var altoDefault = parseFloat($("input[name='altoDefault']").val());
+	} else {
+		var anchoDefault = parseFloat($("input[name='anchoDefault']").val()/localStorage["vias"]);
+		var altoDefault = parseFloat($("input[name='altoDefault']").val());		
+	}
+
+	
+	
 	var anchoMinimo = parseFloat($('#anchoMinimo').val());
 	var altoMinimo = parseFloat($('#altoMinimo').val());
 	var anchoMaximo = parseFloat($('#anchoMaximo').val());
-	var altoMaximo = parseFloat($('#altooMaximo').val());
+	var altoMaximo = parseFloat($('#altoMaximo').val());
 	var diferenciaAncho = ancho - anchoDefault;	
 	var scaleAncho = diferenciaAncho/anchoDefault+1;
 	var diferenciaAlto = alto - altoDefault;	
 	var scaleAlto = diferenciaAlto/altoDefault+1;
 	var scaleAnchoMin = (scaleAncho * config.scaleObjetos) / 1;
 	var scaleAltoMin = (scaleAlto * config.scaleObjetos) / 1;
+
 	
 	stage.clear();
 
@@ -307,11 +312,7 @@ function drawVariosColores(dibujo, id, colores) {
     });
     
     var layerColores = new Kinetic.Layer();
-    var coloresFill = ["#000000", "#9A9A99", "#d8d8d8"];
-    
-    console.log(coloresFill);
-    
-    
+    var coloresFill = ["#000000", "#9A9A99", "#d8d8d8"];    
     var coloresActuales = productoSelected.get("coloresPintados");
  
 	if (coloresActuales[0]) {
@@ -386,8 +387,6 @@ function drawVariosColores(dibujo, id, colores) {
 	     	} else {
 	     		var color2 = coloresActuales[1];
 	     	} 
-	     	
-	     	
 	     	    	
 	     	var colorestext = []
 	        var colores = []     
@@ -799,9 +798,6 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 	var widthOriginal = width;
 	var heightOriginal = height;
 	
-	console.log(widthOriginal);
-	console.log(heightOriginal);
-	
 	width = width*2;
 	height = height*2;
 	
@@ -840,8 +836,7 @@ function symbolStage(dibujo, id, x, y, producto, width, height, colores, fuente,
 	} else {
 		
 		if (color1) {
-			
-			console.log("pasa");
+
 			
 			simbolosArray[id] = new Kinetic.Group({
 				x: x,
@@ -1306,19 +1301,19 @@ function draw(dibujo, ctx, mask) {
 }
 
 
-
-
-
-
-
-
 //// FUNCTION GET PRECIO SOPORTE
 function getPrecioSoporte() {
 	
 	var idSoporte = $('#productoId').val();
 	var idTejido = $('#tejidoId').val();
-	var ancho = $('input[name="ancho"]').val();
-	var alto = $('input[name="alto"]').val();
+	
+	if (localStorage['idSoporte'] != 6) {
+		var ancho = $('input[name="ancho"]').val();
+		var alto = $('input[name="alto"]').val();
+	} else {
+		var ancho = $('input[name="ancho"]').val()/localStorage["vias"];
+		var alto = $('input[name="alto"]').val();
+	}
 	
 	$.ajax({
 	  url: url+"calcularPrecioTejido.json",
@@ -1328,16 +1323,13 @@ function getPrecioSoporte() {
 	  	
 	  	var result = jQuery.parseJSON(data);
 	  	
-
-	  	
 	  	if (localStorage["vias"] > 0) {
 	  		if ($('.pd .pvp span').text() == "") {
 	  			
 		  		for (var i = 0; i < localStorage['vias']; i++) {
 		  			var viaSoporte = viasCarrito.at(i);					
 					viaSoporte.set({precio: result.precio});
-			  	}
-			  	
+			  	}			  	
 			  	soporteProducto.set({precio: result.precio*localStorage["vias"]});
 		  	
 		  	
@@ -1359,10 +1351,7 @@ function getPrecioSoporte() {
 	  }
 	});
 	
-	
-	
 }  
-
 
 function getPrecioVia(id) {
 	
@@ -1379,16 +1368,12 @@ function getPrecioVia(id) {
 	  success: function(data) {
 	  	
 	  	var result = jQuery.parseJSON(data);
-	  	viaActive.set({precio: result.precio});
-	  	
-	  	getPrecioSoporte();
-	  	
+	  	viaActive.set({precio: result.precio});	  	
+	  	getPrecioSoporte();	  	
 	  	calcularTotal();
 	  	
 	  }
 	});
-	
-	
 	
 } 
 
@@ -1529,16 +1514,21 @@ function redimensionar(type, val) {
 	switch(type) {
 		
 		case "ancho":
+		
+				
+		
+		
 		    			if (localStorage['idSoporte'] != 6) { 
 		    			getPrecioSoporte();
 		      			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());
 		      			
 		      			soporteProducto.set({ancho: val});
 		      			} else {
-		      			
+		      				
+		      			val = val/localStorage['vias'];
 		      			for (var i = 0; i < localStorage['vias']; i++) {
 		      			var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
+			  			calcular_medida(val, $('.medida_estandar input[name="alto"]').val());			
 						viaSoporte.set({ancho: val});
 						getPrecioVia(i);
 						}
@@ -1556,10 +1546,11 @@ function redimensionar(type, val) {
 			      		soporteProducto.set({alto: val});
 		           	} else {
 		           		
+		           		var ancho = $('.medida_estandar input[name="ancho"]').val()/localStorage['vias'];
 		           		
 		           		for (var i = 0; i < localStorage['vias']; i++) {
 		           		var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
+			  			calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			
 						viaSoporte.set({alto: val});
 						getPrecioVia(i);
 						}
@@ -2333,8 +2324,7 @@ function cmToPixel(cm) {
 	
 	var dpi = 72;	
 	var value = dpi * cm / 2.54;
-	
-	console.log(value);
+
 	
 	return value;
 	

@@ -860,11 +860,12 @@ textarea {
 		padding: 10px 9px;
 	}
 	
-	.colores .aviso {
+	.aviso_colores {
 		font-size: 9px;
 		color: #a70328;
 		background: url("../img/ico-warning.png") top right no-repeat;
-		cursor:pointer;		
+		cursor:pointer;
+		margin: -5px 0 10px 0;		
 	}
 	
 	.colores li {

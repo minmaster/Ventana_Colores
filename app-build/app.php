@@ -64,10 +64,12 @@
 				<ul class="paleta-colores colores-soporte">
 				</ul>
 				
-				<p class="aviso">* AVISO IMPORTANTE COLORIDOS</p>
+				
 				
 				<div class="clear"></div>
 			</div>
+			
+			<p class="aviso_colores">* AVISO IMPORTANTE COLORIDOS</p>
 			
 			<div class="field background">
 				<label for="producto">MEDIDA DE PRODUCTO (cm)</label>
@@ -198,7 +200,7 @@
 					<li><span class="btnRotate" title="Rotar Objeto">Rotar Objeto</span></li>
 					<li><span class="btnColorear" title="Colorear Objeto">Colorear Objeto</span></li>
 					<li><span class="btnTexto" title="Editar Texto">Editar Texto</span></li>
-					<li class="1color">Para colorear el objeto arrastre el color hasta él</li>
+					<li class="1color"><span class="color">Para colorear el objeto arrastre el color hasta él</span></li>
 				</ul>
 				
 				<div class="submenu">
@@ -707,8 +709,6 @@
 	   							<label for="mensaje">Mensaje:</label>
 	   							<textarea  name="mensaje" id="mensaje" class="obligatorio"></textarea>
 	   						</div>
-	   			
-	   						
 	   						   						
 	   						<div class="button">
 	   							<button>Enviar</button>

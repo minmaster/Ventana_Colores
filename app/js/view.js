@@ -348,6 +348,10 @@ var ViewCarrito = Backbone.View.extend({
 		var template = Handlebars.compile(source);
 		var html = template(ultimoProducto.toJSON());
 		this.$el.append(html);
+		
+		if (!factor) {
+			$('.pvp').css({"display":"none"});
+		}
 	},
 	close: function() {
 		this.undelegateEvents();
@@ -356,7 +360,8 @@ var ViewCarrito = Backbone.View.extend({
 	showVinilo: function(e) {
 		$this = $(e.currentTarget);		
 		var id = $this.attr("id");		
-		mask.setOpacity(0.9);
+		mask.setOpacity(0.9);		
+		simbolosArray[id].getChildren()[1].setOpacity(1);
 		layer.draw();
 		
 	},
@@ -364,6 +369,8 @@ var ViewCarrito = Backbone.View.extend({
 		$this = $(e.currentTarget);		
 		var id = $this.attr("id");		
 		mask.setOpacity(1);
+		simbolosArray[id].getChildren()[1].setOpacity(0);
+		
 		layer.draw();
 		
 	}

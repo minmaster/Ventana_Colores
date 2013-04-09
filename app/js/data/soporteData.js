@@ -27,6 +27,13 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 	  	var result = jQuery.parseJSON(data);
 	  	
 	  	
+	  	/// COMPROBAMOS SI FACTOR EXISTE SI NO, NO MOSTRAMOS PRECIOS
+	  	if (!factor) {
+	  		$(".precioTotal").css("display": "none");
+	  		$(".pvp").css("display": "none");
+	  	}
+	  	
+	  	
 	  	// AÑADIR A COLLECTION
 	  	objetos = new c.Objetos();
 	  	categorias = new c.Categorias();
@@ -91,11 +98,20 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 	  	/// FORMATO CONTENIDO
 	  	$('.txt-nombre').text(result.soporte.nombre);
 	  	$('input#productoId').val(result.soporte.idSoporte);
-	  	$('input[name="anchoDefault"]').val(result.soporte.anchoPorDefecto);
-		$('input[name="altoDefault"]').val(result.soporte.altoPorDefecto);
-		$('input#anchoMinimo').val(result.soporte.anchoMin);
-		$('input#altoMinimo').val(result.soporte.altoMin);
-		$('input#anchoMaximo').val(result.soporte.anchoMax);
+	  	
+	  	if (localStorage['idSoporte'] != "6") {
+	  		$('input[name="anchoDefault"]').val(result.soporte.anchoPorDefecto);
+	  		$('input#anchoMaximo').val(result.soporte.anchoMax);
+	  		$('input#anchoMinimo').val(result.soporte.anchoMin);
+	  	} else {
+	  		$('input[name="anchoDefault"]').val(result.soporte.anchoPorDefecto*localStorage["vias"]);
+	  		$('input#anchoMaximo').val(result.soporte.anchoMax*localStorage["vias"]);
+	  		$('input#anchoMinimo').val(result.soporte.anchoMin*localStorage["vias"]);
+	  	}
+	  	
+	  	
+		$('input[name="altoDefault"]').val(result.soporte.altoPorDefecto);		
+		$('input#altoMinimo').val(result.soporte.altoMin);		
 		$('input#altoMaximo').val(result.soporte.altoMax);
 		$('#tejido').text(result.tejidoPorDefecto.descripcion);
 		$('#tejidoId').val(result.tejidoPorDefecto.idTejido);
@@ -121,10 +137,14 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 			} else {
 			$('.medida_colcha').addClass("nodisplay");
 			$('.medida_estandar').removeClass("nodisplay");
-			$('.medida_estandar input[name="ancho"]').val(result.soporte.anchoPorDefecto);
-			$('.medida_estandar input[name="alto"]').val(result.soporte.altoPorDefecto);	
 			
-			
+			if (localStorage['idSoporte'] != "6") {
+				$('.medida_estandar input[name="ancho"]').val(result.soporte.anchoPorDefecto);
+				$('.medida_estandar input[name="alto"]').val(result.soporte.altoPorDefecto);	
+			} else {
+				$('.medida_estandar input[name="ancho"]').val(result.soporte.anchoPorDefecto*localStorage["vias"]);
+				$('.medida_estandar input[name="alto"]').val(result.soporte.altoPorDefecto);	
+			}
 			
 			if (uiSpinnerAncho) $( ".spinnerAncho" ).spinner("destroy");
 			var uiSpinnerAncho = $( ".spinnerAncho" ).spinner({
@@ -134,24 +154,20 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      max: $('#anchoMaximo').val(),
 		      spin: function( event, ui ) {
 		      	
-		      	
-		      	if (localStorage['idSoporte'] != "6") { 
+		      	if (localStorage['idSoporte'] != 6) { 
 		      		getPrecioSoporte();
 		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());
 		     		soporteProducto.set({ancho: $('.medida_estandar input[name="ancho"]').val()});
 		      		
-		      		
-		      	} else {
-		      		
-			  		
-			  		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());	
-		      		
+		      	} else {		      		
+				    var ancho = ui.value/localStorage["vias"];		      					  		
+			  		for (var i = 0; i < localStorage['vias']; i++) {
+			  			var viaSoporte = viasCarrito.at(i);	
+						viaSoporte.set({ancho: ancho});
+						getPrecioVia(i);
+			  		}				  		
+			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			      		
 		      	}
-		      	
-		      	
-		      	
-		     	
-		     	
 		     	
 		     
 		      }
@@ -233,22 +249,23 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      spin: function( event, ui ) {
 		      	
 		      	
-		      	if (localStorage['idSoporte'] != "6") { 
+		      	if (localStorage['idSoporte'] != 6) { 
 		      		getPrecioSoporte();
 		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());
 		      		soporteProducto.set({alto: $('.medida_estandar input[name="alto"]').val()});
+		      		 
+		      	} else {	
 		      		
-		      		
-		      	} else {
-		      		
+		      		 var ancho = $('.medida_estandar input[name="ancho"]').val()/localStorage["vias"];	
+		      			      		
 		      		for (var i = 0; i < localStorage['vias']; i++) {
 			  			var viaSoporte = viasCarrito.at(i);		
-			  			calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());			
-						viaSoporte.set({alto: $('.medida_estandar input[name="alto"]').val()});
+			  			viaSoporte.set({alto: $('.medida_estandar input[name="alto"]').val()});
 						getPrecioVia(i);
-						
 			  		}
-		      		
+			  		
+			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			
+						
 		      	}
 		      	
 		      	

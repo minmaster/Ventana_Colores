@@ -66,13 +66,13 @@
 	        },
 	        warnings: false,
 	        mangle: true,
-	        ascii_only: true,
+	        ascii_only: false,
 	        comments: false
 	},
 	modules: [
 		{
 			name: "main",
-			exclude: ["jquery", "handlebars", "underscore", "backbone"]
+			exclude: ["jquery", "handlebars", "underscore", "backbone", "mask", "objetos", "soportes", "medidas"]
 		}
 	],
 	fileExclusionRegExp: /\.git/
