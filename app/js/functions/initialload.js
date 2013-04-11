@@ -1,8 +1,6 @@
-define("initialload", ["jquery", "handlebars", "collection", "variosColores", "model", "popup"], function($, Handlebars, c, viewVC, m, vPopup) {
+define("initialload", ["jquery", "handlebars", "collection", "variosColores", "model", "popup", "routes"], function($, Handlebars, c, viewVC, m, vPopup) {
 	
 	function initialLoad() {
-		
-
 		
 		calcularAltoScroll();
 		
@@ -22,8 +20,8 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
         $(window).scrollTop(0);
 
         $('#test').append(keyboard_shown?'keyboard ':'nokeyboard ');
-    });
-				
+    	});
+    	
 		carrito = new c.Carrito();
 			$('#tejido').click(function() {
 				$('.popup-tejidos').fadeIn("300");

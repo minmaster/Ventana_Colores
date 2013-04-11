@@ -15,7 +15,7 @@ define("viasCarrito", ["underscore", "backbone", "handlebars", "jquery"], functi
 					this.$el.html(html);
 					
 					
-					if (!cliente) 	$(".pvp").css({"display": "none"});		
+					if (!sessionSecurity) 	$(".pvp").css({"display": "none"});		
 					
 		},
 		close: function() {

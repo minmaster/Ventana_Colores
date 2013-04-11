@@ -64,8 +64,6 @@
 				<ul class="paleta-colores colores-soporte">
 				</ul>
 				
-				
-				
 				<div class="clear"></div>
 			</div>
 			

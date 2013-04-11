@@ -20,7 +20,7 @@ define("soporteCarrito", ["underscore", "backbone", "handlebars", "jquery"], fun
 			var html = template(soporteProducto.toJSON());
 			this.$el.html(html);
 			
-			if (!cliente) 	$(".pvp").css({"display": "none"});		
+			if (!sessionSecurity) 	$(".pvp").css({"display": "none"});		
 			
 		},
 		close: function() {

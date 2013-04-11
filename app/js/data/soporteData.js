@@ -5,6 +5,8 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		
 		getSoporteData: function(id) {
 			
+		sessionSecurity = sessionStorage["sessionSecurity"];
+					
 					/**** CONFIG ***/
 		if (localStorage['idSoporte'] == 6) {
 			config =  {

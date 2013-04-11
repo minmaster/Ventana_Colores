@@ -113,12 +113,11 @@ require([
 		 	
 	 	domReady(function () {
 			appRouter = new r.AppRouter(); 
-			Backbone.history.start();			
+			Backbone.history.start();
+			
+					
 	 	});
 });
-
-
-
 
 /// FUNCTION CALCULAR MEDIDA ///
 
@@ -1322,10 +1321,11 @@ function getPrecioSoporte() {
 	  	var result = jQuery.parseJSON(data);
 	  	
 	  	if (localStorage["vias"] > 0) {
-	  		if ($('.pd .pvp span').text() == "") {
+	  		
+	  		if ($('.viasPD .pvp span').text() == "") {
 	  			
 		  		for (var i = 0; i < localStorage['vias']; i++) {
-		  			var viaSoporte = viasCarrito.at(i);					
+		  			var viaSoporte = viasCarrito.at(i);		
 					viaSoporte.set({precio: result.precio});
 			  	}			  	
 			  	soporteProducto.set({precio: result.precio*localStorage["vias"]});
@@ -1344,8 +1344,11 @@ function getPrecioSoporte() {
 	  		soporteProducto.set({precio: result.precio});
 	  	}
 	  	
-	  	calcularTotal();
 	  	
+	  	
+	  },
+	  complete: function() {
+	  	 calcularTotal();
 	  }
 	});
 	
@@ -1402,20 +1405,15 @@ function calcularTotal() {
 }
 
 function calcularNuevoPrecio(precio, medidaDefault, medidaNow) {
-	
-	
-	var nuevo = (medidaNow * precio) / medidaDefault;
-	
+	var nuevo = (medidaNow * precio) / medidaDefault;	
 	return nuevo.toFixed(2);
-	
 }
 
 function calcularAltoScroll () {
 	
 	var windowHeight = $(window).height();
-
 	
-	if (!cliente) {
+	if (sessionSecurity == "") {
 		$('.seleccion').css({ "height": windowHeight - 198 });
 		$(".precioTotal").css({"display": "none"});
 	  	$(".pvp").css({"display": "none"});		
@@ -1423,10 +1421,7 @@ function calcularAltoScroll () {
 		$('.seleccion').css({ "height": windowHeight - 260 });
 		$(".precioTotal").css({"display": "block"});
 	  	$(".pvp").css({"display": "block"});	
-		
 	}
-	
-	
 	
 }
 

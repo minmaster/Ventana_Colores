@@ -7,13 +7,10 @@ define("init", ["underscore", "backbone", "initpage"], function(_, Backbone, ini
 			this.render();
 		},
 		render: function() {
-				
-		
-		
+			
 			$('.divLoader').fadeOut('fast');
 			$('#initContainer').css({"display": "block"});
 			initPage.initPage();
-			
 			
 		},
 		close: function() {

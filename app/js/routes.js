@@ -30,7 +30,6 @@ define(["underscore", "backbone", "body", "print", "login", "email", "init", "in
 	        	$('#contContainer').fadeOut("fast", function() {$('#contContainer').empty();});
 	        	$('.popup-content').show();
 	        	
-	        	
 	        	if (viewInit) { viewInit.close()};
 	        	viewInit = new vInit();
 	        	

@@ -13,8 +13,9 @@ define("initpage", ["jquery", "handlebars", "collection", "view"], function($, H
 			              {nombre:'Vinilos', codigo:'vinilos', id: 8, con_vias: false}]);
 			              
 			vias = new c.Vias();
-			vias.add([{nombre:'3 vías', via: 3},{nombre:'4 vías', via: 4},{nombre:'5 vías', via: 5}]);
+			vias.add([{nombre:'3 vías', via: 3},{nombre:'4 vías', via: 4},{nombre:'5 vías', via: 5}]);			
 			
+			if (viewSoporte) viewSoporte.close();
 			var viewSoporte = new v.ViewSoporte();
 				
 				$('.container').click(function(event) {
