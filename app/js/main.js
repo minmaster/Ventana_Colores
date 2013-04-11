@@ -20,8 +20,8 @@ var colorVinilo = null;
 var colorId = null;
 var stopVinilo = false;
 var idVinilo = null;
-var sessionSecurity = "";
-var url = 'http://ventanacolores.artdinamica.com/';
+var sessionSecurity = null;
+var url = '';
 var routeImage = "";
 var vias = localStorage['vias'];
 var indexObject = 0;
@@ -52,7 +52,7 @@ $(window).resize(function() {
 });
 
 require.config({
-  baseUrl: "/js/",
+  baseUrl: "http://laventanadecolores.es/app/js/",
   paths: {
     underscore: 'vendor/underscore',
     backbone: 'vendor/backbone',
@@ -131,8 +131,6 @@ function calcular_medida(ancho, alto) {
 		var anchoDefault = parseFloat($("input[name='anchoDefault']").val()/localStorage["vias"]);
 		var altoDefault = parseFloat($("input[name='altoDefault']").val());		
 	}
-
-	
 	
 	var anchoMinimo = parseFloat($('#anchoMinimo').val());
 	var altoMinimo = parseFloat($('#altoMinimo').val());
@@ -1318,7 +1316,7 @@ function getPrecioSoporte() {
 	$.ajax({
 	  url: url+"calcularPrecioTejido.json",
 	  type: "POST",
-  	  data: {idsoporte : idSoporte, idtejido : idTejido, ancho : ancho, alto: alto},
+  	  data: {idsoporte : idSoporte, idtejido : idTejido, ancho : ancho, alto: alto, securitySession: sessionSecurity },
 	  success: function(data) {
 	  	
 	  	var result = jQuery.parseJSON(data);
@@ -1415,8 +1413,20 @@ function calcularNuevoPrecio(precio, medidaDefault, medidaNow) {
 function calcularAltoScroll () {
 	
 	var windowHeight = $(window).height();
+
 	
-	$('.seleccion').css({ "height": windowHeight - 260 });
+	if (!cliente) {
+		$('.seleccion').css({ "height": windowHeight - 198 });
+		$(".precioTotal").css({"display": "none"});
+	  	$(".pvp").css({"display": "none"});		
+	} else {
+		$('.seleccion').css({ "height": windowHeight - 260 });
+		$(".precioTotal").css({"display": "block"});
+	  	$(".pvp").css({"display": "block"});	
+		
+	}
+	
+	
 	
 }
 
@@ -1514,9 +1524,6 @@ function redimensionar(type, val) {
 	switch(type) {
 		
 		case "ancho":
-		
-				
-		
 		
 		    			if (localStorage['idSoporte'] != 6) { 
 		    			getPrecioSoporte();

@@ -349,9 +349,7 @@ var ViewCarrito = Backbone.View.extend({
 		var html = template(ultimoProducto.toJSON());
 		this.$el.append(html);
 		
-		if (!factor) {
-			$('.pvp').css({"display":"none"});
-		}
+		if (!cliente) 	$(".pvp").css({"display": "none"});		
 	},
 	close: function() {
 		this.undelegateEvents();

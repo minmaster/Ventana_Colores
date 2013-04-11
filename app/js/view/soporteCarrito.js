@@ -19,6 +19,9 @@ define("soporteCarrito", ["underscore", "backbone", "handlebars", "jquery"], fun
 			var template = Handlebars.compile(source);
 			var html = template(soporteProducto.toJSON());
 			this.$el.html(html);
+			
+			if (!cliente) 	$(".pvp").css({"display": "none"});		
+			
 		},
 		close: function() {
 			this.undelegateEvents();

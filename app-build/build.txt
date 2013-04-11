@@ -65,7 +65,7 @@ css_old/ui-lightness/jquery-ui-1.10.0.custom.min.css
 
 js/main.js
 ----------------
-js/domready.js
+js/domReady.js
 js/vendor/jquery-ui.js
 js/vendor/jtransit.js
 js/vendor/kinetic.js

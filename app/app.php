@@ -633,7 +633,7 @@
 			<header>
 	    			<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
 	    			<h2>Introduzca su usuario y contraseña para continuar</h2>    	
-	    			<a href="#" class="ico-help">Ayuda</a>
+	    			<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html" class="help">Ayuda</a>
 	   		</header>
 	   		
 	   		<article class="login">

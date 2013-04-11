@@ -13,6 +13,10 @@ define("viasCarrito", ["underscore", "backbone", "handlebars", "jquery"], functi
 					var template = Handlebars.compile(source);
 					var html = template(viasCarrito.toJSON());
 					this.$el.html(html);
+					
+					
+					if (!cliente) 	$(".pvp").css({"display": "none"});		
+					
 		},
 		close: function() {
 			this.undelegateEvents();

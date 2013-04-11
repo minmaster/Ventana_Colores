@@ -21,18 +21,10 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 			$.ajax({
 			  url: url+"selectSoporte.json",
 			  type: "POST",
-		  	  data: {idsoporte : id},
+		  	  data: {idsoporte : id, securitySession: sessionSecurity},
 			  success: function(data) {
 	  	
 	  	var result = jQuery.parseJSON(data);
-	  	
-	  	
-	  	/// COMPROBAMOS SI FACTOR EXISTE SI NO, NO MOSTRAMOS PRECIOS
-	  	if (!factor) {
-	  		$(".precioTotal").css("display": "none");
-	  		$(".pvp").css("display": "none");
-	  	}
-	  	
 	  	
 	  	// AÑADIR A COLLECTION
 	  	objetos = new c.Objetos();
@@ -182,23 +174,16 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		    		var actual = $(this).val();
 
 		    		
-		    		if (actual >= min && actual <= max) {
-		    			
-						redimensionar("ancho", $(this).val());
-		
+		    		if (actual >= min && actual <= max) {		    			
+						redimensionar("ancho", $(this).val());		
 		      		}
-		      		else if (actual > max) {
-		      			
+		      		else if (actual > max) {		      			
 		      			$(this).val(max);		      			
-		      			redimensionar("ancho", $(this).val());
-		      			
-		      		}
-		      		
-		      		else if (actual < min) {
-		      			
+		      			redimensionar("ancho", $(this).val());		      			
+		      		}		      		
+		      		else if (actual < min) {		      			
 		      			$(this).val(min);
-		      			redimensionar("ancho", $(this).val());
-		      			
+		      			redimensionar("ancho", $(this).val());		      			
 		      		}
 
 		      		
@@ -217,26 +202,21 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		    		var actual = $(this).val();
 		    		
 		    		if (actual >= min && actual <= max) {
-		    			
 						redimensionar("alto", $(this).val());
-		
-		      		}
+				    }
 		      		else if (actual > max) {
-		      			
 		      			$(this).val(max);		      			
 		      			redimensionar("alto", $(this).val());
-		      			
 		      		}
 		      		
-		      		else if (actual < min) {
-		      			
+		      		else if (actual < min) {		      			
 		      			$(this).val(min);
-		      			redimensionar("alto", $(this).val());
-		      			
+		      			redimensionar("alto", $(this).val());		      			
 		      		}
+		      		
 				} else {
-					alert("Este campo solo admite datos númericos");
-				}
+						alert("Este campo solo admite datos númericos");
+					}
 		    });
 		    
 		    if (uiSpinnerAlto) $( ".spinnerAlto" ).spinner("destroy");
@@ -292,6 +272,10 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 			tejidoId: result.tejidoPorDefecto.idTejido,
 			tejidoNombre: result.tejidoPorDefecto.descripcion	  		
 	  	});
+	  	
+	  	if (localStorage["idSoporte"] == 6) {
+	  		soporteProducto.set({ancho: result.soporte.anchoPorDefecto*localStorage['vias'] });
+	  	}
   	
 	  	
 	  	viasCarrito = new c.ViaCarrito();	  	

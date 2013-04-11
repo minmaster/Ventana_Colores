@@ -56,6 +56,7 @@ var ViewLogin = Backbone.View.extend({
 			  		cliente.set({id: result.idTienda, usuario: result.login, email: result.email, factor: result.factor});
 					
 					factor = cliente.get("factor");
+					sessionSecurity = result.sessionSecurity;
 					
 			  		appRouter.navigate("", true);
 			  		$('.divLoader').fadeOut('fast');

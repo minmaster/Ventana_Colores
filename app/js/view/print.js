@@ -24,6 +24,8 @@ var ViewImprimir =  Backbone.View.extend({
 		
 		this.$el.attr("class", "init").css({"overflow": "auto"});
 		
+	
+		
 		var datos = { carrito: carrito.toJSON(), viasCarrito: viasCarrito.toJSON(), image: imagePrint, soporte: soporteProducto.toJSON(), precio: precio }		
 		
 				
@@ -36,7 +38,6 @@ var ViewImprimir =  Backbone.View.extend({
 
 	},
 	printPage: function(e) {
-		
 		window.print();
 		e.preventDefault();
 	},
