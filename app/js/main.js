@@ -1413,7 +1413,7 @@ function calcularAltoScroll () {
 	
 	var windowHeight = $(window).height();
 	
-	if (sessionSecurity == "") {
+	if (sessionSecurity) {
 		$('.seleccion').css({ "height": windowHeight - 198 });
 		$(".precioTotal").css({"display": "none"});
 	  	$(".pvp").css({"display": "none"});		
