@@ -4,6 +4,7 @@ define("popup", ["underscore", "backbone", "jquery", "model"], function(_, Backb
 	/*** VISTA MAIN ***/
 	var ViewPopup = Backbone.View.extend({
 		el: $('#bodyContainer'),
+		close: true,
 		initialize: function() {
 			
 		},
@@ -19,8 +20,12 @@ define("popup", ["underscore", "backbone", "jquery", "model"], function(_, Backb
 			var html = template(popupModel.toJSON());
 			this.$el.append(html);
 			
+			if (!this.close) $('.popupMessage .btn-cerrar').hide();
+			
 			$('.popupMessage').css({"top": "-2000px", "display":"block"});
 			$('.popupMessage').transition({"top":"50%"});
+			
+		
 			
 			
 		},

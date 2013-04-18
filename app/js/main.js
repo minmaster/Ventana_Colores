@@ -21,7 +21,7 @@ var colorId = null;
 var stopVinilo = false;
 var idVinilo = null;
 var sessionSecurity = null;
-var url = '';
+
 var routeImage = "";
 var vias = localStorage['vias'];
 var indexObject = 0;
@@ -45,14 +45,22 @@ var IVA = 0.21;
 var config =  {
 		scaleObjetos: 0.07
 	}
+	
+// PRODUCTION 
+var baseUrl = "../app/js/";
+var url = '';
+
+// DEVELOPMENT
+var baseUrl = "../js/";
+var url = "http://ventanacolores.artdinamica.com/";
 
 
 $(window).resize(function() {
-		calcularAltoScroll();
+	calcularAltoScroll();
 });
 
 require.config({
-  baseUrl: "http://laventanadecolores.es/app/js/",
+  baseUrl: baseUrl,
   paths: {
     underscore: 'vendor/underscore',
     backbone: 'vendor/backbone',
@@ -358,8 +366,6 @@ function drawVariosColores(dibujo, id, colores) {
         	
         	var coloresTextos = productoSelected.get("color");
         	var coloresActuales = productoSelected.get("coloresPintados");
-        	
-        	
         	
         	if (coloresTextos[2]) {
         		var colortexto3 = coloresTextos[2];
@@ -1413,7 +1419,7 @@ function calcularAltoScroll () {
 	
 	var windowHeight = $(window).height();
 	
-	if (sessionSecurity) {
+	if (!sessionSecurity) {
 		$('.seleccion').css({ "height": windowHeight - 198 });
 		$(".precioTotal").css({"display": "none"});
 	  	$(".pvp").css({"display": "none"});		

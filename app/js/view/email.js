@@ -46,27 +46,34 @@ var ViewEmail =  Backbone.View.extend({
 		
 		if (validar_formulario(form, e)) {
 			
+					popupModel = new m.Popup();
+					popupModel.set("message", "Estamos procesando la imagen y enviando su email. Espere unos segundos...");
+					var popupLoadEmail = new vPopup({close: false});
+					
+					popupLoadEmail.render();
+			
 					$.ajax({
 					  type: "POST",
 					  url: "save.php",
 					  data: {image: imagePrint}
 					}).done(function( respond ) {
-
-		
-			
+									
 					$.ajax({
-					  url: url+"email.php",
+					  url: "email.php",
 					  type: "POST",
-				  	  data: form.serialize()+"&datos="+$('.listEmail').html()+"&image="+imagePrint,
+				  	  data: form.serialize()+"&datos="+$('.listEmail').html(),
 					  success: function(data) {
 					  	
 					  	var result = jQuery.parseJSON(data);
 					  	
 					  	if (result.status) {
 					  		
+					  		popupLoadEmail.cerrarPopup()
 					  		popupModel = new m.Popup();
 					  		popupModel.set("message", result.mensaje);
-					  		new vPopup();
+					  		var popupOk = new vPopup();
+					  		
+					  		popupOk.render();
 					  	
 					  	}
 					  	

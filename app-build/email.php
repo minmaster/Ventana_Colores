@@ -10,12 +10,12 @@ $mensaje = $_POST['mensaje'];
 
 $datos = $_POST['datos'];
 
-$body = "Mensaje: ".$mensaje."<br /><br /><img src='http://ventanacolores.artdinamica.com/image.png' /><br /><br />".$datos;
+$body = "Mensaje: ".$mensaje."<br /><br /><img src='http://laventanadecolores.es/app/image.png' /><br /><br />".$datos;
 
 try {
   $mail->AddAddress($suemail, $sunombre);
   $mail->SetFrom($tuemail, $tunombre);
-  $mail->AddReplyTo('name@yourdomain.com', 'First Last');
+  //$mail->AddReplyTo('name@yourdomain.com', 'First Last');
   $mail->Subject = 'Ventana de Colores - Presupuesto de Diseño';
   $mail->Body = $body;
   $mail->IsHTML(true);

@@ -120,6 +120,15 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		  		
     	});	
     	
+    	$('.btnReflejar').on("click", function(){ 
+    		
+    		 var id = $(this).attr("id");
+    		 var a = simbolosArray[id];
+    		  a.setScale(-config.scaleObjetos, config.scaleObjetos);
+    		  layer.draw();
+    		
+    	});
+    	
     	$('.btnRotate').on("click", function(){ 
     		
     		var id = $(this).attr("id");
@@ -226,8 +235,6 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		var index = $(this).attr("id");
     		
     		productoSelected = carrito.get(index);
-    		
-    		
     		
     		$('.menuObjetos .submenu .tab').css({"display":"none"});    		
     		$('.menuObjetos .submenu').transition({"top": "30px"}, function() {    			

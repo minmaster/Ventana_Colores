@@ -224,7 +224,7 @@ textarea {
 	}
 	
 	.init section {
-		width: 950px;
+		width: 650px;
 		margin: 0 auto 0 auto;
 		text-align:center;
 	}
@@ -1884,8 +1884,9 @@ and (max-device-width : 1024px) {
         page-break-after: avoid;
     }
     
-    .main .container { visibility: hidden!important; display :none!important}	
-    
+    .main .container { visibility: hidden!important; display :none!important}	    
+    body { overflow: auto !important; height: auto !important; }
+    #contContainer { overflow: none !important; height: auto !important; position: static !important}
 
 }
 

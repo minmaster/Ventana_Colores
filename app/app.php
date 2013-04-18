@@ -198,6 +198,7 @@
 					<li><span class="btnRotate" title="Rotar Objeto">Rotar Objeto</span></li>
 					<li><span class="btnColorear" title="Colorear Objeto">Colorear Objeto</span></li>
 					<li><span class="btnTexto" title="Editar Texto">Editar Texto</span></li>
+					<li><span class="btnReflejar" title="Reflejar Objeto">Reflejar Objeto</span></li>
 					<li class="1color"><span class="color">Para colorear el objeto arrastre el color hasta él</span></li>
 				</ul>
 				

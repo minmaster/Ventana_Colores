@@ -36,9 +36,7 @@ define("initpage", ["jquery", "handlebars", "collection", "view"], function($, H
 						$('header h2').transition({ x: '90', opacity:0 }, 300, 'snap', function() {		
 							$('header h2').text("Seleccione el producto que desea diseñar");
 							$('header h2').transition({ x: '0', opacity:1 }, 300, 'snap');		
-						});	
-						
-					
+						});
 						
 					}
 					
