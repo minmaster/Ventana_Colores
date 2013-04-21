@@ -229,7 +229,7 @@ textarea {
 		text-align:center;
 	}
 	
-	.init .elem {
+	.init .elem, .subsoporte {
 		border: 1px solid #d8d8d8;
 		-webkit-box-shadow:  0px 0px 5px 1px rgba(0, 0, 0, 0.1);        
         box-shadow:  0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -241,24 +241,32 @@ textarea {
 		cursor:pointer;
 	}
 	
-	.init .elem .dibujo {
+	.subsoporte { 
+		margin: 30px 50px 30px 50px;
+		padding: 10px;
+		box-shadow: none;
+	}
+	
+	.init .elem .dibujo, .subsoporte .subdibujo {
 		width: 125px;
 		margin: 10px auto 0 auto;
 	}
 	
-	.init .elem .dibujo canvas {
+	.init .elem .dibujo canvas, .subsoporte .dibujo canvas {
 		top:0;
 		left: 0
 	}
 
-	.init .elem .title {
+	.init .elem .title, .subsoporte  .title {
 		position:absolute;
 		text-align:center;
 		bottom: 20px;
 		font-size: 13px;
 		color: #c40000;
-		width: 100%;
+		width: 100%;		
 	}
+	
+	.subsoporte  .title { width: 92% }
 	
 	
 	.login { 
@@ -1583,6 +1591,11 @@ textarea {
 	.menuObjetos .btnColorear {
 		background: url(../img/ico-colores.png) no-repeat;
 		padding: 0 0 0 23px;		
+	}
+	
+	.menuObjetos .btnReflejar {
+		background: url(../img/ico-reflejar.png) no-repeat;
+		padding: 0 0 0 27px;		
 	}
 	
 	.menuObjetos .color {

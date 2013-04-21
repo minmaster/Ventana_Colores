@@ -8,7 +8,7 @@ define("initpage", ["jquery", "handlebars", "collection", "view"], function($, H
 			soportes.add([{nombre:'Paneles Japoneses', codigo:'panel_japones', id: 6, con_vias: true, vias: [3, 4, 5, 6]}, 
 			              {nombre:'Estor Enrollable', codigo:'estor_enrollable', id: 3, con_vias: false},
 			              {nombre:'Estor Paqueto', codigo:'estor_paqueto', id: 4, con_vias: false},
-			              {nombre:'Colcha de Cama Funda Nórdica', codigo:'colcha', id: 2, con_vias: false},
+			              {nombre:'Colcha de Cama/Funda Nórdica', codigo:'colcha', id: 2, con_vias: false},
 			              {nombre:'Cojín', codigo:'cojin', id: 1, con_vias: false},
 			              {nombre:'Vinilos', codigo:'vinilos', id: 8, con_vias: false}]);
 			              

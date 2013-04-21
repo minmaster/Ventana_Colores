@@ -51,8 +51,8 @@ var baseUrl = "../app/js/";
 var url = '';
 
 // DEVELOPMENT
-var baseUrl = "../js/";
-var url = "http://ventanacolores.artdinamica.com/";
+//var baseUrl = "../js/";
+//var url = "http://ventanacolores.artdinamica.com/";
 
 
 $(window).resize(function() {
@@ -702,7 +702,7 @@ function drawObjeto(dibujo) {
     	 }
  
     	 
-    	 if (dibujo == "2") { // Colcha
+    	 if (dibujo == "2" ) { // Colcha
     		 
     		 objeto1 = new Kinetic.Shape({
     			 drawFunc: function(canvas) {
@@ -747,6 +747,52 @@ function drawObjeto(dibujo) {
     		layer.add(objeto2);
     		 
     	 }
+    	 
+    	 if (dibujo == "5" ) { // Colcha
+    		 
+    		 objeto1 = new Kinetic.Shape({
+    			 drawFunc: function(canvas) {
+    			 		var ctx = canvas.getContext();    	        	
+    	    	        ctx = draw("almohada1_5", ctx, false);
+    	   	          	canvas.fillStroke(this);
+    	    	        },
+    	    	        opacity: 1,
+    	    	        fill: "#FFFFFF",
+    	    	        x: 0,
+    	    	        y: 0,
+    	                shadow: {
+    	                    color: "black",
+    	                    blur: 10,
+    	                    offset: [0, 0],
+    	                    opacity: 0.1
+    	         }     			 
+    		 });
+    		 
+    		 objeto2 = new Kinetic.Shape({
+    			 drawFunc: function(canvas) { 
+    			 		var ctx = canvas.getContext();   	        	
+    	    	        ctx = draw("almohada2_5", ctx, false);
+    	   	          	canvas.fillStroke(this);
+    	    	        },
+    	    	        opacity: 1,
+    	    	        fill: "#FFFFFF",
+    	    	        x: 0,
+    	    	        y: 0,
+    	                shadow: {
+    	                    color: "black",
+    	                    blur: 10,
+    	                    offset: [0, 0],
+    	                    opacity: 0.1
+    	         }     			 
+    		 });    
+    		 
+    		 objeto1.setScale(config.scaleObjetos);
+    		 objeto2.setScale(config.scaleObjetos); 
+    		 
+    		layer.add(objeto1); 
+    		layer.add(objeto2);
+    		 
+    	 }    	 
     	 
     	 mask.moveToTop();
     	 
@@ -1938,7 +1984,7 @@ function drawObjetoInit(dibujo) {
           });    	  
       } 
 
-      else if (dibujo == "colcha") {
+      else if (dibujo == "colcha" || dibujo == "colcha2" || dibujo == "funda") {
     	  var triangle = new Kinetic.Shape({
     	        drawFunc: function(canvas) {
     	        	var ctx = canvas.getContext();

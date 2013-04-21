@@ -124,8 +124,19 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
     		
     		 var id = $(this).attr("id");
     		 var a = simbolosArray[id];
-    		  a.setScale(-config.scaleObjetos, config.scaleObjetos);
-    		  layer.draw();
+    		 productoSelected = carrito.get(id); 
+    		 
+    		 var reflejar = productoSelected.get("reflejar");    		 
+    		 
+    		 if (reflejar) {    		 	
+    		 	a.setScale(config.scaleObjetos, config.scaleObjetos);
+    		 	productoSelected.set({reflejar: false});    		 	
+    		 } else {
+    		 	a.setScale(-config.scaleObjetos, config.scaleObjetos);
+    		 	productoSelected.set({reflejar: true});
+    		 }
+    		 
+    		 layer.draw();
     		
     	});
     	

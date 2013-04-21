@@ -823,6 +823,15 @@
    		{{/each}}
         </script>
         
+		<script type="text/x-handlebars" id="subSoportesTemplate">
+        {{#each this}}
+        	<div class="subsoporte">
+   				<div class="subdibujo" id="{{codigo}}" name="{{id}}"></div>
+   				<div class="title">{{nombre}}</div>
+   			</div>
+   		{{/each}}
+        </script>        
+        
         <script type="text/x-handlebars" id="viasTemplate">
         {{#each this}}
 		    <div class="subelem"  id="{{via}}">

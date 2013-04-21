@@ -46,6 +46,50 @@ function draw(dibujo, ctx, mask, via) {
 	      		     
 	}
 	
+	if (dibujo == 5) {
+
+      ctx.beginPath();
+      ctx.moveTo(335.8, 6225.9);
+      ctx.bezierCurveTo(335.8, 6225.9, 223.5, 6219.7, 707.5, 6213.6);
+      ctx.bezierCurveTo(1191.4, 6207.4, 1885.7, 6205.9, 2130.7, 6213.6);
+      ctx.bezierCurveTo(2375.8, 6221.2, 2839.3, 6211.4, 3108.9, 6217.1);
+      ctx.bezierCurveTo(3378.4, 6222.8, 3317.1, 6227.4, 3615.3, 6225.9);
+      ctx.bezierCurveTo(3913.4, 6224.3, 4187.0, 6216.3, 4256.4, 6217.3);
+      ctx.bezierCurveTo(4325.9, 6218.2, 4468.8, 6234.1, 4630.1, 6226.1);
+      ctx.bezierCurveTo(4791.5, 6218.2, 5010.0, 6210.9, 5287.7, 6218.4);
+      ctx.bezierCurveTo(5565.4, 6225.9, 5810.4, 6236.6, 5810.4, 6236.6);
+      ctx.bezierCurveTo(5810.4, 6236.6, 5910.5, 6239.1, 5963.6, 6222.5);
+      ctx.bezierCurveTo(6016.6, 6205.9, 6043.2, 6167.5, 6045.2, 6037.0);
+      ctx.bezierCurveTo(6047.3, 5906.4, 6059.5, 5278.4, 6059.5, 5278.4);
+      ctx.lineTo(6059.5, 4481.5);
+      ctx.lineTo(6039.1, 3816.6);
+      ctx.lineTo(6043.2, 3156.3);
+      ctx.lineTo(6035.0, 2500.6);
+      ctx.lineTo(6037.1, 1907.9);
+      ctx.lineTo(6028.9, 1758.9);
+      ctx.lineTo(6000.3, 1556.3);
+      ctx.lineTo(4485.2, 1520.9);
+      ctx.bezierCurveTo(4485.2, 1520.9, 3813.3, 1507.1, 3437.6, 1517.9);
+      ctx.bezierCurveTo(3061.9, 1528.6, 3045.6, 1528.6, 3045.6, 1528.6);
+      ctx.lineTo(2929.2, 1531.7);
+      ctx.bezierCurveTo(2929.2, 1531.7, 2714.8, 1481.0, 2588.2, 1474.9);
+      ctx.bezierCurveTo(2461.6, 1468.7, 1808.1, 1467.2, 1808.1, 1467.2);
+      ctx.lineTo(619.7, 1488.7);
+      ctx.lineTo(254.2, 1485.6);
+      ctx.lineTo(145.9, 1482.5);
+      ctx.lineTo(166.4, 2727.9);
+      ctx.lineTo(186.8, 3549.4);
+      ctx.lineTo(186.8, 4397.0);
+      ctx.lineTo(188.8, 4957.5);
+      ctx.lineTo(205.2, 5516.4);
+      ctx.lineTo(203.1, 6010.9);
+      ctx.bezierCurveTo(203.1, 6010.9, 199.0, 6073.8, 207.2, 6113.8);
+      ctx.bezierCurveTo(215.4, 6153.7, 335.8, 6225.9, 335.8, 6225.9);
+      ctx.closePath();
+
+		
+	}
+	
 	if (dibujo == 3) {
 	  ctx.beginPath();
       ctx.moveTo(8503.9, 8503.9);
@@ -500,6 +544,85 @@ function draw(dibujo, ctx, mask, via) {
       ctx.lineTo(3446.6, 1806.8);
       ctx.closePath();
 
+	}
+	
+	if (dibujo == "almohada1_5") {
+		 ctx.beginPath();
+      ctx.moveTo(276.6, 1485.8);
+      ctx.lineTo(145.9, 1482.5);
+      ctx.lineTo(1.0, 1482.5);
+      ctx.bezierCurveTo(1.0, 1482.5, 227.6, 1157.0, 231.7, 1034.2);
+      ctx.bezierCurveTo(235.8, 911.3, 231.7, 515.1, 231.7, 515.1);
+      ctx.lineTo(158.2, 301.7);
+      ctx.bezierCurveTo(158.2, 301.7, 94.9, 244.9, 66.3, 166.6);
+      ctx.bezierCurveTo(37.7, 88.3, 39.8, 6.9, 39.8, 6.9);
+      ctx.bezierCurveTo(39.8, 6.9, 160.2, -13.1, 358.3, 17.6);
+      ctx.bezierCurveTo(556.4, 48.3, 772.8, 62.2, 772.8, 62.2);
+      ctx.lineTo(1007.7, 66.8);
+      ctx.lineTo(1185.3, 77.5);
+      ctx.lineTo(1569.2, 63.7);
+      ctx.lineTo(1789.7, 51.4);
+      ctx.bezierCurveTo(1789.7, 51.4, 1942.9, 63.7, 2128.7, 65.2);
+      ctx.bezierCurveTo(2314.5, 66.8, 2629.0, 63.7, 2629.0, 63.7);
+      ctx.bezierCurveTo(2629.0, 63.7, 2678.0, 71.4, 2767.8, 57.6);
+      ctx.bezierCurveTo(2857.7, 43.7, 2963.9, 28.4, 2963.9, 28.4);
+      ctx.lineTo(3031.3, 19.2);
+      ctx.bezierCurveTo(3031.3, 19.2, 3090.5, 11.5, 3108.9, 85.2);
+      ctx.bezierCurveTo(3127.2, 158.9, 3137.4, 274.1, 3137.4, 274.1);
+      ctx.lineTo(3137.4, 409.2);
+      ctx.bezierCurveTo(3137.4, 409.2, 3131.3, 621.1, 3123.2, 704.0);
+      ctx.bezierCurveTo(3115.0, 786.9, 3115.0, 1083.3, 3115.0, 1083.3);
+      ctx.lineTo(3102.7, 1239.9);
+      ctx.lineTo(3076.2, 1361.2);
+      ctx.lineTo(3023.1, 1517.9);
+      ctx.lineTo(3011.0, 1529.5);
+      ctx.lineTo(2810.0, 1506.3);
+      ctx.bezierCurveTo(2810.0, 1506.3, 2729.3, 1473.8, 2414.7, 1471.1);
+      ctx.bezierCurveTo(2100.1, 1468.4, 1546.6, 1471.9, 1546.6, 1471.9);
+      ctx.lineTo(815.8, 1485.1);
+      ctx.lineTo(276.6, 1485.8);
+      ctx.closePath();
+	}
+	
+	if (dibujo == "almohada2_5") {
+		// capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(3033.0, 1528.9);
+      ctx.lineTo(3925.6, 1514.1);
+      ctx.bezierCurveTo(3925.6, 1514.1, 4576.2, 1528.1, 4745.2, 1529.5);
+      ctx.bezierCurveTo(4914.1, 1530.9, 5513.1, 1544.9, 5513.1, 1544.9);
+      ctx.lineTo(5953.8, 1555.2);
+      ctx.lineTo(6103.8, 1534.6);
+      ctx.lineTo(6237.2, 1514.1);
+      ctx.bezierCurveTo(6237.2, 1514.1, 6109.2, 1376.6, 6082.0, 1212.8);
+      ctx.bezierCurveTo(6054.8, 1049.0, 6024.8, 786.9, 6024.8, 786.9);
+      ctx.bezierCurveTo(6024.8, 786.9, 6033.0, 516.7, 6084.7, 414.3);
+      ctx.bezierCurveTo(6136.4, 311.9, 6171.8, 246.4, 6171.8, 246.4);
+      ctx.bezierCurveTo(6171.8, 246.4, 6199.0, 144.1, 6177.3, 107.2);
+      ctx.bezierCurveTo(6155.5, 70.4, 6136.4, 58.1, 6136.4, 58.1);
+      ctx.bezierCurveTo(6136.4, 58.1, 5896.9, 72.4, 5845.1, 76.5);
+      ctx.bezierCurveTo(5793.4, 80.6, 5649.1, 113.4, 5649.1, 113.4);
+      ctx.lineTo(5101.8, 107.2);
+      ctx.lineTo(4519.2, 94.9);
+      ctx.lineTo(4219.7, 92.9);
+      ctx.lineTo(4015.5, 88.8);
+      ctx.lineTo(3751.4, 78.5);
+      ctx.bezierCurveTo(3751.4, 78.5, 3541.7, 80.6, 3465.5, 58.1);
+      ctx.bezierCurveTo(3389.3, 35.5, 3261.3, 0.5, 3261.3, 0.5);
+      ctx.lineTo(3201.4, 0.5);
+      ctx.lineTo(3137.4, 23.3);
+      ctx.lineTo(3160.6, 97.0);
+      ctx.bezierCurveTo(3160.6, 97.0, 3178.3, 166.6, 3157.9, 244.4);
+      ctx.bezierCurveTo(3137.4, 322.2, 3137.4, 633.4, 3137.4, 633.4);
+      ctx.lineTo(3117.5, 836.0);
+      ctx.lineTo(3113.8, 1097.8);
+      ctx.lineTo(3102.7, 1257.8);
+      ctx.lineTo(3055.8, 1421.4);
+      ctx.lineTo(3023.1, 1517.9);
+      ctx.lineTo(3033.0, 1528.9);
+      ctx.closePath();
+		
+		
 	}
 	
 	if (dibujo == "1") { // Cojin

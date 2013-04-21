@@ -43,7 +43,15 @@ var ViewSoporte = Backbone.View.extend({
 			popup_content("Seleccione la cantidad de vías");
 			viewVias = new ViewVias();
 		} else {
-			appRouter.navigate("app", true);
+			
+			if (soporte.get("id") == 2) {
+				
+				popup_content("Seleccione el soporte");
+				ViewSubSoportes = new ViewSubSoportes();
+				
+			} else {
+				appRouter.navigate("app", true);
+			}
 		}
 		
 	},
@@ -78,6 +86,60 @@ var ViewVias = Backbone.View.extend({
 		appRouter.navigate("app", true);
 	},
 	closePopup: function(e) {
+	},
+	close: function() {
+		this.undelegateEvents();
+		
+	}
+});	
+
+
+/*** VISTA SUBSOPORTES ***/
+var ViewSubSoportes = Backbone.View.extend({
+	el: $('#viasContainer'),
+	model: m.Via,
+	initialize: function() {
+		this.render();
+	},
+	events: {
+		"click .subsoporte" : "navigateApp",
+		"click .opacity" : "closePopup"
+	},
+    render: function() {
+    	
+    	var arraySoportes = [{nombre:'Colcha de Cama', codigo:'colcha2', id: 2, con_vias: false},{nombre:'Funda Nórdica Reversible', codigo:'funda', id: 5, con_vias: false}];
+		
+				var source = $('#subSoportesTemplate').html();
+				var template = Handlebars.compile(source);
+				var html = template(arraySoportes);
+				this.$el.html(html);
+				
+				$('.subdibujo').each(function() {		
+					var id = $(this).attr("id");
+					drawObjetoInit(id);
+				});
+				
+				
+				$('.opacity').on("click", this.closePopup())
+				
+				
+				
+	},
+	navigateApp: function(e) {		
+		
+		var index = $(e.currentTarget).children().attr("name");
+		
+		localStorage['idSoporte'] = index;
+		localStorage['vias'] = 0;
+		
+		appRouter.navigate("app", true);
+	},
+	closePopup: function(e) {
+		
+		$('.popup-open').fadeOut("fast", function() {			
+			$('.popup-open').removeClass("popup-open");
+		})
+		
 	},
 	close: function() {
 		this.undelegateEvents();
@@ -383,6 +445,7 @@ var ViewCarrito = Backbone.View.extend({
 		ViewObjetos: ViewObjetos,
 		ViewTejidos: ViewTejidos,
 		ViewCarrito: ViewCarrito,
+		ViewSubSoportes: ViewSubSoportes
 		
 	})
 	
