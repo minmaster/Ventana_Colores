@@ -12,8 +12,409 @@ function drawMedidas(dibujo, ctx) {
     }
     
     if (dibujo == "3") {
-	ctx.beginPath();ctx.moveTo(421.5,18.0);ctx.lineWidth=0.2;ctx.lineJoin="miter";ctx.miterLimit=4.0;ctx.stroke();ctx.beginPath();ctx.moveTo(27.4,11.3);ctx.lineTo(27.4,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(48.5,13.8);ctx.lineTo(48.5,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(67.2,13.8);ctx.lineTo(67.2,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(86.0,13.9);ctx.lineTo(86.0,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(104.6,13.8);ctx.lineTo(104.6,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(123.3,13.8);ctx.lineTo(123.3,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(142.0,13.8);ctx.lineTo(142.0,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(160.7,13.9);ctx.lineTo(160.7,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(179.1,13.8);ctx.lineTo(179.1,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(198.2,13.9);ctx.lineTo(198.2,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(216.8,13.9);ctx.lineTo(216.8,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(235.6,14.0);ctx.lineTo(235.6,17.8);ctx.stroke();ctx.beginPath();ctx.moveTo(254.3,14.0);ctx.lineTo(254.3,17.8);ctx.stroke();ctx.beginPath();ctx.moveTo(274.8,13.8);ctx.lineTo(274.8,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(296.4,13.8);ctx.lineTo(296.4,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(318.2,13.9);ctx.lineTo(318.2,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(339.9,13.8);ctx.lineTo(339.9,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(361.2,13.8);ctx.lineTo(361.2,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(380.0,13.9);ctx.lineTo(380.0,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(398.7,13.9);ctx.lineTo(398.7,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(417.2,13.7);ctx.lineTo(417.2,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(435.8,13.7);ctx.lineTo(435.8,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(454.6,13.8);ctx.lineTo(454.6,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(473.3,13.8);ctx.lineTo(473.3,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(491.7,13.7);ctx.lineTo(491.7,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(510.4,13.8);ctx.lineTo(510.4,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(529.1,13.8);ctx.lineTo(529.1,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(547.6,13.6);ctx.lineTo(547.6,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(567.2,13.6);ctx.lineTo(567.2,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(587.0,13.7);ctx.lineTo(587.0,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(606.7,13.7);ctx.lineTo(606.7,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(16.3,26.0);ctx.lineTo(22.4,26.0);ctx.stroke();ctx.beginPath();ctx.moveTo(16.3,613.3);ctx.lineTo(22.4,613.3);ctx.stroke();ctx.font="9.3px 'Myriad Pro'";ctx.fillText("300",0.0,613.9);ctx.beginPath();ctx.moveTo(18.7,363.9);ctx.lineTo(22.4,363.9);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,345.2);ctx.lineTo(22.4,345.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,324.5);ctx.lineTo(22.5,324.5);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,305.8);ctx.lineTo(22.5,305.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,287.1);ctx.lineTo(22.4,287.1);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,268.4);ctx.lineTo(22.4,268.4);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,249.7);ctx.lineTo(22.5,249.7);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,231.3);ctx.lineTo(22.5,231.3);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,212.2);ctx.lineTo(22.6,212.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,193.6);ctx.lineTo(22.6,193.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.9,174.8);ctx.lineTo(22.6,174.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,156.2);ctx.lineTo(22.6,156.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,137.6);ctx.lineTo(22.4,137.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,119.0);ctx.lineTo(22.4,119.0);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,100.2);ctx.lineTo(22.5,100.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,81.6);ctx.lineTo(22.5,81.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,63.2);ctx.lineTo(22.4,63.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,44.2);ctx.lineTo(22.4,44.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.5,460.6);ctx.lineTo(22.3,460.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,441.8);ctx.lineTo(22.4,441.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,479.2);ctx.lineTo(22.4,479.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,423.2);ctx.lineTo(22.4,423.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.5,403.5);ctx.lineTo(22.3,403.5);ctx.stroke();ctx.beginPath();ctx.moveTo(18.5,382.8);ctx.lineTo(22.3,382.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,497.9);ctx.lineTo(22.5,497.9);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,594.6);ctx.lineTo(22.4,594.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,575.8);ctx.lineTo(22.4,575.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,557.1);ctx.lineTo(22.4,557.1);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,537.4);ctx.lineTo(22.4,537.4);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,516.8);ctx.lineTo(22.4,516.8);ctx.stroke();ctx.fillText("0",8.4,26.0);ctx.fillText("0",24.5,8.5);ctx.fillText("300",625.5,7.8);ctx.beginPath();ctx.moveTo(626.1,11.3);ctx.lineTo(626.1,17.4);ctx.stroke();ctx.restore();
-	
+ // capa1/Trazado
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(439.5, 18.0);
+      ctx.lineWidth = 0.3;
+      ctx.lineJoin = "miter";
+      ctx.miterLimit = 4.0;
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(45.4, 11.3);
+      ctx.lineTo(45.4, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(66.5, 13.8);
+      ctx.lineTo(66.5, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(85.2, 13.8);
+      ctx.lineTo(85.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(103.9, 13.9);
+      ctx.lineTo(103.9, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(122.6, 13.8);
+      ctx.lineTo(122.6, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(141.3, 13.8);
+      ctx.lineTo(141.3, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(160.0, 13.8);
+      ctx.lineTo(160.0, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(178.7, 13.9);
+      ctx.lineTo(178.7, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(197.1, 13.8);
+      ctx.lineTo(197.1, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(216.2, 13.9);
+      ctx.lineTo(216.2, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(234.8, 13.9);
+      ctx.lineTo(234.8, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(253.6, 14.0);
+      ctx.lineTo(253.6, 17.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(272.3, 14.0);
+      ctx.lineTo(272.3, 17.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(292.8, 13.8);
+      ctx.lineTo(292.8, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(314.4, 13.8);
+      ctx.lineTo(314.4, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(336.2, 13.9);
+      ctx.lineTo(336.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(357.9, 13.8);
+      ctx.lineTo(357.9, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(379.2, 13.8);
+      ctx.lineTo(379.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(398.0, 13.9);
+      ctx.lineTo(398.0, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(416.7, 13.9);
+      ctx.lineTo(416.7, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(435.2, 13.7);
+      ctx.lineTo(435.2, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(453.8, 13.7);
+      ctx.lineTo(453.8, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(472.6, 13.8);
+      ctx.lineTo(472.6, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(491.3, 13.8);
+      ctx.lineTo(491.3, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(509.6, 13.7);
+      ctx.lineTo(509.6, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(528.4, 13.8);
+      ctx.lineTo(528.4, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(547.1, 13.8);
+      ctx.lineTo(547.1, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(565.6, 13.6);
+      ctx.lineTo(565.6, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(585.2, 13.6);
+      ctx.lineTo(585.2, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(605.0, 13.7);
+      ctx.lineTo(605.0, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(624.7, 13.7);
+      ctx.lineTo(624.7, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(16.3, 51.0);
+      ctx.lineTo(22.4, 51.0);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 388.9);
+      ctx.lineTo(22.4, 388.9);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 370.2);
+      ctx.lineTo(22.4, 370.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 349.5);
+      ctx.lineTo(22.5, 349.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 330.8);
+      ctx.lineTo(22.5, 330.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 312.1);
+      ctx.lineTo(22.4, 312.1);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 293.4);
+      ctx.lineTo(22.4, 293.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 274.7);
+      ctx.lineTo(22.5, 274.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 256.3);
+      ctx.lineTo(22.5, 256.3);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 237.2);
+      ctx.lineTo(22.6, 237.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 218.6);
+      ctx.lineTo(22.6, 218.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 199.8);
+      ctx.lineTo(22.6, 199.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 181.2);
+      ctx.lineTo(22.6, 181.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 162.6);
+      ctx.lineTo(22.4, 162.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 144.0);
+      ctx.lineTo(22.4, 144.0);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 125.2);
+      ctx.lineTo(22.5, 125.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 106.6);
+      ctx.lineTo(22.5, 106.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 88.2);
+      ctx.lineTo(22.4, 88.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 69.2);
+      ctx.lineTo(22.4, 69.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 485.6);
+      ctx.lineTo(22.3, 485.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 466.8);
+      ctx.lineTo(22.4, 466.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 504.2);
+      ctx.lineTo(22.4, 504.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 448.2);
+      ctx.lineTo(22.4, 448.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 428.5);
+      ctx.lineTo(22.3, 428.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 407.8);
+      ctx.lineTo(22.3, 407.8);
+      ctx.stroke();
+
+      // capa1/0
+      ctx.font = "9.3px 'Myriad Pro'";
+      ctx.fillText("0", 3.9, 50.0);
+
+      // capa1/0
+      ctx.fillText("0", 42.5, 8.5);
+
+      // capa1/300
+      ctx.fillText("300", 643.5, 7.8);
+
+      // capa1/Gua
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(644.1, 11.3);
+      ctx.lineTo(644.1, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(16.3, 630.6);
+      ctx.lineTo(22.4, 630.6);
+      ctx.stroke();
+
+      // capa1/300
+      ctx.fillText("300", 0.0, 631.2);
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 586.6);
+      ctx.lineTo(22.3, 586.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 568.8);
+      ctx.lineTo(22.4, 568.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 607.2);
+      ctx.lineTo(22.4, 607.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 543.2);
+      ctx.lineTo(22.4, 543.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 520.7);
+      ctx.lineTo(22.3, 520.7);
+      ctx.stroke();
+      ctx.restore();
+      
 	}    
     
     if (dibujo == "4") {
@@ -22,7 +423,400 @@ function drawMedidas(dibujo, ctx) {
 	}
 	
     if (dibujo == "6") {
-	ctx.save();ctx.beginPath();ctx.moveTo(27.4,11.3);ctx.lineTo(27.4,17.4);ctx.lineWidth=0.3;ctx.lineJoin="miter";ctx.miterLimit=4;ctx.stroke();ctx.beginPath();ctx.moveTo(48.5,13.8);ctx.lineTo(48.5,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(67.2,13.8);ctx.lineTo(67.2,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(85.9,13.9);ctx.lineTo(85.9,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(104.6,13.8);ctx.lineTo(104.6,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(123.3,13.8);ctx.lineTo(123.3,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(142,13.8);ctx.lineTo(142,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(160.7,13.9);ctx.lineTo(160.7,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(179.1,13.8);ctx.lineTo(179.1,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(198.2,13.9);ctx.lineTo(198.2,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(216.8,13.7);ctx.lineTo(216.8,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(235.6,13.8);ctx.lineTo(235.6,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(254.3,13.8);ctx.lineTo(254.3,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(273,13.7);ctx.lineTo(273,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(291.6,13.7);ctx.lineTo(291.6,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(310.4,13.8);ctx.lineTo(310.4,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(328.7,13.8);ctx.lineTo(328.7,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(347.8,13.9);ctx.lineTo(347.8,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(366.5,13.7);ctx.lineTo(366.5,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(385.3,13.8);ctx.lineTo(385.3,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(403.9,13.8);ctx.lineTo(403.9,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(422.6,13.8);ctx.lineTo(422.6,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(441.3,13.7);ctx.lineTo(441.3,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(460.1,13.8);ctx.lineTo(460.1,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(478.4,13.8);ctx.lineTo(478.4,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(497.5,13.9);ctx.lineTo(497.5,17.7);ctx.stroke();ctx.beginPath();ctx.moveTo(516.1,13.7);ctx.lineTo(516.1,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(534.9,13.8);ctx.lineTo(534.9,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(553.6,13.8);ctx.lineTo(553.6,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(572.3,13.7);ctx.lineTo(572.3,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(590.9,13.7);ctx.lineTo(590.9,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(609.7,13.8);ctx.lineTo(609.7,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(628,13.8);ctx.lineTo(628,17.5);ctx.stroke();ctx.beginPath();ctx.moveTo(647.1,13.8);ctx.lineTo(647.1,17.6);ctx.stroke();ctx.beginPath();ctx.moveTo(16.3,26);ctx.lineTo(22.4,26);ctx.stroke();ctx.beginPath();ctx.moveTo(16.3,522.6);ctx.lineTo(22.4,522.6);ctx.stroke();ctx.font="9.3px 'Myriad Pro'";ctx.fillText("350",0,523.2);ctx.beginPath();ctx.moveTo(18.7,249.7);ctx.lineTo(22.5,249.7);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,231.3);ctx.lineTo(22.5,231.3);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,212.2);ctx.lineTo(22.6,212.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,193.6);ctx.lineTo(22.6,193.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,174.8);ctx.lineTo(22.6,174.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,156.2);ctx.lineTo(22.6,156.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,137.6);ctx.lineTo(22.4,137.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,119);ctx.lineTo(22.4,119);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,100.2);ctx.lineTo(22.5,100.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,81.6);ctx.lineTo(22.5,81.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,63.2);ctx.lineTo(22.4,63.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,44.2);ctx.lineTo(22.4,44.2);ctx.stroke();ctx.fillText("0",8.4,26);ctx.fillText("0",24.5,8.5);ctx.fillText("300",666.5,7.8);ctx.beginPath();ctx.moveTo(667.1,11.3);ctx.lineTo(667.1,17.4);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,455.1);ctx.lineTo(22.5,455.1);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,436.8);ctx.lineTo(22.5,436.8);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,417.7);ctx.lineTo(22.5,417.7);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,399.1);ctx.lineTo(22.5,399.1);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,380.3);ctx.lineTo(22.6,380.3);ctx.stroke();ctx.beginPath();ctx.moveTo(18.8,361.6);ctx.lineTo(22.6,361.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,343.1);ctx.lineTo(22.4,343.1);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,324.5);ctx.lineTo(22.4,324.5);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,305.7);ctx.lineTo(22.5,305.7);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,287);ctx.lineTo(22.5,287);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,268.6);ctx.lineTo(22.4,268.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,506.2);ctx.lineTo(22.5,506.2);ctx.stroke();ctx.beginPath();ctx.moveTo(18.7,489.6);ctx.lineTo(22.5,489.6);ctx.stroke();ctx.beginPath();ctx.moveTo(18.6,472.2);ctx.lineTo(22.4,472.2);ctx.stroke();ctx.restore();
+   // capa1/Trazado
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(421.5, 18.0);
+      ctx.lineWidth = 0.3;
+      ctx.lineJoin = "miter";
+      ctx.miterLimit = 4.0;
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(29.4, 11.3);
+      ctx.lineTo(29.4, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(50.5, 13.8);
+      ctx.lineTo(50.5, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(69.2, 13.8);
+      ctx.lineTo(69.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(87.9, 13.9);
+      ctx.lineTo(87.9, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(106.6, 13.8);
+      ctx.lineTo(106.6, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(125.3, 13.8);
+      ctx.lineTo(125.3, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(144.0, 13.8);
+      ctx.lineTo(144.0, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(162.7, 13.9);
+      ctx.lineTo(162.7, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(181.1, 13.8);
+      ctx.lineTo(181.1, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(200.2, 13.9);
+      ctx.lineTo(200.2, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(218.8, 13.9);
+      ctx.lineTo(218.8, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(237.6, 14.0);
+      ctx.lineTo(237.6, 17.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(256.3, 14.0);
+      ctx.lineTo(256.3, 17.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(276.8, 13.8);
+      ctx.lineTo(276.8, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(298.4, 13.8);
+      ctx.lineTo(298.4, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(320.2, 13.9);
+      ctx.lineTo(320.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(341.9, 13.8);
+      ctx.lineTo(341.9, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(363.2, 13.8);
+      ctx.lineTo(363.2, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(382.0, 13.9);
+      ctx.lineTo(382.0, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(400.7, 13.9);
+      ctx.lineTo(400.7, 17.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(419.2, 13.7);
+      ctx.lineTo(419.2, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(437.8, 13.7);
+      ctx.lineTo(437.8, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(456.6, 13.8);
+      ctx.lineTo(456.6, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(475.3, 13.8);
+      ctx.lineTo(475.3, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(493.6, 13.7);
+      ctx.lineTo(493.6, 17.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(512.4, 13.8);
+      ctx.lineTo(512.4, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(531.1, 13.8);
+      ctx.lineTo(531.1, 17.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(549.6, 13.6);
+      ctx.lineTo(549.6, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(608.6, 13.6);
+      ctx.lineTo(608.6, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(628.4, 13.7);
+      ctx.lineTo(628.4, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(648.1, 13.7);
+      ctx.lineTo(648.1, 17.4);
+      ctx.stroke();
+
+      // capa1/450
+      ctx.font = "9.3px 'Myriad Pro'";
+      ctx.fillText("450", 666.9, 7.8);
+
+      // capa1/Gua
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(667.4, 11.3);
+      ctx.lineTo(667.4, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(569.2, 13.6);
+      ctx.lineTo(569.2, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(589.0, 13.7);
+      ctx.lineTo(589.0, 17.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(16.3, 24.0);
+      ctx.lineTo(22.4, 24.0);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 361.9);
+      ctx.lineTo(22.4, 361.9);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 343.2);
+      ctx.lineTo(22.4, 343.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 322.5);
+      ctx.lineTo(22.5, 322.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 303.8);
+      ctx.lineTo(22.5, 303.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 285.1);
+      ctx.lineTo(22.4, 285.1);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 266.4);
+      ctx.lineTo(22.4, 266.4);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 247.7);
+      ctx.lineTo(22.5, 247.7);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 229.3);
+      ctx.lineTo(22.5, 229.3);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 210.2);
+      ctx.lineTo(22.6, 210.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 191.6);
+      ctx.lineTo(22.6, 191.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 172.8);
+      ctx.lineTo(22.6, 172.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.8, 154.2);
+      ctx.lineTo(22.6, 154.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 135.6);
+      ctx.lineTo(22.4, 135.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 117.0);
+      ctx.lineTo(22.4, 117.0);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 98.2);
+      ctx.lineTo(22.5, 98.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.7, 79.6);
+      ctx.lineTo(22.5, 79.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 61.2);
+      ctx.lineTo(22.4, 61.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 42.2);
+      ctx.lineTo(22.4, 42.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 460.6);
+      ctx.lineTo(22.3, 460.6);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 440.8);
+      ctx.lineTo(22.4, 440.8);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 479.2);
+      ctx.lineTo(22.4, 479.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 421.2);
+      ctx.lineTo(22.4, 421.2);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 401.5);
+      ctx.lineTo(22.3, 401.5);
+      ctx.stroke();
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.5, 380.8);
+      ctx.lineTo(22.3, 380.8);
+      ctx.stroke();
+
+      // capa1/0
+      ctx.fillText("0", 8.4, 24.0);
+
+      // capa1/0
+      ctx.fillText("0", 26.5, 8.5);
+
+      // capa1/Gua
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(16.3, 518.6);
+      ctx.lineTo(22.4, 518.6);
+      ctx.stroke();
+
+      // capa1/350
+      ctx.fillText("350", 0.0, 519.2);
+
+      // capa1/Trazado
+      ctx.beginPath();
+      ctx.moveTo(18.6, 499.2);
+      ctx.lineTo(22.4, 499.2);
+      ctx.stroke();
+      ctx.restore();
+	
+	
 	}  
 	
 	return ctx;
