@@ -1417,7 +1417,7 @@ function getPrecioVia(id) {
 	$.ajax({
 	  url: url+"calcularPrecioTejido.json",
 	  type: "POST",
-  	  data: {idsoporte : idSoporte, idtejido : idTejido, ancho : ancho, alto: alto},
+  	  data: {idsoporte : idSoporte, idtejido : idTejido, ancho : ancho, alto: alto, securitySession: sessionSecurity},
 	  success: function(data) {
 	  	
 	  	var result = jQuery.parseJSON(data);

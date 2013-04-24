@@ -16,6 +16,14 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.0.custom.min.css">
         
+        <style type="text/css">
+.distribuidor {
+	display:block; position: absolute; top: 25px; right: 0; color: #646464; font-size: 12px; font-weight: bold; padding-right: 0px; cursor:pointer; height: 17px
+
+}
+</style>
+        
+        
     </head>
     <body class="main" id="bodyContainer">
     	
@@ -27,6 +35,7 @@
 		    	<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
 		    	<h2>Seleccione el producto que desea diseñar</h2>    	
 		    	<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank" class="help">Ayuda</a>
+                <a href="http://www.laventanadecolores.es/app/app.php#login " target="_blank" class="distribuidor">Distribuidores</a>
 		   	</header>	
 		   	
 		   	<section>
@@ -418,7 +427,7 @@
 				<img src="img/tejidos/peq/th_{{imagen}}" alt="" />
 			</div>
 			<div class="title tejidoEvent" id="{{ id }}" name="{{ nombre }}">
-				<span class="name">{{ nombre }}</span> - {{ precio }}€ m2</span>
+				<span class="name">{{ nombre }}</span> - {{ precio }}€ m</span>
 			</div>
 			
 		</li>
