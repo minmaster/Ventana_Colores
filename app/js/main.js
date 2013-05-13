@@ -2321,7 +2321,9 @@ function isiPad(){
 function slideContent(clase) {
 	
 	var cantidad = $("li", clase).length;
-	var width = $(window).width();
+	var width = $(window).width()-44;
+	
+	console.log(width);
 	
 	var elem = $('li', clase);
 	var elemWidth = elem.outerWidth(true);
@@ -2338,7 +2340,9 @@ function slideContent(clase) {
 	$(clase).parent().parent().append("<nav><div class='prev'><span>anterior</span></div><div class='next'><span>siguiente</span></div>");
 	
 	$(window).resize(function() {		
-		width = $(window).width();
+		width = $(window).width()-44;
+		console.log(width);
+		
 		animateWidth = 0;
 		$(clase).transition({ x: 0 });
 		$('.prev', carousel).hide();
