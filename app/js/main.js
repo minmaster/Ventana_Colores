@@ -341,7 +341,7 @@ function drawVariosColores(dibujo, id, colores) {
     	
     shapeColores = new Kinetic.Shape({
           	drawFunc: function(canvas) {          		
-          		var ctxDibujo = canvas.getContext();   
+          		var ctxDibujo = canvas.getContext();  
           		ctxDibujo = drawSymbolColores(dibujo, ctxDibujo, color1, color2, color3);
           		canvas.fillStroke(this);
 

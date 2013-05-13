@@ -151,9 +151,10 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      spin: function( event, ui ) {
 		      	
 		      	if (localStorage['idSoporte'] != 6) { 
+		      		soporteProducto.set({ancho: ui.value});
 		      		getPrecioSoporte();
-		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());
-		     		soporteProducto.set({ancho: $('.medida_estandar input[name="ancho"]').val()});
+		      		calcular_medida(ui.value, $('.medida_estandar input[name="alto"]').val());
+		     		
 		      		
 		      	} else {		      		
 				    var ancho = ui.value/localStorage["vias"];		      					  		
@@ -231,12 +232,12 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      min: $('#altoMnimo').val(),
 		      max: $('#altoMaximo').val(),
 		      spin: function( event, ui ) {
-		      	
-		      	
+
 		      	if (localStorage['idSoporte'] != 6) { 
+		      		soporteProducto.set({alto: ui.value});
 		      		getPrecioSoporte();
-		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), $('.medida_estandar input[name="alto"]').val());
-		      		soporteProducto.set({alto: $('.medida_estandar input[name="alto"]').val()});
+		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), ui.value);
+		      		
 		      		 
 		      	} else {	
 		      		
@@ -244,7 +245,7 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      			      		
 		      		for (var i = 0; i < localStorage['vias']; i++) {
 			  			var viaSoporte = viasCarrito.at(i);		
-			  			viaSoporte.set({alto: $('.medida_estandar input[name="alto"]').val()});
+			  			viaSoporte.set({alto: ui.value});
 						getPrecioVia(i);
 			  		}
 			  		
