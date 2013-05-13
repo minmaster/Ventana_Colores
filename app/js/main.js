@@ -1591,6 +1591,8 @@ function redimensionar(type, val) {
 						viaSoporte.set({ancho: val});
 						getPrecioVia(i);
 						}
+						
+						soporteProducto.set({ancho: val*localStorage["vias"]});
 		      			
 		      			}		
 		
@@ -1612,6 +1614,8 @@ function redimensionar(type, val) {
 			  			calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			
 						viaSoporte.set({alto: val});
 						getPrecioVia(i);
+						
+						soporteProducto.set({alto: val});
 						}
 		           		
 		           	}

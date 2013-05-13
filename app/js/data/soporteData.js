@@ -163,7 +163,9 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 						viaSoporte.set({ancho: ancho});
 						getPrecioVia(i);
 			  		}				  		
-			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			      		
+			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());		
+			  		soporteProducto.set({ancho: ui.value});
+			  		      		
 		      	}
 		     	
 		     
@@ -249,7 +251,9 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 						getPrecioVia(i);
 			  		}
 			  		
-			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());			
+			  		calcular_medida(ancho, $('.medida_estandar input[name="alto"]').val());	
+			  		
+			  		soporteProducto.set({alto: ui.value});		
 						
 		      	}
 		      	
