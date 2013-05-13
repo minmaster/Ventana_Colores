@@ -1351,7 +1351,7 @@ function draw(dibujo, ctx, mask) {
 
 
 //// FUNCTION GET PRECIO SOPORTE
-function getPrecioSoporte() {
+function getPrecioSoporte(an, al) {
 	
 	var idSoporte = $('#productoId').val();
 	var idTejido = $('#tejidoId').val();
@@ -1362,8 +1362,13 @@ function getPrecioSoporte() {
 	} else {
 		var ancho = $('input[name="ancho"]').val()/localStorage["vias"];
 		var alto = $('input[name="alto"]').val();
-	}
+	} 
 	
+	if (an && al) {		
+		var ancho = an;
+		var alto = al;
+	}
+
 	$.ajax({
 	  url: url+"calcularPrecioTejido.json",
 	  type: "POST",

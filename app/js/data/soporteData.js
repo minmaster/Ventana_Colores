@@ -152,7 +152,7 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 		      	
 		      	if (localStorage['idSoporte'] != 6) { 
 		      		soporteProducto.set({ancho: ui.value});
-		      		getPrecioSoporte();
+		      		getPrecioSoporte(ui.value, $('.medida_estandar input[name="alto"]').val());
 		      		calcular_medida(ui.value, $('.medida_estandar input[name="alto"]').val());
 		     		
 		      		
@@ -235,7 +235,7 @@ define("soporteData", ["jquery", "model", "collection", "view", "dragdrop", "sop
 
 		      	if (localStorage['idSoporte'] != 6) { 
 		      		soporteProducto.set({alto: ui.value});
-		      		getPrecioSoporte();
+		      		getPrecioSoporte($('.medida_estandar input[name="ancho"]').val(), ui.value);
 		      		calcular_medida($('.medida_estandar input[name="ancho"]').val(), ui.value);
 		      		
 		      		 
