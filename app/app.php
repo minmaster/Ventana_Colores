@@ -17,9 +17,7 @@
         <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.0.custom.min.css">
         
         <style type="text/css">
-.distribuidor {
-	display:block; position: absolute; top: 25px; right: 0; color: #646464; font-size: 12px; font-weight: bold; padding-right: 0px; cursor:pointer; height: 17px
-
+.distribuidor {	display:block; position: absolute; top: 25px; right: 0; color: #646464; font-size: 12px; font-weight: bold; padding-right: 0px; cursor:pointer; height: 17px
 }
 </style>
         
@@ -472,7 +470,7 @@
 	   							</tr>	
 	   							<tr>
 	   								<td class="uds">{{ soporte.unidades }}</td>
-	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm</td>
+	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
 	   								<td class="precio">{{ soporte.precio }} €</td>
 	   							</tr>
@@ -740,7 +738,7 @@
 	   							</tr>	
 	   							<tr>
 	   								<td class="uds">{{ soporte.unidades }}</td>
-	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm</td>
+	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
 	   								<td class="precio">{{ soporte.precio }} €</td>
 	   							</tr>
