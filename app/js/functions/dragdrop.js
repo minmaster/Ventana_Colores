@@ -127,8 +127,6 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
         		var id = indexObject;
         		indexObject += 1;
         		
-        		
-        		
         		var greca = $(this).attr("breca");
 
 				var width = parseInt($(this).attr("mwidth"));
@@ -172,10 +170,20 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
 				      min: 20,
 				      spin: function( event, ui ) {
 				      	
+				      	productoSelected = carrito.at(id);				      	
+				      	if (productoSelected.get("tipoGreca") == 1) {
+				      		productoSelected.set({ancho: ui.value});				      		
+				      	}				      	
+				      	else {
+				      		productoSelected.set({alto: ui.value});	
+				      	}
+					      					      	
 				      	var price = $('#greca'+dibujo+' .ui-spinner').next().val();
 				      	var medidaDefault = $('#greca'+dibujo+' .ui-spinner').next().next().val();
 				      	$('#greca'+dibujo+ " .pvp span").text(calcularNuevoPrecio(price, medidaDefault, $(this).val()));
 						calcularTotal();
+						
+						
 				      	
 				      }
 				    });
@@ -184,7 +192,15 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
 				      	var price = $('#greca'+dibujo+' .ui-spinner').next().val();
 				      	var medidaDefault = $('#greca'+dibujo+' .ui-spinner').next().next().val();
 				      	$('#greca'+dibujo+ " .pvp span").text(calcularNuevoPrecio(price, medidaDefault, $(this).val()));
-						calcularTotal();				    	
+						calcularTotal();	
+						
+						productoSelected = carrito.at(id);	
+				      	if (productoSelected.get("tipoGreca") == 1) {
+				      		productoSelected.set({ancho: $(this).val()});				      		
+				      	}				      	
+				      	else {
+				      		productoSelected.set({alto: $(this).val()});	
+				      	}			    	
 				    	
 				    });
 					
@@ -212,7 +228,7 @@ define("dragdrop", ["jquery", "jqueryui", "view"], function($, jqueryUI, v) {
         		
         		
         		
-				carrito.add([{producto:titulo, id: id, dibujo: dibujo, greca: grecaBoolean, precio: precio, precioUnidad: precio, unidades: 1, ancho:width, alto: height}]);
+				carrito.add([{producto:titulo, id: id, dibujo: dibujo, greca: grecaBoolean, tipoGreca: greca, precio: precio, precioUnidad: precio, unidades: 1, ancho:width, alto: height}]);
 	  			var viewCarrito = new v.ViewCarrito();
 				calcularTotal();
 				

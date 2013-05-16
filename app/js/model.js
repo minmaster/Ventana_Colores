@@ -97,6 +97,7 @@ define("model", ["underscore", "backbone", "soporteCarrito"], function(_, Backbo
 			precioUnidad: "",
 			unidades: 0,
 			greca: false,
+			tipoGreca: 0,
 			reflejar: false,
 			ancho: "",
 			alto: "",
