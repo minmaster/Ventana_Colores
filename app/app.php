@@ -31,7 +31,7 @@
     	
     	 <header>
 		    	<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
-		    	<h2>Seleccione el producto que desea diseñar</h2>    	
+		    	<h2>Seleccione el producto que desea dise&ntilde;ar</h2>    	
 		    	<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank" class="help">Ayuda</a>
                 <a href="http://www.laventanadecolores.es/app/app.php#login " target="_blank" class="distribuidor">Distribuidores</a>
 		   	</header>	
@@ -131,7 +131,7 @@
 			
 			<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html " target="_blank" class="help">Ayuda</a>
 			
-			<h2>TU SELECCIÓN</h2>
+			<h2>TU SELECCI&Oacute;N</h2>
 			
 			<div class="seleccion">
 				
@@ -175,18 +175,18 @@
 			<div class="precioTotal">
 				<div class="total">
 					<span>IMPORTE</span>
-					<span id="total">0 €</span>
+					<span id="total">0 &euro;</span>
 				</div>
 				<div class="iva">
 					<span>IVA (21%)</span>
-					<span id="iva">0 €</span>
+					<span id="iva">0 &euro;</span>
 				</div>
 				<div class="totalIVA">
 					<span>TOTAL (IVA INC.)</span>
-					<span id="totalIVA">0 €</span>
+					<span id="totalIVA">0 &euro;</span>
 				</div>
 				<div class="text">
-					* PRECIOS SIN INSTALACIÓN
+					* PRECIOS SIN INSTALACI&Oacute;N
 				</div>
 			</div>
 			
@@ -206,7 +206,7 @@
 					<li><span class="btnColorear" title="Colorear Objeto">Colorear Objeto</span></li>
 					<li><span class="btnTexto" title="Editar Texto">Editar Texto</span></li>
 					<li><span class="btnReflejar" title="Reflejar Objeto">Reflejar Objeto</span></li>
-					<li class="1color"><span class="color">Para colorear el objeto arrastre el color hasta él</span></li>
+					<li class="1color"><span class="color">Para colorear el objeto arrastre el color hasta &eacute;l</span></li>
 				</ul>
 				
 				<div class="submenu">
@@ -216,7 +216,7 @@
 					</div>
 					
 					<div class="divTexto tab">	
-						<label for="textoObjeto">Escribe aquí tu texto:</label>					
+						<label for="textoObjeto">Escribe aqu&iacute; tu texto:</label>					
 						<input type="text" name="textoObjeto" id="textoObjeto" />						
 					</div>
 					
@@ -425,7 +425,7 @@
 				<img src="img/tejidos/peq/th_{{imagen}}" alt="" />
 			</div>
 			<div class="title tejidoEvent" id="{{ id }}" name="{{ nombre }}">
-				<span class="name">{{ nombre }}</span> - {{ precio }}€ m</span>
+				<span class="name">{{ nombre }}</span> - {{ precio }}&euro; m</span>
 			</div>
 			
 		</li>
@@ -436,7 +436,7 @@
 		<script type="text/x-handlebars" id="greca">
 		<div class="greca" id="greca{{id}}">
 			<div class="name">{{ name }}</div>
-			<div class="pvp"><span>{{precio}}</span> €</div>
+			<div class="pvp"><span>{{precio}}</span> &euro;</div>
 			
 			<div class="clear"></div>
 			
@@ -452,7 +452,7 @@
 		<script type="text/x-handlebars" id="printTemplate">			
 				<header>
 	    			<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
-	    			<h2>Imprimir esta página</h2>    	
+	    			<h2>Imprimir esta p&aacute;gina</h2>    	
 	    			<a href="#" class="ico-print">Imprimir</a>
 	    			<a href="#close" class="ico-back">Volver</a>
 	   			</header>
@@ -472,7 +472,7 @@
 	   								<td class="uds">{{ soporte.unidades }}</td>
 	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
-	   								<td class="precio">{{ soporte.precio }} €</td>
+	   								<td class="precio">{{ soporte.precio }} &euro;</td>
 	   							</tr>
 	   						</table>
 	   						
@@ -492,7 +492,7 @@
 	   								<td class="producto">{{ tejidoNombre }}</td>
 	   								<td class="color">{{ color }}</td>
 	   								<td class="medida">{{ancho}}x{{alto}}cm</td>
-	   								<td class="precio">{{ precio }} €</td>
+	   								<td class="precio">{{ precio }} &euro;</td>
 	   							</tr>
 	   							{{/each}}
 	   						</table>
@@ -513,7 +513,7 @@
 	   								<td class="producto">{{producto}}</td>
 	   								<td class="color">{{color}}</td>	   								
 	   								<td class="medida">{{ancho}}x{{alto}}cm</td>
-	   								<td class="precio">{{precio}} €</td>
+	   								<td class="precio">{{precio}} &euro;</td>
 	   							</tr>
 	   						{{/each}}
 	   						</table>
@@ -542,7 +542,7 @@
 	   						
 	   						<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">	
 	   							<td>
-	   								 * Precios sin instalación<br />
+	   								 * Precios sin instalaci&oacute;n<br />
 	   								 * Comprobar siempre el color real de tejidos y estampaciones en el punto de venta. Recuerda que los colores que se muestran en pantalla no son 100% reales.<br />
 	   							</td>
 	   						</table>	   						
@@ -561,7 +561,7 @@
 					
 				</div>
 				{{#unless  greca}}
-				<div class="pvp"><span>{{ precio }}</span>€</div>
+				<div class="pvp"><span>{{ precio }}</span>&euro;</div>
 				{{/ unless}}
 				<div class="clear"></div>
 			</div>
@@ -572,14 +572,14 @@
 			<div class="name">{{ producto }} {{ ancho }}x{{ alto }} con {{ tejidoNombre }}				
 				{{#if color}}<br /><span class="color">Color: {{ color }}</span>{{/if}}
 			</div>
-			<div class="pvp"><span>{{factor precio }}</span> €</div>	
+			<div class="pvp"><span>{{factor precio }}</span> &euro;</div>	
 			<div class="clear"></div>	
 		</script>
 		
 		<script type="text/handlebars" id="soporteJaponesTemplate">
 			<div class="uds">{{ unidades }}</div>
-			<div class="name">{{ producto }} con {{ vias }} Vías</div>
-			<div class="pvp"><span>{{factor precio }}</span> €</div>	
+			<div class="name">{{ producto }} con {{ vias }} V&iacute;as</div>
+			<div class="pvp"><span>{{factor precio }}</span> &euro;</div>	
 			<div class="clear"></div>	
 		</script>
 		
@@ -592,7 +592,7 @@
 				{{#if color}}<br /><span class="color">Color: {{ color }}</span>{{/if}}
 				
 			</div>
-			<div class="pvp nopvp"><span>{{ precio }}</span> €</div>	
+			<div class="pvp nopvp"><span>{{ precio }}</span> &euro;</div>	
 			<div class="clear"></div>
 			</div>
 			{{/each}}
@@ -605,13 +605,13 @@
 				{{#if color}}<br /><span class="color">Color: {{ color }}</span>{{/if}}
 				
 			</div>
-			<div class="pvp nopvp"><span>{{ precio }}</span> €</div>	
+			<div class="pvp nopvp"><span>{{ precio }}</span> &euro;</div>	
 			<div class="clear"></div>
 		</script>		
 		
 		<script type="text/handlebars" id="viasTejidoTemplate">
 			
-			<div class="title">Seleccione la vía sobre la que desea aplicar el tejido</div>
+			<div class="title">Seleccione la v&iacute;a sobre la que desea aplicar el tejido</div>
 			
 			<div class="viasList">
 				<ul>
@@ -624,7 +624,7 @@
 		</script>
 		
 		<script type="text/handlebars" id="viasColoresTemplate">			
-			<div class="title">Seleccione el color de la vía</div>			
+			<div class="title">Seleccione el color de la v&iacute;a</div>			
 			<div class="coloresList colores">
 				<ul>
 					{{#each this}}
@@ -638,7 +638,7 @@
 			
 			<header>
 	    			<div class="logo"><img src="img/logo.png" alt="La Ventana de Colores" /></div>    	
-	    			<h2>Introduzca su usuario y contraseña para continuar</h2>    	
+	    			<h2>Introduzca su usuario y contrase&ntilde;a para continuar</h2>    	
 	    			<a href="http://desarrollo.artdinamica.es/ventana/ayuda.html" class="help">Ayuda</a>
 	   		</header>
 	   		
@@ -651,7 +651,7 @@
 	   				</div>
 	   				
 	   				<div class="field">
-	   				<label for="login">Contraseña</label>
+	   				<label for="login">Contrase&ntilde;a</label>
 	   				<input type="password"  id="password" name="password" class="obligatorio" />
 	   				</div>
 	   				
@@ -740,7 +740,7 @@
 	   								<td class="uds">{{ soporte.unidades }}</td>
 	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
-	   								<td class="precio">{{ soporte.precio }} €</td>
+	   								<td class="precio">{{ soporte.precio }} &euro;</td>
 	   							</tr>
 	   						</table>	
 	   						
@@ -761,7 +761,7 @@
 	   								<td class="producto" style="border:1px solid black">{{ tejidoNombre }}</td>
 	   								<td class="color" style="border:1px solid black">{{ color }} </td>
 	   								<td class="medida" style="border:1px solid black">{{ancho}}x{{alto}}cm</td>
-	   								<td class="precio" style="border:1px solid black">{{ precio }} €</td>
+	   								<td class="precio" style="border:1px solid black">{{ precio }} &euro;</td>
 	   							</tr>
 	   							{{/each}}
 	   						</table>
@@ -782,7 +782,7 @@
 	   								<td class="producto" style="border:1px solid black">{{producto}}</td>
 	   								<td class="color" style="border:1px solid black">{{color}}</td>	   								
 	   								<td class="medida" style="border:1px solid black">{{ancho}}x{{alto}}cm</td>
-	   								<td class="precio" style="border:1px solid black">{{precio}} €</td>
+	   								<td class="precio" style="border:1px solid black">{{precio}} &euro;</td>
 	   							</tr>
 	   						{{/each}}
 	   						</table>
@@ -811,7 +811,7 @@
 	   						
 	   						<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">	
 	   							<td>
-	   								 * Precios sin instalación<br />
+	   								 * Precios sin instalaci&oacute;n<br />
 	   								 * Comprobar siempre el color real de tejidos y estampaciones en el punto de venta. Recuerda que los colores que se muestran en pantalla no son 100% reales.<br />
 	   							</td>
 	   						</table>
