@@ -323,6 +323,20 @@ define("initialload", ["jquery", "handlebars", "collection", "variosColores", "m
 			}
 			
 			return precio;
+		});	
+
+
+		/*** HELPERS HANDLEBARS ***/
+		Handlebars.registerHelper("tejidoName", function(tejidoName) {	
+			
+			var tejido = "";
+
+			if (localStorage["idSoporte"] != 6) {
+				tejido = "con "+tejidoName;
+			}
+			
+			
+			return tejido;
 		});			
 		
 		

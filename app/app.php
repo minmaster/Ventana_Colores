@@ -470,7 +470,7 @@
 	   							</tr>	
 	   							<tr>
 	   								<td class="uds">{{ soporte.unidades }}</td>
-	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
+	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm {{tejidoName soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
 	   								<td class="precio">{{ soporte.precio }} &euro;</td>
 	   							</tr>
@@ -587,7 +587,7 @@
 			{{#each this}}
 			<div class="via{{via}} livia">
 			<div class="uds"></div>
-			<div class="name">Via: {{ via }} {{ ancho}}x{{alto}} con {{tejidoNombre}}
+			<div class="name">Via: {{ via }} {{ ancho}}x{{alto}} {{tejidoNombre}}
 				
 				{{#if color}}<br /><span class="color">Color: {{ color }}</span>{{/if}}
 				
@@ -738,7 +738,7 @@
 	   							</tr>	
 	   							<tr>
 	   								<td class="uds">{{ soporte.unidades }}</td>
-	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm con {{soporte.tejidoNombre}}</td>
+	   								<td class="producto">{{ soporte.producto }} {{soporte.ancho}}x{{soporte.alto}}cm {{tejidoName soporte.tejidoNombre}}</td>
 	   								<td class="color">{{ soporte.color }}</td>
 	   								<td class="precio">{{ soporte.precio }} &euro;</td>
 	   							</tr>
